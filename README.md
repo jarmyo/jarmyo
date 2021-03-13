@@ -3,8 +3,8 @@
 Here are some things about me:
 
 SKILLS
-- C# Development, I'm been working for about 10 years in .NET technologies: WinForms, WPF And Modern/Metro UI, ASP.NET Webforms and MVC, ClickOnce Deployment, Linq & EntityFramework, Async, Task & Threads, etc...
-- SQL Server Database: I Love to design well structured databases: normalized, with relational keys, functions, constrains and stored procedures, views, indexes. Both Network Servers and Azure.
+- C# Development, I'm been working for about 10 years in **.NET technologies**: WinForms, WPF And Modern/Metro UI, ASP.NET Webforms and MVC, ClickOnce Deployment, Linq & EntityFramework, Async, Task & Threads, etc...
+- SQL Server Database: I Love to design well structured databases: normalized, with relational keys, functions, constrains and stored procedures, views, indexes. Both Local Servers and Azure.
 - Version control: Just the basics of Microsoft TeamFundation and Github.
 - I'm junior in Web development, but I'm able to build a responsibe web site with MVC and Webforms technology, I can use Bootstrap, CSS and Vainilla Javascript (fetch instead of some jQuery funtion for example). 
 - Tech Support: I have a lot of knowledge fixing Printers and PCs. Windows Server Config and services deployment (Domains, FTP, IIS, Policies, etc). And the basics of scripting in PowerShell and bash.
