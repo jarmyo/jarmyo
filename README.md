@@ -1,4 +1,7 @@
+![visitors](https://visitor-badge.glitch.me/badge?page_id=jarmyo)
+
 ### Hi there 👋
+
 
 Here are some things about me:
 
@@ -10,12 +13,11 @@ SKILLS
 - Tech Support: I have a lot of knowledge fixing Printers and PCs. Windows Server Config and services deployment (Domains, FTP, IIS, Policies, etc). And the basics of scripting in PowerShell and bash.
 - Languages: Spanish native and fluend. English: about 80%, Can write, read and listeng very well, but i have terrible accent. French: just a little bit, a complete course in duolingo app.
 - Hacking skills: network sniffing, .NET disassembling, bruteforce logins, SQL injection.
-- I have Police Training. Self defense, Armor and guns, Laws, Vehicles, interviews.
 
 
 PROFESSIONAL BACKGROUND
 - I've working 10 years in the INM (Instituto Nacional de Migración) in Chiapas, as the director of informatics in the State, Building software for [administrative control](https://www.behance.net/gallery/4752143/Rol-de-Servicios), Telecomunications administration (CISCO and Nortel switches and BCM's, Ubiquiti antennas), all network congiguration (VPN and Domain Control) and Tech support.
-- I’m the CTO of [Repos Software](https://repos.mx) we have a POS for restaurants, we apply all our tech knowledge: Web and Desktop development, Huge normalized Databases, Cloud Security, integrations, deployment and support. We are only two people, but we have about 20 clients in México and USA.
+- I’m the CTO of [Repos Software](https://repos.mx) we have a POS for restaurants, we apply all our tech knowledge: Web and Desktop development, Huge normalized Databases, Cloud Security, biometrics, online payments, deployment and support. We are only two people, but we have about 20 clients in México and USA.
 - I’m currently working on Secretaría de Seguridad Pública del Estado de Aguascalientes, in a In-House security development.
 
 
