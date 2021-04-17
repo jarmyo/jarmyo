@@ -6,6 +6,24 @@
 [![Telegram](https://img.shields.io/badge/-TELEGRAM-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/jarmyo)
 [![LinkedIn](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shinjistudio/)
 
+![JavaScript](https://img.shields.io/badge/javascript-323330.svg?&style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-1572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
+![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?&style=for-the-badge&logo=visual-studio&logoColor=white)
+![C#](https://img.shields.io/badge/c%23-239120.svg?&style=for-the-badge&logo=c-sharp&logoColor=white)
+![XAML](https://img.shields.io/badge/xaml-0C54C2.svg?&style=for-the-badge&logo=xaml&logoColor=white)
+![Xamarin](https://img.shields.io/badge/xamarin-3498DB.svg?&style=for-the-badge&logo=xamarin&logoColor=white)
+![SQL Server](https://img.shields.io/badge/sql%20server-CC2927.svg?&style=for-the-badge&logo=microsoft-sql-server&logoColor==white)
+![Microsoft Teams](https://img.shields.io/badge/microsoft%20Teams-6264A7.svg?&style=for-the-badge&logo=microsoft-teams&logoColor==white)
+![GitHub](https://img.shields.io/badge/github-181717.svg?&style=for-the-badge&logo=github&logoColor==white)
+![Azure](https://img.shields.io/badge/azure-0072C6.svg?&style=for-the-badge&logo=azure-devops&logoColor=white)
+![IIS](https://img.shields.io/badge/IIS%20Windows%20Server-5E5E5E.svg?&style=for-the-badge&logo=microsoft&logoColor=white)
+![Nginx](https://img.shields.io/badge/nginx-009639.svg?&style=for-the-badge&logo=nginx&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+
 Here are some things about me:
 
 SKILLS
