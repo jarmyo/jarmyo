@@ -1,7 +1,10 @@
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=jarmyo)
 
-### Hi there 👋
+### Hello world👋
 
+[![Gmail](https://img.shields.io/badge/-GMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jarm.yo@gmail.com)
+[![Telegram](https://img.shields.io/badge/-TELEGRAM-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/jarmyo)
+[![LinkedIn](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shinjistudio/)
 
 Here are some things about me:
 
