@@ -13,7 +13,6 @@ namespace Personal.Controllers
         private readonly BlogContext _DbContext = new();
         public BlogController()
         {
-
         }
         public ActionResult Index()
         {

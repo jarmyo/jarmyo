@@ -3,13 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Personal.Data
 {
-    public class SQLiteContext : DbContext
+    public class BlogContext : DbContext
     {
-        public DbSet<Visitante> Visitantes { get; set; }
+        public DbSet<Post> Entradas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionStringBuilder = new SqliteConnectionStringBuilder { DataSource = @"wwwroot\data\SQLite.db" };
+            var connectionStringBuilder = new SqliteConnectionStringBuilder { DataSource = @"wwwroot\data\blog.db" };
             var connectionString = connectionStringBuilder.ToString();
             var connection = new SqliteConnection(connectionString);
 
