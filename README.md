@@ -1,4 +1,4 @@
-This repository contains all code from JulianAugusto.com, my personal page and blog.
+This repository contains all code from <https://JulianAugusto.com>, my personal page and blog.
 
 [![CodeFactor](https://www.codefactor.io/repository/github/jarmyo/jarmyo/badge)](https://www.codefactor.io/repository/github/jarmyo/jarmyo)
 
