@@ -1,14 +1,18 @@
 This repository contains all code from JulianAugusto.com, my personal page and blog.
+
 [![CodeFactor](https://www.codefactor.io/repository/github/jarmyo/jarmyo/badge)](https://www.codefactor.io/repository/github/jarmyo/jarmyo)
 [![Build and deploy ASP.Net Core app to Azure Web App - JulianAugusto](https://github.com/jarmyo/jarmyo/actions/workflows/main_JulianAugusto.yml/badge.svg)](https://github.com/jarmyo/jarmyo/actions/workflows/main_JulianAugusto.yml)
 
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=jarmyo)
 
-### Hello world👋
+## Hello visitor👋
 
+### Contact forms
 [![Gmail](https://img.shields.io/badge/-GMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jarm.yo@gmail.com)
 [![Telegram](https://img.shields.io/badge/-TELEGRAM-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/jarmyo)
 [![LinkedIn](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shinjistudio/)
+
+### Skills
 ![JavaScript](https://img.shields.io/badge/javascript-323330.svg?&style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-1572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)
