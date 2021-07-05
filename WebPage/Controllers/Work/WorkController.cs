@@ -13,6 +13,7 @@ namespace Personal.Controllers
         // GET: Work
         public ActionResult Index()
         {
+            ViewBag.Titulo = "Portafolio";
             return View();
         }
 

@@ -6,6 +6,7 @@ namespace Personal.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Titulo = "Inicio";
             return View();
         }
     }

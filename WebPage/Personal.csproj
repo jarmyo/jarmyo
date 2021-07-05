@@ -6,19 +6,19 @@
     <TargetFramework>net5.0</TargetFramework>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>bin\</OutputPath>
-    <PackageProjectUrl>https://github.com/jarmyo/Personal</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/jarmyo/Personal</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/jarmyo/jarmyo</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jarmyo/jarmyo</RepositoryUrl>
     <AssemblyName>Personal</AssemblyName>
     <StartupObject>Personal.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>  
-  <ItemGroup>
-    <None Include="Properties\PublishProfiles\JulianAugusto - Web Deploy.pubxml" />        
+  </PropertyGroup>
+  <ItemGroup>        
     <None Include="wwwroot\assets\index.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>    
+    </None>        
+    <None Include="wwwroot\robots.txt" />    
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />

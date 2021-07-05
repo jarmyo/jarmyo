@@ -16,6 +16,7 @@ namespace Personal.Controllers
         }
         public ActionResult Index()
         {
+            ViewBag.Titulo = "Blog Personal";
             var model = new Personal.Models.BlogIndexModel();
             model.Entradas = _DbContext.Entradas.OrderByDescending(e => e.Fecha).ToList();
             return View(model);

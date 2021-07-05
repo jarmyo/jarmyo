@@ -1,6 +1,4 @@
-﻿@{
-    ViewBag.Titulo = "Inicio";
-}
+﻿<a href="https://github.com/jarmyo/jarmyo" target="_blank" id="fork-corner" class="fork-corner fc-pos-tr fc-animate fc-theme-github fc-size-small"></a>
 <div class="container my-5">
     <div class="row p-2 pb-0 pe-lg-0 pt-lg-0 align-items-center rounded-3 border shadow-lg">
         <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
@@ -8,12 +6,13 @@
             <p class="lead">Hola, bienvenido a mi pagina personal, soy un desarrollador de software especializado en tecnologías .NET y ecosistemas de Microsoft, tengo mas de 10 años creando software. Me encanta aprender y construir cosas nuevas.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
                 <a href="/Work" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Portafolio Profesional</a>
-                <a href="https://www.linkedin.com/in/shinjistudio/" class="btn btn-outline-success btn-lg px-4">LinkedIn</a>
+                <a href="/Blog" class="btn btn-secondary btn-lg px-4 me-md-2 fw-bold">Blog</a>
+                <a href="https://www.linkedin.com/in/shinjistudio/" class="btn btn-outline-success btn-lg px-4">CV</a>
             </div>
         </div>
         <div class="col-lg-4 offset-lg-1 p-0 position-relative overflow-hidden shadow-lg">
             <div class="position-lg-absolute top-0 left-0 overflow-hidden">
-                <img class="d-block rounded-lg-3" src="/assets/index.png" alt="" width="720">
+                <img class="d-block rounded-lg-3" src="/assets/index.png" alt="julian's picture'" width="720">
             </div>
         </div>
     </div>
@@ -24,16 +23,16 @@
             <h2>Actividades actuales</h2>
             <p>Pues no hago mucho, pero lo que hago, lo hago con pasión.</p>
             <ul class="icon-list">
-                <li>Desarrollo sistemas de seguridad para el <a href="https://www.aguascalientes.gob.mx/ssp/">Estado de aguascalientes</a></li>
+                <li>Desarrollo sistemas de seguridad para el <a href="https://www.aguascalientes.gob.mx/ssp/">Estado de Aguascalientes</a></li>
                 <li>Soy el responsable del desarrollo tecnologico de <a href="https://repos.mx">Repos Software</a></li>
                 <li><a href="https://www.freecodecamp.org/fccdc754e81-1b3c-43ac-b223-dce2f274982a">Aprendo sobre web development</a></li>
-                <li><a href="https://github.com/jarmyo/">Hago software por amor al arte</a></li>
+                <li><a href="https://github.com/jarmyo/">codifico software por amor al arte</a></li>
             </ul>
         </div>
 
         <div class="col-md-6">
             <h2>Contacto</h2>
-            <p>Suelo inscribirme en cualquier nuevo proyecto o red social que encuentro por internet  y tengo mas perfiles que el enlaminado de una bodega</p>
+            <p>Suelo inscribirme en cualquier nuevo proyecto o red social que encuentro por internet.</p>
             <ul class="icon-list">
                 <li><a href="https://www.facebook.com/shinjistudio/">Facebook</a></li>
                 <li><a href="https://twitter.com/BShinji">Twitter</a></li>
@@ -47,7 +46,7 @@
         </div>
         <div class="col-md-12">
             <h2>Otras cosas</h2>
-            <p>Con el 10% libre de tiempo que me queda, medio le hago a lo que caiga</p>
+            <p>Con el 10% libre de tiempo que me queda, intento no quedarme dormido</p>
             <ul class="icon-list">
                 <li>A veces escribo <a href="https://shinjistudio.blogspot.com/search/label/Poetico">poesia</a> y <a href="https://shinjistudio.blogspot.com/search/label/Filosofico">prosa</a> en mi blog personal desde el 2006</li>
                 <li>Me gusta tocar un poco la <a href="https://www.instagram.com/p/CF07YvKhl4r/">Guitarra</a></li>
@@ -56,3 +55,11 @@
         </div>
     </div>
 </div>
+@section Styles
+{
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-corner/dist/fork-corner.min.css">
+}
+@section HeadScripts
+{
+<script src="https://cdn.jsdelivr.net/npm/fork-corner/dist/fork-corner.min.js" defer></script>
+}

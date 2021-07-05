@@ -19,12 +19,9 @@ namespace Personal
         public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
-        {
-            Console.WriteLine("Configure Services");
-            services.AddControllersWithViews(ConfigureMvcOptions);
-            Console.WriteLine("AddControllersWithViews: OK");
-            services.AddEntityFrameworkSqlite().AddDbContext<SQLiteContext>();
-            Console.WriteLine("AddEntityFrameworkSqlite: OK");
+        {            
+            services.AddControllersWithViews(ConfigureMvcOptions);         
+            services.AddEntityFrameworkSqlite().AddDbContext<SQLiteContext>();            
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
