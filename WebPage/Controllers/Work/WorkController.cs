@@ -5,12 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Personal.Data;
 using Personal.Models;
+using System.IO;
+using System.Text;
+using Microsoft.CognitiveServices.Speech;
+using Microsoft.CognitiveServices.Speech.Audio;
 
 namespace Personal.Controllers
 {
     public class WorkController : Controller
     {
-        // GET: Work
         public ActionResult Index()
         {
             ViewBag.Titulo = "Portafolio";
@@ -58,8 +61,8 @@ namespace Personal.Controllers
         private readonly SQLiteContext _myDbContext = new();
         public ActionResult SQLite()
         {
-            var model = new SQLiteModel();            
-            model.Visitantes = _myDbContext.Visitantes.OrderByDescending(v=>v.Fecha).Take(50).ToList();
+            var model = new SQLiteModel();
+            model.Visitantes = _myDbContext.Visitantes.OrderByDescending(v => v.Fecha).Take(50).ToList();
             return View(model);
         }
 

@@ -5,7 +5,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Personal.Data;
-using System;
 
 namespace Personal
 {
@@ -19,7 +18,8 @@ namespace Personal
         public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
-        {            
+        {
+            KeyVault.SpeechKey = Configuration["speechKey1"];
             services.AddControllersWithViews(ConfigureMvcOptions);         
             services.AddEntityFrameworkSqlite().AddDbContext<SQLiteContext>();            
         }
