@@ -1,11 +1,12 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 namespace Personal.Controllers.Work
 {
     public partial class WorkController : Controller
     {
         public JsonResult WebApiExample(string id)
         {
+            //TODO: traducir. 
+            //Usar scoped attributes para mostrar esta función de ASP.NET
             var Respuesta = new ObjetoResultado();
             if (id != null)
             {
@@ -22,7 +23,7 @@ namespace Personal.Controllers.Work
                     }
                     else
                     {
-                        Respuesta.Name = "El valor no es un numero entero de 16Bits, debe ser mayor a " + Int16.MinValue.ToString() + " y menor que " + Int16.MaxValue.ToString();
+                        Respuesta.Name = "El valor no es un numero entero de 16Bits, debe ser mayor a " + short.MinValue.ToString() + " y menor que " + short.MaxValue.ToString();
                     }
                 }
                 else
@@ -35,11 +36,12 @@ namespace Personal.Controllers.Work
                 Respuesta.OK = true;
                 Respuesta.Id = 9876;
                 Respuesta.Name = "Respuesta de Ejemplo, agrege un parametro de valor entero de 16Bits (WebApiExample/99) para obtener el cuadrado del numero ";
-                Respuesta.Attributes.Add("Normalized", "true");
-                Respuesta.Attributes.Add("Webfriendly", "true");
-                Respuesta.Attributes.Add("NoTrash", "maybe");
+        
             }
 
+            Respuesta.Attributes.Add("scoped", "true");
+            Respuesta.Attributes.Add("transient", "true");
+            Respuesta.Attributes.Add("singleton", "true");
             return Json(Respuesta);
         }
     }

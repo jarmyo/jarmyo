@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Personal.Data;
 using Personal.Models;
-
 namespace Personal.Controllers
 {
     public partial class WorkController : Controller
@@ -14,7 +13,6 @@ namespace Personal.Controllers
             ViewBag.Titulo = "Portafolio";
             return View();
         }
-
         private readonly SQLiteContext _myDbContext = new();
         public ActionResult SQLite()
         {
@@ -22,7 +20,6 @@ namespace Personal.Controllers
             model.Visitantes = _myDbContext.Visitantes.OrderByDescending(v => v.Fecha).Take(50).ToList();
             return View(model);
         }
-
         public async Task<JsonResult> SQLiteAgregarVisitante(string id)
         {
             if (id != null)
