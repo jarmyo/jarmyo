@@ -1,24 +1,30 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Personal.Data;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Personal.Controllers
 {
     public class BlogController : Controller
     {
-        private readonly BlogContext _DbContext = new();
+        private readonly PersonalBlogContext personal = new();
+        private readonly BlogContext blogCtx = new();
         public BlogController()
         {
         }
         public ActionResult Index()
         {
+            ViewBag.Titulo = "Blog";
+            var model = new Models.BlogIndexModel();            
+            model.Entradas = blogCtx.Entradas.OrderByDescending(e => e.Fecha).ToList();
+            return View(model);
+        }
+
+        public ActionResult Personal()
+        {
             ViewBag.Titulo = "Blog Personal";
-            var model = new Personal.Models.BlogIndexModel();
-            model.Entradas = _DbContext.Entradas.OrderByDescending(e => e.Fecha).ToList();
+            var model = new Models.BlogIndexModel();
+           
+            model.Entradas = personal.Entradas.OrderByDescending(e => e.Fecha).ToList();
             return View(model);
         }
 
@@ -26,7 +32,7 @@ namespace Personal.Controllers
         {
             if (id != null)
             {
-                var entrada = _DbContext.Entradas.Find(id);
+                var entrada = personal.Entradas.Find(id);
                 return View(entrada);
             }
             else
@@ -58,7 +64,7 @@ namespace Personal.Controllers
             //    }
             //}
 
-           // _DbContext.SaveChanges();
+            // _DbContext.SaveChanges();
             return View();
         }
     }

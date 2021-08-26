@@ -11,7 +11,7 @@ namespace Personal
         {
             public async Task Generar(string s)
             {
-                var config = SpeechConfig.FromSubscription(KeyVault.SpeechKey, "southcentralus");
+                var config = SpeechConfig.FromSubscription(SpeechKey, "southcentralus");
                 config.SpeechSynthesisLanguage = "es-MX";
                 config.SpeechRecognitionLanguage = "es-MX";
                 config.SpeechSynthesisVoiceName = "es-MX-DaliaNeural";
