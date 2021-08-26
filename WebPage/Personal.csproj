@@ -11,6 +11,7 @@
     <AssemblyName>Personal</AssemblyName>
     <StartupObject>Personal.Program</StartupObject>
     <UserSecretsId>ef7b1b6d-e3df-4fa6-8a11-2807dcc0f0fa</UserSecretsId>
+    <RootNamespace>Personal</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <PlatformTarget>x86</PlatformTarget>
