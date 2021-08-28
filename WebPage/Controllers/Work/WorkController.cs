@@ -7,12 +7,12 @@ using Personal.Models;
 namespace Personal.Controllers.Work
 {
     public partial class WorkController : Controller
-    {        
-        IScopedService _scopedService;
-        ISingletonService _singletonService;
-        
+    {
+        readonly IScopedService _scopedService;
+        readonly ISingletonService _singletonService;
+
         public WorkController(IScopedService scoped, ISingletonService singleton)
-        {            
+        {
             _scopedService = scoped;
             _singletonService = singleton;
 
@@ -25,8 +25,10 @@ namespace Personal.Controllers.Work
         private readonly SQLiteContext _myDbContext = new();
         public ActionResult SQLite()
         {
-            var model = new SQLiteModel();
-            model.Visitantes = _myDbContext.Visitantes.OrderByDescending(v => v.Fecha).Take(50).ToList();
+            var model = new SQLiteModel
+            {
+                Visitantes = _myDbContext.Visitantes.OrderByDescending(v => v.Fecha).Take(50).ToList()
+            };
             return View(model);
         }
         public async Task<JsonResult> SQLiteAgregarVisitante(string id)
@@ -40,10 +42,12 @@ namespace Personal.Controllers.Work
 
                 try
                 {
-                    var visita = new Visitante();
-                    visita.Nombre = id;
-                    visita.Fecha = DateTime.Now;
-                    visita.Id = respuesta.GUID;
+                    var visita = new Visitante
+                    {
+                        Nombre = id,
+                        Fecha = DateTime.Now,
+                        Id = respuesta.GUID
+                    };
                     _myDbContext.Visitantes.Add(visita);
                     await _myDbContext.SaveChangesAsync();
                     respuesta.OK = true;

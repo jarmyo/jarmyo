@@ -14,17 +14,20 @@ namespace Personal.Controllers
         public ActionResult Index()
         {
             ViewBag.Titulo = "Blog";
-            var model = new Models.BlogIndexModel();            
-            model.Entradas = blogCtx.Entradas.OrderByDescending(e => e.Fecha).ToList();
+            var model = new Models.BlogIndexModel
+            {
+                Entradas = blogCtx.Entradas.OrderByDescending(e => e.Fecha).ToList()
+            };
             return View(model);
         }
 
         public ActionResult Personal()
         {
             ViewBag.Titulo = "Blog Personal";
-            var model = new Models.BlogIndexModel();
-           
-            model.Entradas = personal.Entradas.OrderByDescending(e => e.Fecha).ToList();
+            var model = new Models.BlogIndexModel
+            {
+                Entradas = personal.Entradas.OrderByDescending(e => e.Fecha).ToList()
+            };
             return View(model);
         }
 
