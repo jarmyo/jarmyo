@@ -5,8 +5,7 @@ namespace Personal.Controllers.Work
     {
         public JsonResult WebApiExample(string id)
         {
-            //TODO: traducir. 
-            //Usar scoped attributes para mostrar esta función de ASP.NET
+            //TODO: traducir.             
             var Respuesta = new ObjetoResultado();
             if (id != null)
             {
@@ -14,11 +13,11 @@ namespace Personal.Controllers.Work
                 Respuesta.OK = false;
                 if (long.TryParse(id, out long result2))
                 {
-                    if (short.TryParse(id, out short result))
+                    if (short.TryParse(id, out short numero))
                     {
-                        var ll = result * result;
-                        Respuesta.Name = "El cuadrado de " + result + " es " + ll.ToString();
-                        Respuesta.Id = result;
+                        var cuadrado = numero * numero;
+                        Respuesta.Name = $"El cuadrado de {numero} es {cuadrado}";
+                        Respuesta.Id = numero;
                         Respuesta.OK = true;
                     }
                     else
@@ -37,11 +36,9 @@ namespace Personal.Controllers.Work
                 Respuesta.Id = 9876;
                 Respuesta.Name = "Respuesta de Ejemplo, agrege un parametro de valor entero de 16Bits (WebApiExample/99) para obtener el cuadrado del numero ";
         
-            }
-
-            Respuesta.Attributes.Add("scoped", "true");
-            Respuesta.Attributes.Add("transient", "true");
-            Respuesta.Attributes.Add("singleton", "true");
+            }                        
+            Respuesta.Attributes.Add("scoped", _scopedService.GetID().ToString());
+            Respuesta.Attributes.Add("singleton", _singletonService.GetID().ToString());
             return Json(Respuesta);
         }
     }

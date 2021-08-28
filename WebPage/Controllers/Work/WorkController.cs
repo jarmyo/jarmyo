@@ -4,10 +4,19 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Personal.Data;
 using Personal.Models;
-namespace Personal.Controllers
+namespace Personal.Controllers.Work
 {
     public partial class WorkController : Controller
-    {
+    {        
+        IScopedService _scopedService;
+        ISingletonService _singletonService;
+        
+        public WorkController(IScopedService scoped, ISingletonService singleton)
+        {            
+            _scopedService = scoped;
+            _singletonService = singleton;
+
+        }
         public ActionResult Index()
         {
             ViewBag.Titulo = "Portafolio";
