@@ -21,9 +21,8 @@ namespace Personal
         {
             KeyVault.SpeechKey = Configuration["speechKey1"];
             services.AddControllersWithViews(ConfigureMvcOptions);         
-            services.AddEntityFrameworkSqlite().AddDbContext<SQLiteContext>();
-            services.AddTransient<ITransientService, ServicioEjemplo>();
-            services.AddScoped<IScopedService, ServicioEjemplo>();
+            services.AddEntityFrameworkSqlite().AddDbContext<SQLiteContext>();            
+            services.AddScoped<IScopedService, ServicioEjemplo>();            
             services.AddSingleton<ISingletonService, ServicioEjemplo>();
         }
 
