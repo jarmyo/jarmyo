@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Personal.Data;
 using System.Linq;
 
@@ -40,6 +41,17 @@ namespace Personal.Controllers
             }
             else
                 return NoContent();
+        }
+        /// <summary>
+        /// Crear un nuevo post.
+        /// </summary>
+        /// <returns></returns>        
+        [Authorize]
+        public ActionResult New()
+        {
+            //TODO: usar autorización y autenticación para publicar
+            //Esto es un micro CMS
+            return View();
         }
         public ActionResult Importar()
         {

@@ -11,10 +11,11 @@
     "Personal": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "http://localhost:7000",
+      "launchUrl": "http://localhost:7000/blog/new",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
+      "dotnetRunMessages": "true",
       "applicationUrl": "https://localhost:7001;http://localhost:7000"
     }
   }

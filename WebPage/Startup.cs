@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,9 +21,15 @@ namespace Personal
         public void ConfigureServices(IServiceCollection services)
         {
             KeyVault.SpeechKey = Configuration["speechKey1"];
-            services.AddControllersWithViews(ConfigureMvcOptions);         
-            services.AddEntityFrameworkSqlite().AddDbContext<SQLiteContext>();            
-            services.AddScoped<IScopedService, ServicioEjemplo>();            
+
+            services.AddEntityFrameworkSqlite().AddDbContext<SQLiteContext>();
+            services.AddDbContext<SecurityContext>();
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<SecurityContext>();
+            services.AddRazorPages();            
+            services.AddControllersWithViews(ConfigureMvcOptions);            
+            services.AddScoped<IScopedService, ServicioEjemplo>();
             services.AddSingleton<ISingletonService, ServicioEjemplo>();
         }
 
@@ -32,19 +39,26 @@ namespace Personal
             {
                 app.UseDeveloperExceptionPage();
             }
-          
-            using (var client = new SQLiteContext())
+            else
             {
-                client.Database.EnsureCreated();
+                app.UseHsts();
             }
 
             app.UseStaticFiles();
             app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                name: "areas",
+                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}/{offset?}"
+                );
+
+                endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
 

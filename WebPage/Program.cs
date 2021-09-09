@@ -16,8 +16,6 @@ namespace Personal
            Host.CreateDefaultBuilder(args)
              .ConfigureAppConfiguration((hostContext, builder) =>
              {
-                 // Add other providers for JSON, etc.
-
                  if (hostContext.HostingEnvironment.IsDevelopment())
                  {
                      builder.AddUserSecrets("ef7b1b6d-e3df-4fa6-8a11-2807dcc0f0fa");                     
