@@ -36,17 +36,17 @@ Here are some things about me:
 
 SKILLS
 
-- C# Development, I'm been working for about 10 years in **.NET technologies**: WinForms-WPF-WinUI, ASP.NET Webforms-Razor Pages, ClickOnce Deployment, Linq & EntityFramework. 
+- C# Development, I've been working for about 10 years in **.NET technologies**: WinForms-WPF-WinUI, ASP.NET Webforms-Razor Pages, ClickOnce Deployment, Linq & EntityFramework. 
 - SQL Server Database: Queries, Security, Triggers, Functions, Stored Procedures, Schemas, Indexes, etc.
 - Version control: Microsoft TeamFundation and Github.
-- I'm relatively new in [Web development](https://www.freecodecamp.org/fccdc754e81-1b3c-43ac-b223-dce2f274982a), but I'm able to build a responsibe web site with MVC, Razor and Webforms; Bootstrap, CSS and Vainilla Javascript or Typescript. Currently learnin vue.js
+- I'm relatively new in [Web development](https://www.freecodecamp.org/fccdc754e81-1b3c-43ac-b223-dce2f274982a), but I'm able to build a responsibe web site with MVC, Razor and Webforms; Bootstrap, CSS and Vainilla Javascript or Typescript. Currently learning vue.js
 - Tech Support: I have a lot of knowledge fixing Printers and PCs. Windows Server and services deployment (Domains, FTP, IIS, Policies, etc). And the basics of scripting in PowerShell and bash.
 - Languages: Spanish native and fluent. English: about 80%, Can write, read and listeng very well, but i have terrible accent and low to speak. French: just a little bit (a complete course in duolingo app).
 - Hacking skills: network sniffing, .NET disassembling, bruteforce logins, SQL injection.
 
 PROFESSIONAL BACKGROUND
-- I've working 10 years in the INM (Instituto Nacional de Migración) in Chiapas, as the director of informatics in the State, Building software for [administrative control](https://www.behance.net/gallery/4752143/Rol-de-Servicios), Telecomunications administration (CISCO and Nortel switches and BCM's, Ubiquiti antennas), all network congiguration (VPN and Domain Control) and Tech support.
-- I’m the CTO of [Repos Software](https://repos.mx) we have a POS for restaurants, we apply all our tech knowledge: Web. Mobil and Desktop development, Huge normalized Databases, Cloud Security, biometrics, online payments, deployment and support. We are only two people, but we have about 20 clients in México and USA.
+- I've working 10 years in the INM (Instituto Nacional de Migración) in Chiapas, as the director of informatics in the State, Building software for [administrative control](https://www.behance.net/gallery/4752143/Rol-de-Servicios), Telecomunications administration (CISCO and Nortel switches and BCM's, Ubiquiti antennas), all network configuration (VPN and Domain Control) and Tech support.
+- I’m the CTO of [Repos Software](https://repos.mx) we have a POS for restaurants, we apply all our tech knowledge: Web. Movile and Desktop development, Huge normalized Databases, Cloud Security, biometrics, online payments, deployment and support. We are only two people, but we have about 20 clients in México and USA.
 - I’m currently working on Secretaría de Seguridad Pública del Estado de Aguascalientes, in a In-House security development.
 
 - 🔭 I’m currently working on biometric control software for goverment of Aguascalientes State in México
