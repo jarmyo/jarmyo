@@ -20,6 +20,7 @@ namespace Personal.Controllers.Work
         }
         public async Task<JsonResult> SQLiteAgregarVisitante(string id)
         {
+            //This function is called in a fecth
             if (id != null)
             {
                 if (id.Length > 50) //chop chop chop      
