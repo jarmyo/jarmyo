@@ -1,10 +1,10 @@
 ﻿using System;
 namespace Personal
 {
-    public class ServicioEjemplo : IScopedService, ISingletonService
+    public class ExampleService : IScopedService, ISingletonService
     {
         Guid id;
-        public ServicioEjemplo()
+        public ExampleService()
         {
             id = Guid.NewGuid();
         }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 namespace Personal.Controllers
 {
-    public class ObjetoResultado
+    public class ResultObject
     {
-        public ObjetoResultado()
+        public ResultObject()
         {
             GUID = Guid.NewGuid().ToString();
             Attributes = new Dictionary<string, string>();
