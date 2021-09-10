@@ -7,7 +7,8 @@ function demoFunction() {
     //DOM
     //Create a modal in bootstrap.
     // Modify elementes in the model
-    var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+    var myModal = new bootstrap.Modal(document.getElementById('javascriptModal'));
+    myModal.show();
     //Promises.
     //Fecth an api; local API and public API
     //Closures.
@@ -20,7 +21,6 @@ function demoFunction() {
     }
     console.log(c1.ShowValue());
     console.log(c2.ShowValue());
-    alert("All the magic is in te console!");
 }
 function ClosureFunction(step) {
     var counter = 0;
