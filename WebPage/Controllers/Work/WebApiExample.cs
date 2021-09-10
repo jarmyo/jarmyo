@@ -12,12 +12,6 @@ namespace Personal.Controllers.Work
         {
             //TODO: translate, globalization            
             //TODO: max number of request.
-            var headerdata = string.Empty;
-            foreach (var header in Request.Headers)
-            {
-                headerdata += header.Key + "=" + header.Value + ";";
-            }
-
             var response = new ResultObject();
             if (id != null)
             {
@@ -50,9 +44,13 @@ namespace Personal.Controllers.Work
                 response.Name = "this is an example response, add an 16Bits integer (WebApiExample/99) to obtain the square root of a number";
             }
 
-            response.Attributes.Add("RequestHeaders:", headerdata);
-            response.Attributes.Add("scopedGUID", _scopedService.GetID().ToString());
+            response.Attributes.Add("scoped-GUID", _scopedService.GetID().ToString());
             response.Attributes.Add("singletonGUID", _singletonService.GetID().ToString());
+            foreach (var header in Request.Headers)
+            {
+                response.Attributes.Add("Header-" + header.Key, header.Value);
+            }
+
             return Json(response);
         }
     }
