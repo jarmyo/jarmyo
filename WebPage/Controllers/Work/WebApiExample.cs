@@ -10,42 +10,50 @@ namespace Personal.Controllers.Work
         /// <returns>square root of given number</returns>
         public JsonResult WebApiExample(string id)
         {
-            //TODO: traducir.
-            //TODO: obtener propiedades del header.
-            //TODO: controlar el numero maximo de solicitudes.
-            var Respuesta = new ObjetoResultado();
+            //TODO: translate, globalization            
+            //TODO: max number of request.
+            var headerdata = string.Empty;
+            foreach (var header in Request.Headers)
+            {
+                headerdata += header.Key + "=" + header.Value + ";";
+            }
+
+            var response = new ResultObject();
             if (id != null)
             {
-                Respuesta.Id = -1;
-                Respuesta.OK = false;
+                response.Id = -1;
+                response.OK = false;
                 if (long.TryParse(id, out _))
                 {
-                    if (short.TryParse(id, out short numero))
+                    if (short.TryParse(id, out short number))
                     {
-                        var cuadrado = numero * numero;
-                        Respuesta.Name = $"El cuadrado de {numero} es {cuadrado}";
-                        Respuesta.Id = numero;
-                        Respuesta.OK = true;
+                        var square = number * number;
+                        //square = (int)System.Math.Sqrt(number);
+                        response.Name = $"The Square root of {number} is {square}";
+                        response.Id = number;
+                        response.OK = true;
                     }
                     else
                     {
-                        Respuesta.Name = $"El valor no es un numero entero de 16Bits, debe ser mayor a {short.MinValue} y menor que {short.MaxValue}";
+                        response.Name = $"El valor no es un numero entero de 16Bits, debe ser mayor a {short.MinValue} y menor que {short.MaxValue}";
                     }
                 }
                 else
                 {
-                    Respuesta.Name = "El valor no es un numero valido, validé con Int64.TryParse, puede que si sea un numero pero muy grande y pude provocar desbordamiento";
+                    response.Name = "El valor no es un numero valido, validé con Int64.TryParse, puede que si sea un numero pero muy grande y pude provocar desbordamiento";
                 }
             }
             else
             {
-                Respuesta.OK = true;
-                Respuesta.Id = 9876;
-                Respuesta.Name = "Respuesta de Ejemplo, agrege un parametro de valor entero de 16Bits (WebApiExample/99) para obtener el cuadrado del numero ";
+                response.OK = true;
+                response.Id = 9876;
+                response.Name = "this is an example response, add an 16Bits integer (WebApiExample/99) to obtain the square root of a number";
             }
-            Respuesta.Attributes.Add("scoped", _scopedService.GetID().ToString());
-            Respuesta.Attributes.Add("singleton", _singletonService.GetID().ToString());
-            return Json(Respuesta);
+
+            response.Attributes.Add("RequestHeaders:", headerdata);
+            response.Attributes.Add("scopedGUID", _scopedService.GetID().ToString());
+            response.Attributes.Add("singletonGUID", _singletonService.GetID().ToString());
+            return Json(response);
         }
     }
 }
