@@ -1,16 +1,22 @@
 ﻿function demoFunction(): void {
     alert("All the magic is in te console!");
-    //TODO: Create an example that uses all concepts.
-    //Datatypes
+    //TODO: Create an example that uses all concepts.    
+
 
     //inherance.
+    //Representation of the objects.
 
     //DOM
     //Create a modal in bootstrap.
+    // Modify elementes in the model
 
     //Promises.
+    //Fecth an api; local API and public API
+
 
     //Closures.
+    //To transform the elements fetched
+
     var c1 = ClosureFunction(2);
     var c2 = ClosureFunction(4);
 
