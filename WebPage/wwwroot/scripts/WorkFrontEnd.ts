@@ -1,6 +1,8 @@
 ﻿function demoFunction(): void {
-    alert("All the magic is in te console!");
-    //TODO: Create an example that uses all concepts.    
+
+    console.clear();
+    console.log("OK, there are some things i can do in javascript");
+    //TODO: Create an example that uses all concepts.
 
 
     //inherance.
@@ -26,6 +28,7 @@
     }
     console.log(c1.ShowValue());
     console.log(c2.ShowValue());
+    alert("All the magic is in te console!");
 }
 
 function ClosureFunction(step: number) {
