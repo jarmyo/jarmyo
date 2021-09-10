@@ -29,8 +29,8 @@ namespace Personal
                 .AddEntityFrameworkStores<SecurityContext>();
             services.AddRazorPages();            
             services.AddControllersWithViews(ConfigureMvcOptions);            
-            services.AddScoped<IScopedService, ServicioEjemplo>();
-            services.AddSingleton<ISingletonService, ServicioEjemplo>();
+            services.AddScoped<IScopedService, ExampleService>();
+            services.AddSingleton<ISingletonService, ExampleService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
