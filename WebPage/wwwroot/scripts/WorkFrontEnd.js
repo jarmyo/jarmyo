@@ -7,6 +7,7 @@ function demoFunction() {
     //DOM
     //Create a modal in bootstrap.
     // Modify elementes in the model
+    var myModal = new bootstrap.Modal(document.getElementById('myModal'));
     //Promises.
     //Fecth an api; local API and public API
     //Closures.

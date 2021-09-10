@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function AgregarVisitante() {
     var campoNombre = document.getElementById('CampoNombre');
     var nombre = campoNombre.value;
@@ -22,4 +20,5 @@ function Columna(texto) {
     cell.innerText = texto;
     return cell;
 }
+export {};
 //# sourceMappingURL=WorkSQLite.js.map
