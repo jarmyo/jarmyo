@@ -38,7 +38,7 @@ namespace Personal.Controllers.Work
                 if (id.Length > 50) //chop chop chop      
                     id = id.Substring(0, 50);
 
-                var respuesta = new ObjetoResultado { OK = false, Name = id };
+                var respuesta = new ResultObject { OK = false, Name = id };
 
                 try
                 {
@@ -61,7 +61,7 @@ namespace Personal.Controllers.Work
             }
             else
             {
-                var respuesta = new ObjetoResultado { OK = false, Name = "No ha especificador un nombre" };
+                var respuesta = new ResultObject { OK = false, Name = "No ha especificador un nombre" };
                 return Json(respuesta);
             }
         }
