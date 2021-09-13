@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JulianAugusto.com", "WebPag
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{C318BB57-81F3-4DF2-B6FA-AD066F6E713B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reactPayground", "Samples\react\reactPayground\reactPayground.csproj", "{E7F17B3E-C65C-4D31-904C-C635F3545605}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,9 +19,16 @@ Global
 		{A5ACCD49-4314-44F3-9D69-5F1B01834460}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5ACCD49-4314-44F3-9D69-5F1B01834460}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5ACCD49-4314-44F3-9D69-5F1B01834460}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7F17B3E-C65C-4D31-904C-C635F3545605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7F17B3E-C65C-4D31-904C-C635F3545605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7F17B3E-C65C-4D31-904C-C635F3545605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7F17B3E-C65C-4D31-904C-C635F3545605}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E7F17B3E-C65C-4D31-904C-C635F3545605} = {C318BB57-81F3-4DF2-B6FA-AD066F6E713B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {58044A62-9C06-41AB-9CF9-4D158FFDA9DB}
