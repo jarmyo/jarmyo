@@ -2,28 +2,28 @@
 <div class="container my-2">
     <div class="row">
         <div class="col">
-            <h1>Base de Datos SQLite en ASP.NET Core</h1>
-            <p>Este servidor aloja un archivo de SQLite para probar el guardado de datos persistente.</p>
+            <h1>SQLite DataBase in ASP.NET Core</h1>
+            <p>This server host and SQLite data file to show how to store persistent data.</p>
             <div class="form">
                 <div class="row">
                     <div class="mb-3">
-                        <label for="CampoNombre" class="form-label">Nombre</label>
-                        <input class="form-control" type="Text" id="CampoNombre" maxlength="50" />
+                        <label for="CampoNombre" class="form-label">Your Name</label>
+                        <input class="form-control" type="Text" id="CampoNombre" maxlength="50" placeholder="your visitor name here" />
                     </div>
                     <div class="mb-3">
-                        <button class="btn btn-primary" type="button" onclick="AgregarVisitante()">Agregar</button>
+                        <button class="btn btn-primary" type="button" onclick="AgregarVisitante()">Add</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col">
-            <h2>Ultimos 50 Visitantes</h2>
+            <h2>Last 50 Visitors</h2>
             <table class="table">
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Fecha</th>
-                        <th>Nombre</th>
+                        <th>Date</th>
+                        <th>Name</th>
                     </tr>
                 </thead>
                 <tbody id="ListaVisitantes">
