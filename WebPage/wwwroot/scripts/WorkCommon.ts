@@ -1,4 +1,4 @@
-﻿export interface ObjetoResultado {
+﻿interface ObjectResult {
     ok: boolean;
     guid: string;
     id: number;

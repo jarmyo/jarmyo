@@ -1,14 +1,14 @@
 function AgregarVisitante() {
-    var campoNombre = document.getElementById('CampoNombre');
-    var nombre = campoNombre.value;
-    fetch('/Work/SQLiteAgregarVisitante/' + nombre).then(function (result) { return result.json(); }).then(function (result) {
+    var nameField = document.getElementById('CampoNombre');
+    var nameData = nameField.value;
+    fetch('/Work/SQLiteAgregarVisitante/' + nameData).then(function (result) { return result.json(); }).then(function (result) {
         if (result.ok == true) {
-            var lista = document.getElementById('ListaVisitantes');
-            var tr = document.createElement('tr');
-            tr.appendChild(Columna(result.guid));
-            tr.appendChild(Columna(result.attributes['Fecha']));
-            tr.appendChild(Columna(result.name));
-            lista.appendChild(tr);
+            var visitorsTable = document.getElementById('ListaVisitantes');
+            var newRow = document.createElement('tr');
+            newRow.appendChild(Columna(result.guid));
+            newRow.appendChild(Columna(result.attributes['Fecha']));
+            newRow.appendChild(Columna(result.name));
+            visitorsTable.appendChild(newRow);
         }
         else {
             console.log(result.name);
@@ -20,5 +20,4 @@ function Columna(texto) {
     cell.innerText = texto;
     return cell;
 }
-export {};
 //# sourceMappingURL=WorkSQLite.js.map

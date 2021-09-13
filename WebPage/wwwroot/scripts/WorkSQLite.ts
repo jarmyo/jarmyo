@@ -1,20 +1,19 @@
-﻿import { ObjetoResultado } from "./WorkCommon";
-function AgregarVisitante(): void {
+﻿function AgregarVisitante(): void {
 
-    var campoNombre = <HTMLInputElement>document.getElementById('CampoNombre');
-    var nombre = campoNombre.value;
+    var nameField = <HTMLInputElement>document.getElementById('CampoNombre');
+    var nameData = nameField.value;
 
-    fetch('/Work/SQLiteAgregarVisitante/' + nombre).then(
+    fetch('/Work/SQLiteAgregarVisitante/' + nameData).then(
         function (result) { return result.json() }
     ).then(
-        function (result: ObjetoResultado) {
+        function (result: ObjectResult) {
             if (result.ok == true) {
-                var lista = document.getElementById('ListaVisitantes');
-                var tr = document.createElement('tr');
-                tr.appendChild(Columna(result.guid))
-                tr.appendChild(Columna(result.attributes['Fecha']));
-                tr.appendChild(Columna(result.name));
-                lista.appendChild(tr);
+                var visitorsTable = document.getElementById('ListaVisitantes');
+                var newRow = document.createElement('tr');
+                newRow.appendChild(Columna(result.guid))
+                newRow.appendChild(Columna(result.attributes['Fecha']));
+                newRow.appendChild(Columna(result.name));
+                visitorsTable.appendChild(newRow);
             }
             else {
                 console.log(result.name)
