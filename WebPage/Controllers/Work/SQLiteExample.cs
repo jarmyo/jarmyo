@@ -12,6 +12,7 @@ namespace Personal.Controllers.Work
         private readonly SQLiteContext _myDbContext = new();
         public ActionResult SQLite()
         {
+            ViewBag.Title = "SQLite WebForm";
             var model = new SQLiteModel
             {
                 Visitantes = _myDbContext.Visitantes.OrderByDescending(v => v.Fecha).Take(50).ToList()
