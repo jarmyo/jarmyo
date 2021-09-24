@@ -4,3 +4,5 @@
 .vs/Personal/DesignTimeBuild/.dtbcache.v2
 WebPage/wwwroot/data/Security.db
 *.js.map
+.vs/Personal/v17/Preview/*
+Samples/LearningCPP/Debug/*

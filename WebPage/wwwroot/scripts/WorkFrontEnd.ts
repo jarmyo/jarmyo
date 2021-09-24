@@ -3,7 +3,6 @@
     console.clear();
     console.log("OK, there are some things i can do in javascript");
     //TODO: Create an example that uses all concepts.
-
     createModalGUI();
     //inherance.    
     //DOM

@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e7f17b3e-c65c-4d31-904c-c635f3545605": {
+      "ProjectGuid": "e7f17b3e-c65c-4d31-904c-c635f3545605",
+      "DisplayName": "reactPayground",
+      "ColorIndex": 0
+    },
+    "a5accd49-4314-44f3-9d69-5f1b01834460": {
+      "ProjectGuid": "a5accd49-4314-44f3-9d69-5f1b01834460",
+      "DisplayName": "JulianAugusto.com",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "c92f97b4-22de-4aaa-8812-cc424d8ae574": {
+      "ProjectGuid": "c92f97b4-22de-4aaa-8812-cc424d8ae574",
+      "DisplayName": "LearningCPP",
+      "ColorIndex": 2
+    },
+    "b48d9f3e-2af1-4e1c-ab68-8ad17b452f82": {
+      "ProjectGuid": "b48d9f3e-2af1-4e1c-ab68-8ad17b452f82",
+      "DisplayName": "LearningPhyton",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
