@@ -25,7 +25,12 @@
       "ProjectGuid": "b48d9f3e-2af1-4e1c-ab68-8ad17b452f82",
       "DisplayName": "LearningPhyton",
       "ColorIndex": 3
+    },
+    "c318bb57-81f3-4df2-b6fa-ad066f6e713b": {
+      "ProjectGuid": "c318bb57-81f3-4df2-b6fa-ad066f6e713b",
+      "DisplayName": "Samples",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 5
 }
