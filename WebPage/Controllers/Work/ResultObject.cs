@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-namespace Personal.Controllers
+﻿namespace Personal.Controllers
 {
     public class ResultObject
     {

@@ -1,5 +1,4 @@
-﻿using System;
-namespace Personal
+﻿namespace Personal
 {
     public interface IScopedService
     {

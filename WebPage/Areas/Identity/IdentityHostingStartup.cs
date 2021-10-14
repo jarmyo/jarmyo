@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Hosting;
-[assembly: HostingStartup(typeof(Personal.Areas.Identity.IdentityHostingStartup))]
+﻿[assembly: HostingStartup(typeof(Personal.Areas.Identity.IdentityHostingStartup))]
 namespace Personal.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup

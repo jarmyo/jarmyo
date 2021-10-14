@@ -1,12 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Personal.Data;
-
 namespace Personal
 {
     public class Startup
@@ -15,9 +9,7 @@ namespace Personal
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
-
         public void ConfigureServices(IServiceCollection services)
         {
             KeyVault.SpeechKey = Configuration["speechKey1"];
@@ -32,7 +24,6 @@ namespace Personal
             services.AddScoped<IScopedService, ExampleService>();
             services.AddSingleton<ISingletonService, ExampleService>();
         }
-
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -61,7 +52,6 @@ namespace Personal
                 endpoints.MapRazorPages();
             });
         }
-
         private void ConfigureMvcOptions(MvcOptions mvcOptions)
         {
         }

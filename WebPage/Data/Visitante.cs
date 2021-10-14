@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
 namespace Personal.Data
 {
     public class Visitante : ITabla

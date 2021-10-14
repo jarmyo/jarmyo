@@ -1,6 +1,4 @@
 ﻿using Microsoft.CognitiveServices.Speech;
-using System;
-using System.Threading.Tasks;
 
 namespace Personal
 {

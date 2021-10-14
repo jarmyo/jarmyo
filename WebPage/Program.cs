@@ -1,7 +1,5 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-
+using System.Reflection;
+[assembly: AssemblyVersionAttribute("1.0.1")]
 namespace Personal
 {
     public class Program
@@ -11,7 +9,6 @@ namespace Personal
             var host = CreateHostBuilder(args).Build();
             host.Run();
         }
-
         public static IHostBuilder CreateHostBuilder(string[] args) =>
            Host.CreateDefaultBuilder(args)
              .ConfigureAppConfiguration((hostContext, builder) =>

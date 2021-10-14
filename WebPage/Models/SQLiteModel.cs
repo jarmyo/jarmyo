@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using Personal.Data;
-
+﻿using Personal.Data;
 namespace Personal.Models
 {
     public class SQLiteModel
