@@ -1,13 +1,14 @@
-﻿<a href="https://github.com/jarmyo/jarmyo" target="_blank" id="fork-corner" class="fork-corner fc-pos-tr fc-animate fc-theme-github fc-size-small"></a>
-
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+<a href="https://github.com/jarmyo/jarmyo" target="_blank" id="fork-corner" class="fork-corner fc-pos-tr fc-animate fc-theme-github fc-size-small"></a>
 <div class="container my-5">
     <div class="row p-4 pb-0 pe-lg-0 pt-lg-2 align-items-center rounded-3 border shadow-lg">
         <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
             <h1 class="display-4 fw-bold lh-1">JULIAN AUGUSTO RUÍZ MARTINEZ</h1>
-            <p class="lead">Hello, welcome to my personal page, I am a software developer specialized in .NET technologies and Microsoft ecosystems, I have more than 10 years creating software. I love learning and building new things.</p>
+            <p class="lead">@Localizer["Lead"]</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-                <a href="/Blog" class="btn btn-info btn-lg px-4 me-md-2 fw-bold">Blog</a>
-                <a href="/Work" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Work Playgroud</a>
+                <a href="/Blog" class="btn btn-info btn-lg px-4 me-md-2 fw-bold">@Localizer["Blog"]</a>
+                <a href="/Work" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">@Localizer["Work Playgroud"]</a>
                 <a href="/Curriculum" class="btn btn-outline-success btn-lg px-4">CV</a>
             </div>
         </div>
@@ -19,18 +20,18 @@
 <div class="container my-5">
     <div class="row g-5">
         <div class="col-md-6">
-            <h2>Current activities</h2>
+            <h2>@Localizer["Current activities"]</h2>
             <p>Well, I don't do much, but what I do, I do with passion.</p>
             <ul>
+                <li>Web Development at <a href="https://education.ti.com">Texas Instruments</a></li>
                 <li>Development of biometric security systems at <a href="https://www.aguascalientes.gob.mx/ssp/">Aguascalientes Goverment</a></li>
                 <li>I am responsible for the technological development of <a href="https://repos.mx">Repos Software</a></li>
                 <li><a href="https://www.freecodecamp.org/fccdc754e81-1b3c-43ac-b223-dce2f274982a">I'm learning about web development</a></li>
                 <li><a href="https://github.com/jarmyo/">I code software for the love of art</a></li>
             </ul>
         </div>
-
         <div class="col-md-6">
-            <h2>Social Media</h2>
+            <h2>@Localizer["Social Media"]</h2>
             <p>There are my personal social media</p>
             <div class="row p-4">
                 <div class="col fs-2"><a href="https://www.facebook.com/shinjistudio/"><i class="bi bi-facebook"></i></a></div>
@@ -38,7 +39,7 @@
                 <div class="col fs-2"><a href="https://www.instagram.com/juliangramer/"><i class="bi bi-instagram"></i></a></div>
                 <div class="col fs-2"><a href="https://www.youtube.com/channel/UC3bChlMRaPeKnqhGD9QF1-w"><i class="bi bi-youtube"></i></a></div>
                 <div class="col fs-2"><a href="https://www.linkedin.com/in/shinjistudio/"><i class="bi bi-linkedin"></i></a></div>
-                <div class="col fs-2"><a href="https://www.youtube.com/channel/UC3bChlMRaPeKnqhGD9QF1-w"><i class="bi bi-twitch"></i></a></div>                
+                <div class="col fs-2"><a href="https://www.youtube.com/channel/UC3bChlMRaPeKnqhGD9QF1-w"><i class="bi bi-twitch"></i></a></div>
             </div>
             <p>A lot of random stuff</p>
             <ul>
@@ -49,15 +50,14 @@
             </ul>
         </div>
         <div class="col-md-12">
-            <h2>Other</h2>
-            <p>more random stuff</p>
+            <h2>@Localizer["Other"]</h2>
+            <p>@Localizer["more random stuff"]</p>
             <ul>
                 <li>I write <a href="https://shinjistudio.blogspot.com/search/label/Poetico">poetry</a> and <a href="https://shinjistudio.blogspot.com/search/label/Filosofico">prose</a> at my personal blog since 2006</li>
                 <li>I like to play <a href="https://www.instagram.com/p/CF07YvKhl4r/">Guitar</a></li>
                 <li>I like to compose <a href="/assets/mas.mp3">rare instrumental minimal music</a> and other <a href="/assets/zapato.mp3">type of music</a> </li>
             </ul>
-             <audio controls src="/assets/mas.mp3">
-            Your browser does not support the <code>audio</code> element. </audio>
+            <audio controls src="/assets/mas.mp3">Your browser does not support the <code>audio</code> element. </audio>
         </div>
     </div>
 </div>
