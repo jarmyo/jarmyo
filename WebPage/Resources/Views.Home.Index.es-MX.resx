@@ -121,7 +121,7 @@
     <value>Diario</value>
   </data>
   <data name="Books" xml:space="preserve">
-    <value>Livres</value>
+    <value>Libros</value>
   </data>
   <data name="Current activities" xml:space="preserve">
     <value>En que me ocupo</value>
@@ -136,7 +136,7 @@
     <value>Me gusta componer &lt;a href="/assets/mas.mp3"&gt;musica instrumental minimalista &lt;/a&gt; y otros&lt;a href="/assets/zapato.mp3"&gt;tipos de música&lt;/a&gt;</value>
   </data>
   <data name="Languages" xml:space="preserve">
-    <value>Langues</value>
+    <value>Idiomas</value>
   </data>
   <data name="Lead" xml:space="preserve">
     <value>Hola, bienvenido a mi pagina personal, soy un desarrollador de software especializado en tecnologías .NET y ecosistemas de Microsoft, tengo mas de 10 años creando software. Disfruto aprendiendo y creando cosas nuevas.</value>
@@ -163,7 +163,7 @@
     <value>Mis redes sociales</value>
   </data>
   <data name="Movies" xml:space="preserve">
-    <value>Films</value>
+    <value>Peliculas</value>
   </data>
   <data name="Other" xml:space="preserve">
     <value>Otras actividades</value>

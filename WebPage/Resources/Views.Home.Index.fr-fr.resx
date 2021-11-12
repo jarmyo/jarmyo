@@ -118,7 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Blog" xml:space="preserve">
-    <value>Blog</value>
+    <value>Journal</value>
+  </data>
+  <data name="Books" xml:space="preserve">
+    <value>Livres</value>
   </data>
   <data name="Current activities" xml:space="preserve">
     <value>Activités en cours</value>
@@ -131,6 +134,9 @@
   </data>
   <data name="Interest3" xml:space="preserve">
     <value>J'aime composer de la &lt;a href="/assets/mas.mp3"&gt;musique minimale instrumentale rare&lt;/a&gt; et d'autres &lt;a href="/assets/zapato.mp3"&gt;type de musique&lt;/a&gt;</value>
+  </data>
+  <data name="Languages" xml:space="preserve">
+    <value>Langues</value>
   </data>
   <data name="Lead" xml:space="preserve">
     <value>Bonjour, bienvenue sur ma page personnelle, je suis un développeur de software spécialisé dans les technologies .NET et les écosystèmes Microsoft, j’ai plus de 10 ans de création de software. J’aime apprendre et construire de nouvelles choses.</value>
@@ -156,11 +162,14 @@
   <data name="LeadSocial" xml:space="preserve">
     <value>Il y a mes médias sociaux personnels</value>
   </data>
+  <data name="Movies" xml:space="preserve">
+    <value>Films</value>
+  </data>
   <data name="Other" xml:space="preserve">
     <value>Autre</value>
   </data>
   <data name="Other2" xml:space="preserve">
-    <value>Beaucoup de choses aléatoires</value>
+    <value>beaucoup de choses aléatoires</value>
   </data>
   <data name="Other3" xml:space="preserve">
     <value>des choses plus aléatoires</value>
