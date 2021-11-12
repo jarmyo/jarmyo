@@ -126,6 +126,15 @@
   <data name="Current activities" xml:space="preserve">
     <value>En que me ocupo</value>
   </data>
+  <data name="Interest1" xml:space="preserve">
+    <value>Escribo &lt;a href="https://shinjistudio.blogspot.com/search/label/Poetico"&gt;poesía&lt;/a&gt; y &lt;a href="https://shinjistudio.blogspot.com/search/label/Filosofico"&gt;prosa&lt;/a&gt; en mi blog personal desde 2006</value>
+  </data>
+  <data name="Interest2" xml:space="preserve">
+    <value>Me gusta tocar la &lt;a href="https://www.instagram.com/p/CF07YvKhl4r/"&gt;Guitarra&lt;/a&gt;</value>
+  </data>
+  <data name="Interest3" xml:space="preserve">
+    <value>Me gusta componer &lt;a href="/assets/mas.mp3"&gt;musica instrumental minimalista &lt;/a&gt; y otros&lt;a href="/assets/zapato.mp3"&gt;tipos de música&lt;/a&gt;</value>
+  </data>
   <data name="Languages" xml:space="preserve">
     <value>Langues</value>
   </data>

@@ -126,6 +126,15 @@
   <data name="Current activities" xml:space="preserve">
     <value>Current activities</value>
   </data>
+  <data name="Interest1" xml:space="preserve">
+    <value>I write &lt;a href="https://shinjistudio.blogspot.com/search/label/Poetico"&gt;poetry&lt;/a&gt; and &lt;a href="https://shinjistudio.blogspot.com/search/label/Filosofico"&gt;prose&lt;/a&gt; at my personal blog since 2006</value>
+  </data>
+  <data name="Interest2" xml:space="preserve">
+    <value>I like to play &lt;a href="https://www.instagram.com/p/CF07YvKhl4r/"&gt;Guitar&lt;/a&gt;</value>
+  </data>
+  <data name="Interest3" xml:space="preserve">
+    <value>I like to compose &lt;a href="/assets/mas.mp3"&gt;rare instrumental minimal music&lt;/a&gt; and other &lt;a href="/assets/zapato.mp3"&gt;type of music&lt;/a&gt;</value>
+  </data>
   <data name="Languages" xml:space="preserve">
     <value>Languages</value>
   </data>
