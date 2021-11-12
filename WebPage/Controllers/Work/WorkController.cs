@@ -9,7 +9,6 @@ namespace Personal.Controllers.Work
         {
             _scopedService = scoped;
             _singletonService = singleton;
-
         }
         public ActionResult Index()
         {

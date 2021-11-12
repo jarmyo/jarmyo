@@ -5,7 +5,6 @@ namespace Personal.Controllers.Work
 {
     public partial class WorkController : Controller
     {
-      
         private readonly SQLiteContext _myDbContext = new();
         public ActionResult SQLite()
         {

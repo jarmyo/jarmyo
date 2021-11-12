@@ -4,7 +4,7 @@
     console.log("OK, there are some things i can do in javascript");
     //TODO: Create an example that uses all concepts.
     createModalGUI();
-    //inherance.    
+    //inherance.
     //DOM
     var myModal = new bootstrap.Modal(document.getElementById('javascriptModal'))
     myModal.show();
@@ -17,7 +17,7 @@
         c2.Increment();
     }
     //console.log(c1.ShowValue());
-    //console.log(c2.ShowValue());   
+    //console.log(c2.ShowValue());
 }
 
 function createModalGUI(): void {
@@ -54,7 +54,7 @@ function createModalGUI(): void {
     container.appendChild(inputGroup);
 }
 
-function SendDataToAPI() : void {
+function SendDataToAPI(): void {
     //fetch data from API, obtain from FORM
     var valueField = <HTMLInputElement>document.getElementById('sendValue');
     var container = <HTMLDivElement>document.getElementById('secondcontainerGrid');
@@ -66,13 +66,13 @@ function SendDataToAPI() : void {
         function (result: ObjectResult) {
             if (result.ok != true) {
                 outputString = "Error: ";
-            }            
+            }
             outputString += result.name;
             console.log(outputString);
             container.innerText = outputString;
         }
     );
-    
+
 }
 
 function ClosureFunction(step: number) {

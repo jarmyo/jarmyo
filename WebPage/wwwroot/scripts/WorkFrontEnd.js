@@ -3,7 +3,7 @@ function demoFunction() {
     console.log("OK, there are some things i can do in javascript");
     //TODO: Create an example that uses all concepts.
     createModalGUI();
-    //inherance.    
+    //inherance.
     //DOM
     var myModal = new bootstrap.Modal(document.getElementById('javascriptModal'));
     myModal.show();
@@ -14,7 +14,7 @@ function demoFunction() {
         c2.Increment();
     }
     //console.log(c1.ShowValue());
-    //console.log(c2.ShowValue());   
+    //console.log(c2.ShowValue());
 }
 function createModalGUI() {
     var container = document.getElementById('containerGrid');
