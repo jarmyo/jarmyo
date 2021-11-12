@@ -117,25 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Blog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
   <data name="Current activities" xml:space="preserve">
-    <value>En que me ocupo</value>
+    <value>Activités en cours</value>
   </data>
   <data name="Lead" xml:space="preserve">
     <value>Bonjour, bienvenue sur ma page personnelle, je suis un développeur de software spécialisé dans les technologies .NET et les écosystèmes Microsoft, j’ai plus de 10 ans de création de software. J’aime apprendre et construire de nouvelles choses.</value>
   </data>
   <data name="LeadActivities" xml:space="preserve">
-    <value />
+    <value>Eh bien, je ne fais pas grand-chose, mais ce que je fais, je le fais avec passion.</value>
+  </data>
+  <data name="LeadActivities1" xml:space="preserve">
+    <value>Développement Web au &lt;a href="https://education.ti.com"&gt;Texas Instruments&lt;/a&gt;</value>
+  </data>
+  <data name="LeadActivities2" xml:space="preserve">
+    <value>Développement de systèmes de sécurité biométrique au &lt;a href="https://www.aguascalientes.gob.mx/ssp/"&gt;Aguascalientes Goverment&lt;/a&gt;</value>
+  </data>
+  <data name="LeadActivities3" xml:space="preserve">
+    <value>Je suis responsable du développement technologique du &lt;a href="https://repos.mx"&gt;Repos Software&lt;/a&gt;</value>
+  </data>
+  <data name="LeadActivities4" xml:space="preserve">
+    <value>&lt;a href="https://www.freecodecamp.org/fccdc754e81-1b3c-43ac-b223-dce2f274982a"&gt;J'apprends le développement web&lt;/a&gt;</value>
+  </data>
+  <data name="LeadActivities5" xml:space="preserve">
+    <value>&lt;a href="https://github.com/jarmyo/"&gt;Je code pour l'amour de l'art&lt;/a&gt;</value>
   </data>
   <data name="LeadSocial" xml:space="preserve">
-    <value />
+    <value>Il y a mes médias sociaux personnels</value>
   </data>
   <data name="Other" xml:space="preserve">
-    <value>Otras actividades</value>
+    <value>Autre</value>
+  </data>
+  <data name="Other2" xml:space="preserve">
+    <value>Beaucoup de choses aléatoires</value>
+  </data>
+  <data name="Other3" xml:space="preserve">
+    <value>des choses plus aléatoires</value>
   </data>
   <data name="Social Media" xml:space="preserve">
-    <value>Redes sociales</value>
+    <value>Des médias sociaux</value>
   </data>
   <data name="Work Playgroud" xml:space="preserve">
-    <value>Area de Pruebas</value>
+    <value>Travail</value>
   </data>
 </root>

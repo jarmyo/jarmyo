@@ -117,13 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Blog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="Books" xml:space="preserve">
+    <value>Books</value>
+  </data>
+  <data name="Current activities" xml:space="preserve">
+    <value>Current activities</value>
+  </data>
+  <data name="Languages" xml:space="preserve">
+    <value>Languages</value>
+  </data>
   <data name="Lead" xml:space="preserve">
     <value>Hello, welcome to my personal page, I am a software developer specialized in .NET technologies and Microsoft ecosystems, I have more than 10 years creating software. I love learning and building new things.</value>
   </data>
   <data name="LeadActivities" xml:space="preserve">
     <value>Well, I don't do much, but what I do, I do with passion.</value>
   </data>
+  <data name="LeadActivities1" xml:space="preserve">
+    <value>Web Development at &lt;a href="https://education.ti.com"&gt;Texas Instruments&lt;/a&gt;</value>
+  </data>
+  <data name="LeadActivities2" xml:space="preserve">
+    <value>Development of biometric security systems at &lt;a href="https://www.aguascalientes.gob.mx/ssp/"&gt;Aguascalientes Goverment&lt;/a&gt;</value>
+  </data>
+  <data name="LeadActivities3" xml:space="preserve">
+    <value>I am responsible for the technological development of &lt;a href="https://repos.mx"&gt;Repos Software&lt;/a&gt;</value>
+  </data>
+  <data name="LeadActivities4" xml:space="preserve">
+    <value>&lt;a href="https://www.freecodecamp.org/fccdc754e81-1b3c-43ac-b223-dce2f274982a"&gt;I'm learning about web development&lt;/a&gt;</value>
+  </data>
+  <data name="LeadActivities5" xml:space="preserve">
+    <value>&lt;a href="https://github.com/jarmyo/"&gt;I code software for the love of art&lt;/a&gt;</value>
+  </data>
   <data name="LeadSocial" xml:space="preserve">
     <value>There are my personal social media</value>
+  </data>
+  <data name="Movies" xml:space="preserve">
+    <value>Movies</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="Other2" xml:space="preserve">
+    <value>A lot of random stuff</value>
+  </data>
+  <data name="Other3" xml:space="preserve">
+    <value>more random stuff</value>
+  </data>
+  <data name="Social Media" xml:space="preserve">
+    <value>Social Media</value>
+  </data>
+  <data name="Work Playgroud" xml:space="preserve">
+    <value>Work Playground</value>
   </data>
 </root>
