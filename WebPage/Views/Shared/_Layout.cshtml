@@ -1,11 +1,11 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer Localizer
 <!DOCTYPE html>
-<html lang="@Localizer["en-US"]">
+<html lang="@Localizer["Lang"]">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="@Localizer["Julian Augusto Personal Page"]" />
+    <meta name="description" content="@ViewBag.Titulo" />
     <meta name="author" content="Julián Augusto Ruiz Martinez" />
     <title>Julián Augusto Ruíz Martinez - @ViewBag.Titulo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.1/dist/lux/bootstrap.min.css" id="luxStyleSheet">
@@ -20,9 +20,9 @@
         <a href="/" class="col-md-6 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-muted text-decoration-none">
             @Localizer["Copyright"] &copy @DateTime.Now.Year Julián Augusto Ruiz            
         </a>        
-        <ul class="nav col-md-6 justify-content-end">
+        
             @await Html.PartialAsync("_SelectLanguagePartial")
-        </ul>
+        
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     @RenderSection("Scripts", required: false)
