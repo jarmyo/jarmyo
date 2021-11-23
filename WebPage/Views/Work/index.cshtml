@@ -1,9 +1,11 @@
-﻿<div class="container my-2">
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+<div class="container my-2">
     <div>
-        <h1>Playgroud</h1>
+        <h1>@ViewBag.Titulo</h1>
         <p class="lead">Code examples and using technologies I've worked on or I am learning.</p>
         <p class="lead">This place is under construction, because i'm always learning'.</p>
-    </div>
+    </div>    
     <hr />
     <div class="row">
         <div class="col-md-4">
@@ -86,6 +88,12 @@
                 </div>
             </div>
         </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col">
+            <h1>@Localizer["Utils"]</h1>
+        </div>        
     </div>
 </div>
 <div class="modal" tabindex="-1" id="javascriptModal">

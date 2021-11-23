@@ -1,8 +1,8 @@
-
 obj/
 packages/
 bin/
 .vs/
+wwwroot/scripts/*.js
 Properties/PublishProfiles/JulianAugusto - Web Deploy.pubxml
 Properties/PublishProfiles/JulianAugusto - Web Deploy.pubxml.user
 Properties/ServiceDependencies/JulianAugusto - Web Deploy/profile.arm.json

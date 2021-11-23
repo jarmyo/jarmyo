@@ -52,26 +52,6 @@
     </VisualStudio>
   </ProjectExtensions>
   <ItemGroup>
-    <EmbeddedResource Update="Resources\Controllers.HomeController.en-US.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Controllers.HomeController.es-MX.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Views.Home.Index.en-US.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Views.Home.Index.es-MX.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Views.Home.Index.fr-fr.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Views.Shared._Layout.es.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <TypeScriptCompile Update="wwwroot\scripts\home.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>

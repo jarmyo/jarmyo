@@ -14,6 +14,6 @@ namespace Personal.Controllers.Work
         {
             ViewBag.Titulo = "Portafolio";
             return View();
-        }       
+        }
     }
 }
