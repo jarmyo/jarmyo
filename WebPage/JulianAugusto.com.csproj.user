@@ -52,6 +52,11 @@
     </VisualStudio>
   </ProjectExtensions>
   <ItemGroup>
+    <EmbeddedResource Update="Resources\Controllers.HomeController.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <TypeScriptCompile Update="wwwroot\scripts\home.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
