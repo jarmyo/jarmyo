@@ -1,11 +1,13 @@
-﻿@model Personal.Models.BlogIndexModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model Personal.Models.BlogIndexModel
 <div class="container my-2">
     <div class="row g-5">
         <div class="col-md-8">
             <h1 class="pb-4 mb-4 border-bottom">
-                Julián's Blog
+                @Localizer["Title"]
             </h1>
-            @foreach (var entrada in Model.Entradas)
+            @foreach (var entrada in Model.Entradas) //filter
             {
                 <article class="blog-post">
                     <h2 class="blog-post-title">@entrada.Titulo</h2>
@@ -16,32 +18,30 @@
                 </article>
             }
             <nav class="blog-pagination" aria-label="Pagination">
-                <a class="btn btn-outline-primary" href="#">Prev</a>
-                <a class="btn btn-outline-secondary" href="#" tabindex="-1" aria-disabled="true">Next</a>
+                <a class="btn btn-outline-primary" href="#">@Localizer["Prev"]</a>
+                <a class="btn btn-outline-secondary" href="#" tabindex="-1" aria-disabled="true">@Localizer["Next"]</a>
             </nav>
         </div>
 
         <div class="col-md-4">
             <div class="position-sticky" style="top: 2rem;">
                 <div class="p-4 mb-3 bg-light rounded">
-                    <h4 class="fst-italic">Acerca de</h4>
-                    <p class="mb-0">La tematica de este blog es compartir un poco sobre mi conocimiento en tecnicas de diseño, desarrollo y despliegue de software; si estás interesado en mis escritos personales puedes darte una vuelta por <a href="https://shinjistudio.blogspot.com">blogspot</a> o bien revisar la <a href="/Blog/Personal">sección personal</a></p>
+                    <h4 class="fst-italic">@Localizer["About"]</h4>
+                    <p class="mb-0">@Localizer["Description"]</p>
                 </div>
                 <div class="p-4">
-                    <h4 class="fst-italic">Archivo</h4>
+                    <h4 class="fst-italic">@Localizer["Archive"]</h4>
                     <ol class="list-unstyled mb-0">
-                        <li><a href="#">March 2021</a></li>
-                        <li><a href="#">February 2021</a></li>
-                        <li><a href="#">January 2021</a></li>
-                        <li><a href="#">December 2020</a></li>
-                        <li><a href="#">November 2020</a></li>
-                        <li><a href="#">October 2020</a></li>
-                        <li><a href="#">September 2020</a></li>
-                        <li><a href="#">August 2020</a></li>
-                        <li><a href="#">July 2020</a></li>
-                        <li><a href="#">June 2020</a></li>
-                        <li><a href="#">May 2020</a></li>
-                        <li><a href="#">April 2020</a></li>
+                        <li><a href="#">2021</a></li>
+                        <li><a href="#">2022</a></li>
+                    </ol>
+                </div>
+                <div class="p-4">
+                    <h4 class="fst-italic">@Localizer["Tags"]</h4>
+                    <ol class="list-unstyled mb-0">
+                        <li><a href="/blog/tags/dotnet">.NET</a></li>
+                        <li><a href="/blog/tags/sqlserver">SQL Server</a></li>
+                        <li><a href="/blog/tags/csharp">C#</a></li>
                     </ol>
                 </div>
             </div>
