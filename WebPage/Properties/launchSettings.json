@@ -11,7 +11,7 @@
     "Personal": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "http://localhost:7000/work/snippets",
+      "launchUrl": "http://localhost:7000/blog/new",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
