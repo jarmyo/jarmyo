@@ -41,15 +41,18 @@ namespace Personal.Controllers
             else
                 return NoContent();
         }
-        /// <summary>
-        /// Crear un nuevo post.
-        /// </summary>
-        /// <returns></returns>        
         [Authorize]
+        [HttpGet]
         public ActionResult New()
         {
-            //TODO: usar autorización y autenticación para publicar
-            //Esto es un micro CMS
+            return View();
+        }
+        [Authorize]
+        [HttpPost]
+        public ActionResult New(BlogPostEntry formData)
+        {
+            //TODO: manage language, postType (personal or technical)
+
             return View();
         }
         public ActionResult Importar()
@@ -81,5 +84,12 @@ namespace Personal.Controllers
             // _DbContext.SaveChanges();
             return View();
         }
+    }
+
+    public class BlogPostEntry
+    {
+        public string Titulo { get; set; }
+        public string Etiquetas { get; set; }
+        public string Texto { get; set; }
     }
 }
