@@ -40,6 +40,28 @@ namespace Personal.Controllers
                 return NoContent();
         }
         [Authorize]
+        public ActionResult Edit(string id)
+        {
+            if (id != null)
+            {
+                var entrada = personal.Entradas.Find(id);
+                return View(entrada);
+            }
+            else
+                return NoContent();
+        }
+        [Authorize]
+        public ActionResult Delete(string id)
+        {
+            if (id != null)
+            {
+                var entrada = personal.Entradas.Find(id);
+                personal.Entradas.Remove(entrada);
+                personal.SaveChanges();
+            }
+            return NoContent();
+        }
+        [Authorize]
         [HttpGet]
         public ActionResult New()
         {
