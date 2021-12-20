@@ -1,0 +1,8 @@
+[
+  {
+    "outputFileName": "wwwroot/styles/blog.min.css",
+    "inputFiles": [
+      "wwwroot/styles/blog.css"
+    ]
+  }
+]
