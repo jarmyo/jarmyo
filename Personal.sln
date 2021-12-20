@@ -5,12 +5,6 @@ VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JulianAugusto.com", "WebPage\JulianAugusto.com.csproj", "{A5ACCD49-4314-44F3-9D69-5F1B01834460}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{C318BB57-81F3-4DF2-B6FA-AD066F6E713B}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LearningCPP", "Samples\LearningCPP\LearningCPP.vcxproj", "{C92F97B4-22DE-4AAA-8812-CC424D8AE574}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "LearningPhyton", "Samples\LearningPhyton\LearningPhyton.pyproj", "{B48D9F3E-2AF1-4E1C-AB68-8AD17B452F82}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,29 +27,9 @@ Global
 		{A5ACCD49-4314-44F3-9D69-5F1B01834460}.Release|x64.Build.0 = Release|Any CPU
 		{A5ACCD49-4314-44F3-9D69-5F1B01834460}.Release|x86.ActiveCfg = Release|Any CPU
 		{A5ACCD49-4314-44F3-9D69-5F1B01834460}.Release|x86.Build.0 = Release|Any CPU
-		{C92F97B4-22DE-4AAA-8812-CC424D8AE574}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{C92F97B4-22DE-4AAA-8812-CC424D8AE574}.Debug|x64.ActiveCfg = Debug|x64
-		{C92F97B4-22DE-4AAA-8812-CC424D8AE574}.Debug|x64.Build.0 = Debug|x64
-		{C92F97B4-22DE-4AAA-8812-CC424D8AE574}.Debug|x86.ActiveCfg = Debug|Win32
-		{C92F97B4-22DE-4AAA-8812-CC424D8AE574}.Debug|x86.Build.0 = Debug|Win32
-		{C92F97B4-22DE-4AAA-8812-CC424D8AE574}.Release|Any CPU.ActiveCfg = Release|Win32
-		{C92F97B4-22DE-4AAA-8812-CC424D8AE574}.Release|x64.ActiveCfg = Release|x64
-		{C92F97B4-22DE-4AAA-8812-CC424D8AE574}.Release|x64.Build.0 = Release|x64
-		{C92F97B4-22DE-4AAA-8812-CC424D8AE574}.Release|x86.ActiveCfg = Release|Win32
-		{C92F97B4-22DE-4AAA-8812-CC424D8AE574}.Release|x86.Build.0 = Release|Win32
-		{B48D9F3E-2AF1-4E1C-AB68-8AD17B452F82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B48D9F3E-2AF1-4E1C-AB68-8AD17B452F82}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{B48D9F3E-2AF1-4E1C-AB68-8AD17B452F82}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{B48D9F3E-2AF1-4E1C-AB68-8AD17B452F82}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B48D9F3E-2AF1-4E1C-AB68-8AD17B452F82}.Release|x64.ActiveCfg = Release|Any CPU
-		{B48D9F3E-2AF1-4E1C-AB68-8AD17B452F82}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{C92F97B4-22DE-4AAA-8812-CC424D8AE574} = {C318BB57-81F3-4DF2-B6FA-AD066F6E713B}
-		{B48D9F3E-2AF1-4E1C-AB68-8AD17B452F82} = {C318BB57-81F3-4DF2-B6FA-AD066F6E713B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {58044A62-9C06-41AB-9CF9-4D158FFDA9DB}
