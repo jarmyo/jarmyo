@@ -1,6 +1,12 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Identity
 @inject IViewLocalizer Localizer
+@inject SignInManager<IdentityUser> SignInManager
 @model Personal.Models.BlogIndexModel
+@section Styles
+{
+<link rel="stylesheet" href="styles/blog.min.css">
+}
 <div class="container my-2">
     <div class="row g-5">
         <div class="col-md-8">
@@ -15,14 +21,21 @@
                     <p>
                         @Html.Raw(entrada.Contenido)
                     </p>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <p>
+                            <a href="/blog/edit/@entrada.Id" class="link-success">Editar</a> |
+                            <a href="/blog/delete/@entrada.Id" class="link-danger">Eliminar</a>
+                        </p>
+                    }
                 </article>
+                <hr />
             }
             <nav class="blog-pagination" aria-label="Pagination">
                 <a class="btn btn-outline-primary" href="#">@Localizer["Prev"]</a>
                 <a class="btn btn-outline-secondary" href="#" tabindex="-1" aria-disabled="true">@Localizer["Next"]</a>
             </nav>
         </div>
-
         <div class="col-md-4">
             <div class="position-sticky" style="top: 2rem;">
                 <div class="p-4 mb-3 bg-light rounded">
