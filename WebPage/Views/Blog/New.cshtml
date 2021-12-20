@@ -1,29 +1,49 @@
-﻿
-<div class="container">
+﻿<div class="container">
     <div class="row mt-4">
         <h1>Nueva Entrada</h1>
         <hr />
     </div>
     <div class="row">
         <form method="post" >
+             <div class="row mb-3">
+                <label for="Id" class="col-sm-2 col-form-label">Id</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="Id" id="Id" readonly value="@ViewBag.Id"/>
+                </div>
+            </div>
             <div class="row mb-3">
                 <label for="Titulo" class="col-sm-2 col-form-label">Titulo</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Titulo" id="Titulo" />
+                    <input type="text" class="form-control" name="Titulo" id="Titulo" required maxlength="50" />
                 </div>
             </div>
-            <div class="row g-3">
+             <div class="row mb-3 g-3">
+                <label for="Fecha" class="col-sm-2 col-form-label">Fecha</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" name="Fecha" id="Fecha" required />
+                </div>
+            </div>
+            <div class="row mb-3 g-3">
                 <label for="Etiquetas" class="col-sm-2 col-form-label">Etiquetas</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Etiquetas" id="Etiquetas" />
+                    <input type="text" class="form-control" name="Etiquetas" id="Etiquetas" required />
                 </div>
             </div>
             <hr />
             <div class="col">
-                <textarea rows="5" class="form-control" name="Texto" id="Texto"></textarea>
+                <textarea rows="5" class="form-control" name="Texto" id="Contenido"></textarea>
             </div>
             <hr />
-            <button type="submit" class="btn btn-primary" >Publicar</button>
+            <button type="submit" class="btn btn-primary">Publicar</button>
         </form>
     </div>
 </div>
+<script>
+    //this on new typescript file
+    var f = document.getElementById('Fecha');
+    var date = new Date();
+    var day = ("0" + date.getDate()).slice(-2);
+    var month = ("0" + (date.getMonth() + 1)).slice(-2);
+    var today = date.getFullYear() + "-" + (month) + "-" + (day);
+    f.value = today;
+</script>
