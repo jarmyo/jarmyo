@@ -20,7 +20,6 @@ namespace Personal.Controllers
             };
             return View(model);
         }
-
         public ActionResult Personal()
         {
             ViewBag.Titulo = "Blog Personal";
@@ -30,7 +29,6 @@ namespace Personal.Controllers
             };
             return View(model);
         }
-
         public ActionResult Entrada(string id)
         {
             if (id != null)
@@ -45,6 +43,7 @@ namespace Personal.Controllers
         [HttpGet]
         public ActionResult New()
         {
+            ViewBag.Id = Guid.NewGuid().ToString();
             return View();
         }
         [Authorize]
@@ -52,7 +51,22 @@ namespace Personal.Controllers
         public ActionResult New(BlogPostEntry formData)
         {
             //TODO: manage language, postType (personal or technical)
-
+            try
+            {
+                var newPost = new Data.Post();
+                newPost.Id = formData.Id;
+                newPost.Fecha = DateTime.Parse(formData.Fecha);
+                newPost.Titulo = formData.Titulo;
+                newPost.Contenido = formData.Contenido;
+                newPost.Etiquetas = formData.Etiquetas;
+                blogCtx.Entradas.Add(newPost);
+                blogCtx.SaveChanges();
+                //mandar al post publicado
+            }
+            catch (Exception ex)
+            {
+                //Mandar a mensaje de error
+            }
             return View();
         }
         public ActionResult Importar()
@@ -84,12 +98,5 @@ namespace Personal.Controllers
             // _DbContext.SaveChanges();
             return View();
         }
-    }
-
-    public class BlogPostEntry
-    {
-        public string Titulo { get; set; }
-        public string Etiquetas { get; set; }
-        public string Texto { get; set; }
     }
 }
