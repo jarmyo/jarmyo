@@ -16,7 +16,12 @@ namespace Personal.Controllers
             ViewBag.Titulo = "Blog";
             var model = new Models.BlogIndexModel
             {
-                Entradas = blogCtx.Entradas.OrderByDescending(e => e.Fecha).ToList()
+                //TODO: This can be slice, order and filter
+                Entradas = blogCtx.Entradas.OrderByDescending(e => e.Fecha).ToList(),
+                DisableBack = true,
+                DisableFoward = false,            
+                Etiquetas = blogCtx.Etiquetas.ToList(),
+                Archivo = blogCtx.Fechas.ToList()
             };
             return View(model);
         }
@@ -31,65 +36,103 @@ namespace Personal.Controllers
         }
         public ActionResult Entrada(string id)
         {
+            Post entrada;
             if (id != null)
             {
-                var entrada = personal.Entradas.Find(id);
+                entrada = personal.Entradas.Find(id);
+
                 return View(entrada);
             }
             else
-                return NoContent();
-        }
-        [Authorize]
-        public ActionResult Edit(string id)
-        {
-            if (id != null)
             {
-                var entrada = personal.Entradas.Find(id);
-                return View(entrada);
-            }
-            else
                 return NoContent();
-        }
-        [Authorize]
-        public ActionResult Delete(string id)
-        {
-            if (id != null)
-            {
-                var entrada = personal.Entradas.Find(id);
-                personal.Entradas.Remove(entrada);
-                personal.SaveChanges();
             }
-            return NoContent();
         }
         [Authorize]
         [HttpGet]
         public ActionResult New()
         {
-            ViewBag.Id = Guid.NewGuid().ToString();
-            return View();
+            return RedirectToAction("Edit");
+        }
+        [Authorize]
+        [HttpGet]
+        public ActionResult Edit(string id)
+        {
+            Post entrada = new();
+            ViewBag.IsUpdate = id != null;
+            if (ViewBag.IsUpdate)
+            {
+                ViewBag.Title = "Actualizar Entrada";
+                ViewBag.ButtonCaption = "Actualizar";
+                entrada = blogCtx.Entradas.Find(id);
+            }
+            else
+            {
+                ViewBag.Title = "Nueva Entrada";
+                ViewBag.ButtonCaption = "Publicar";
+                entrada.Fecha = DateTime.Now;
+                entrada.Id = Guid.NewGuid().ToString();
+            }
+            return View(entrada);
         }
         [Authorize]
         [HttpPost]
-        public ActionResult New(BlogPostEntry formData)
+        public ActionResult Edit(BlogPostEntry formData)
         {
-            //TODO: manage language, postType (personal or technical)
-            try
+            Post OriginalPost = new();
+            if (formData.IsUpdate) OriginalPost = blogCtx.Entradas.Find(formData.Id); //find original if update
+            //map 
+            OriginalPost.Id = formData.Id;
+            //TODO: Manage date index.
+            OriginalPost.Fecha = DateTime.Parse(formData.Fecha);
+            OriginalPost.Titulo = formData.Titulo;
+            OriginalPost.Contenido = formData.Contenido;
+            //TODO: manage tags
+            OriginalPost.Etiquetas = formData.Etiquetas.Trim().ToLower();
+            ProcessTags(OriginalPost.Etiquetas, OriginalPost.Id);
+            // end map
+            if (!formData.IsUpdate) blogCtx.Entradas.Add(OriginalPost); //add if new
+            blogCtx.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        private void ProcessTags(string etiquetas, string id)
+        {
+            List<string> usedTags = new List<string>();
+            foreach (var tags in etiquetas.Split(';'))
             {
-                var newPost = new Data.Post();
-                newPost.Id = formData.Id;
-                newPost.Fecha = DateTime.Parse(formData.Fecha);
-                newPost.Titulo = formData.Titulo;
-                newPost.Contenido = formData.Contenido;
-                newPost.Etiquetas = formData.Etiquetas;
-                blogCtx.Entradas.Add(newPost);
+                var trimmedTag = tags.Trim();
+                usedTags.Add(trimmedTag);
+                // create tag if not exist
+                if (!blogCtx.Etiquetas.Any(t => t.Name == trimmedTag))
+                {
+                    blogCtx.Etiquetas.Add(new Tag() { Name = trimmedTag });
+                    blogCtx.SaveChanges();
+                }
+                // now, check if has in the map.
+                if (!blogCtx.EtiquetasEntradas.Any(et => et.Tag == trimmedTag && et.IdPost == id))
+                {
+                    blogCtx.EtiquetasEntradas.Add(new PostTags() { IdPost = id, Tag = trimmedTag });
+                    blogCtx.SaveChanges();
+                }
+            }
+            //then remove unused tags.
+            var unused = blogCtx.EtiquetasEntradas.Where(et => et.IdPost == id && !usedTags.Contains(et.Tag));
+            blogCtx.EtiquetasEntradas.RemoveRange(unused);
+            //save
+            blogCtx.SaveChanges();
+        }
+
+        [Authorize]
+        public IActionResult Delete(string id)
+        {
+            if (id != null)
+            {
+                var entrada = blogCtx.Entradas.Find(id);
+                blogCtx.Entradas.Remove(entrada);
                 blogCtx.SaveChanges();
-                //mandar al post publicado
             }
-            catch (Exception ex)
-            {
-                //Mandar a mensaje de error
-            }
-            return View();
+            return RedirectToAction("Index");
         }
         public ActionResult Importar()
         {

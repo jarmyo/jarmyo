@@ -1,6 +1,7 @@
-﻿<div class="container">
+﻿@model Personal.Data.Post
+<div class="container">
     <div class="row mt-4">
-        <h1>Nueva Entrada</h1>
+        <h1>@ViewBag.Title</h1>
         <hr />
     </div>
     <div class="row">
@@ -8,42 +9,34 @@
              <div class="row mb-3">
                 <label for="Id" class="col-sm-2 col-form-label">Id</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Id" id="Id" readonly value="@ViewBag.Id"/>
+                    <input type="text" class="form-control" name="Id" id="Id" readonly value="@Model.Id"/>
                 </div>
             </div>
             <div class="row mb-3">
                 <label for="Titulo" class="col-sm-2 col-form-label">Titulo</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Titulo" id="Titulo" required maxlength="50" />
+                    <input type="text" class="form-control" name="Titulo" id="Titulo" required maxlength="50" value="@Model.Titulo"/>
                 </div>
             </div>
              <div class="row mb-3 g-3">
                 <label for="Fecha" class="col-sm-2 col-form-label">Fecha</label>
                 <div class="col-sm-10">
-                    <input type="date" class="form-control" name="Fecha" id="Fecha" required />
+                    @Html.EditorFor(o => o.Fecha, new { htmlAttributes = new { @class="form-control", @required="" } })
                 </div>
             </div>
             <div class="row mb-3 g-3">
                 <label for="Etiquetas" class="col-sm-2 col-form-label">Etiquetas</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Etiquetas" id="Etiquetas" required />
+                    <input type="text" class="form-control" name="Etiquetas" id="Etiquetas" required value="@Model.Etiquetas" />
                 </div>
             </div>
             <hr />
             <div class="col">
-                <textarea rows="5" class="form-control" name="Texto" id="Contenido"></textarea>
+                <textarea rows="5" class="form-control" name="Contenido" id="Contenido" >@Model.Contenido</textarea>
             </div>
             <hr />
-            <button type="submit" class="btn btn-primary">Publicar</button>
+            <input type="hidden" id="IsUpdate" name="IsUpdate" value="@ViewBag.IsUpdate.ToString().ToLower()" />
+            <button type="submit" class="btn btn-primary">@ViewBag.ButtonCaption</button>
         </form>
     </div>
 </div>
-<script>
-    //this on new typescript file
-    var f = document.getElementById('Fecha');
-    var date = new Date();
-    var day = ("0" + date.getDate()).slice(-2);
-    var month = ("0" + (date.getMonth() + 1)).slice(-2);
-    var today = date.getFullYear() + "-" + (month) + "-" + (day);
-    f.value = today;
-</script>
