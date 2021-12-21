@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.Options;
-using Personal.Data;
 using System.Globalization;
 namespace Personal
 {

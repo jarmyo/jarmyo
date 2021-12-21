@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.Sqlite;
+﻿global using System.ComponentModel.DataAnnotations;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 namespace Personal.Data
 {

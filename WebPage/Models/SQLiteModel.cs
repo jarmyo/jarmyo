@@ -1,5 +1,4 @@
-﻿using Personal.Data;
-namespace Personal.Models
+﻿namespace Personal.Models
 {
     public class SQLiteModel
     {

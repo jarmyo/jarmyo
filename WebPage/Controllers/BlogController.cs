@@ -1,7 +1,4 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Personal.Data;
-
 namespace Personal.Controllers
 {
     public class BlogController : Controller
@@ -98,7 +95,7 @@ namespace Personal.Controllers
 
         private void ProcessTags(string etiquetas, string id)
         {
-            List<string> usedTags = new List<string>();
+            List<string> usedTags = new();
             foreach (var tags in etiquetas.Split(';'))
             {
                 var trimmedTag = tags.Trim();

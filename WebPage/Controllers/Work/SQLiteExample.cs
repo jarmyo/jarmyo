@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Personal.Data;
-using Personal.Models;
-namespace Personal.Controllers.Work
+﻿namespace Personal.Controllers.Work
 {
     public partial class WorkController : Controller
     {

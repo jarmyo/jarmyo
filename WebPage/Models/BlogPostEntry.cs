@@ -1,4 +1,4 @@
-﻿namespace Personal.Controllers
+﻿namespace Personal.Models
 {
     public class BlogPostEntry
     {

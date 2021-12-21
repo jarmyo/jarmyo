@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace Personal.Controllers
+﻿namespace Personal.Controllers
 {
     public class CurriculumController : Controller
     {
