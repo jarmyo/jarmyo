@@ -2,8 +2,6 @@ This repository contains all code from <https://JulianAugusto.com>, my personal 
 
 [![CodeFactor](https://www.codefactor.io/repository/github/jarmyo/jarmyo/badge)](https://www.codefactor.io/repository/github/jarmyo/jarmyo)
 
-[![Build and deploy ASP.Net Core app to Azure Web App - JulianAugusto](https://github.com/jarmyo/jarmyo/actions/workflows/main_JulianAugusto.yml/badge.svg)](https://github.com/jarmyo/jarmyo/actions/workflows/main_JulianAugusto.yml)
-
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=jarmyo)
 
 ## Hello visitor👋
