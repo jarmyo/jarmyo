@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JulianAugusto.com", "WebPage\JulianAugusto.com.csproj", "{A5ACCD49-4314-44F3-9D69-5F1B01834460}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JulianAugusto.comTests", "Tests\JulianAugusto.comTests.csproj", "{6A305936-A003-42B7-8847-4DEF3364C398}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JulianAugusto.comTests", "Tests\JulianAugusto.comTests.csproj", "{6A305936-A003-42B7-8847-4DEF3364C398}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

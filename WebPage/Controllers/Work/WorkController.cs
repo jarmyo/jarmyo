@@ -11,7 +11,7 @@
         }
         public ActionResult Index()
         {
-            ViewBag.Titulo = "Portafolio";
+        //    ViewBag.Titulo = "Portafolio";
             return View();
         }
     }
