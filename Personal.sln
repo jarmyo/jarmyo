@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JulianAugusto.com", "WebPage\JulianAugusto.com.csproj", "{A5ACCD49-4314-44F3-9D69-5F1B01834460}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JulianAugusto.comTests", "Tests\JulianAugusto.comTests.csproj", "{6A305936-A003-42B7-8847-4DEF3364C398}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,18 @@ Global
 		{A5ACCD49-4314-44F3-9D69-5F1B01834460}.Release|x64.Build.0 = Release|Any CPU
 		{A5ACCD49-4314-44F3-9D69-5F1B01834460}.Release|x86.ActiveCfg = Release|Any CPU
 		{A5ACCD49-4314-44F3-9D69-5F1B01834460}.Release|x86.Build.0 = Release|Any CPU
+		{6A305936-A003-42B7-8847-4DEF3364C398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A305936-A003-42B7-8847-4DEF3364C398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A305936-A003-42B7-8847-4DEF3364C398}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6A305936-A003-42B7-8847-4DEF3364C398}.Debug|x64.Build.0 = Debug|Any CPU
+		{6A305936-A003-42B7-8847-4DEF3364C398}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6A305936-A003-42B7-8847-4DEF3364C398}.Debug|x86.Build.0 = Debug|Any CPU
+		{6A305936-A003-42B7-8847-4DEF3364C398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A305936-A003-42B7-8847-4DEF3364C398}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A305936-A003-42B7-8847-4DEF3364C398}.Release|x64.ActiveCfg = Release|Any CPU
+		{6A305936-A003-42B7-8847-4DEF3364C398}.Release|x64.Build.0 = Release|Any CPU
+		{6A305936-A003-42B7-8847-4DEF3364C398}.Release|x86.ActiveCfg = Release|Any CPU
+		{6A305936-A003-42B7-8847-4DEF3364C398}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
