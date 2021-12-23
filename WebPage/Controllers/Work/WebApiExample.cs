@@ -44,12 +44,12 @@
                 response.Id = -1;
                 response.OK = false;
 
-                if (!IsNotNumeric(number))
+                if (IsNotNumeric(number))
+                    return BadResult("El valor no es un numero valido, validé con Int64.TryParse, puede que si sea un numero pero muy grande y pude provocar desbordamiento");
+                else
                 {
                     if (IsNot16Bits(number))
-                    {
                         return BadResult($"El valor no es un numero entero de 16Bits, debe ser mayor a {short.MinValue} y menor que {short.MaxValue}");
-                    }
                     else
                     {
                         var number_ = short.Parse(number);
@@ -59,25 +59,21 @@
                         response.OK = true;
                     }
                 }
-                else
-                {
-                    return BadResult("El valor no es un numero valido, validé con Int64.TryParse, puede que si sea un numero pero muy grande y pude provocar desbordamiento");
-                }
 
                 return response;
             }
         }
-        public bool IsNotNumeric(string number)
+        public static bool IsNotNumeric(string number)
         {
             return !long.TryParse(number, out _);
-        } 
+        }
 
-        public bool IsNot16Bits(string number)
+        public static bool IsNot16Bits(string number)
         {
             return !short.TryParse(number, out _);
         }
 
-        public ResultObject BadResult(string msg)
+        public static ResultObject BadResult(string msg)
         {
             using (var response = new ResultObject())
             {
@@ -88,3 +84,4 @@
             }
         }
     }
+}
