@@ -117,6 +117,45 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="JobDate1" xml:space="preserve">
+    <value>Agosto 2009 - Marzo 2019</value>
+  </data>
+  <data name="JobDate2" xml:space="preserve">
+    <value>Marzo 2013 - Presente</value>
+  </data>
+  <data name="JobDate3" xml:space="preserve">
+    <value>Noviembre 2019 - Presente</value>
+  </data>
+  <data name="JobDate4" xml:space="preserve">
+    <value>Septiembre 2021 - Presente</value>
+  </data>
+  <data name="JobDescription1" xml:space="preserve">
+    <value>Control y administración de bienes informáticos de la Delegación en Chiapas, responsable de la estadística estatal, desarrollo de software para control de estaciones migratorias. Soporte y administración de telecomunicaciones.</value>
+  </data>
+  <data name="JobDescription2" xml:space="preserve">
+    <value>Software desktop para control de restaurantes. Web service y App android. Web Page con dashboard de estadísticas. Sistema propietario de deployment. Comunicación en tiempo real multiclientes. Base de datos federada de alto volumen.</value>
+  </data>
+  <data name="JobDescription3" xml:space="preserve">
+    <value>Diseño, Desarrollo e implementación de software para control biométrico de Centros de reinserción y software de control interno de la Secretaría de Seguridad Pública del Estado.</value>
+  </data>
+  <data name="JobDescription4" xml:space="preserve">
+    <value>Mantenimiento y desarrollo backend del CMS en sitecore del area de educación de &lt;a href="https://education.ti.com"&gt;Texas Instruments&lt;/a&gt;</value>
+  </data>
+  <data name="JobName1" xml:space="preserve">
+    <value>Jefe de Departamento</value>
+  </data>
+  <data name="JobName2" xml:space="preserve">
+    <value>Cofundador, Director Técnologico</value>
+  </data>
+  <data name="JobName3" xml:space="preserve">
+    <value>Desarrollador Principal, Director de proyecto</value>
+  </data>
+  <data name="JobName4" xml:space="preserve">
+    <value>Desarrollador .NET</value>
+  </data>
+  <data name="Stack" xml:space="preserve">
+    <value>Tecnologías</value>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Experiencia laboral</value>
   </data>

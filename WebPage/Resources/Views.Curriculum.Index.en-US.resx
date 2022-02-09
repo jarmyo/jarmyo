@@ -117,6 +117,45 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="JobDate1" xml:space="preserve">
+    <value>August 2009 - March 2019</value>
+  </data>
+  <data name="JobDate2" xml:space="preserve">
+    <value>March 2013 - Present</value>
+  </data>
+  <data name="JobDate3" xml:space="preserve">
+    <value>November 2019 - Present</value>
+  </data>
+  <data name="JobDate4" xml:space="preserve">
+    <value>September 2021 - Present</value>
+  </data>
+  <data name="JobDescription1" xml:space="preserve">
+    <value>Administration of technological assets in Chiapas Delegation, responsible for statistics and data analysis, software development for control of migratory stations. Telecommunications support and management.</value>
+  </data>
+  <data name="JobDescription2" xml:space="preserve">
+    <value>Desktop software for restaurant control. Web service and Android App. Web Page with statistics dashboard. Proprietary deployment system. Real-time communication between clients. High-volume federated database.</value>
+  </data>
+  <data name="JobDescription3" xml:space="preserve">
+    <value>Design, Development and implementation of software for biometric control of Aguascalientes state's prisions and internal control software of the Public Security Bureau of the State.</value>
+  </data>
+  <data name="JobDescription4" xml:space="preserve">
+    <value>Backend maintenance and development of &lt;a href="https://education.ti.com"&gt;Texas Instruments&lt;/a&gt; sitecore-CMS o education area.</value>
+  </data>
+  <data name="JobName1" xml:space="preserve">
+    <value>Informatics Department Head</value>
+  </data>
+  <data name="JobName2" xml:space="preserve">
+    <value>Co-founder, CTO</value>
+  </data>
+  <data name="JobName3" xml:space="preserve">
+    <value>Product Owner - Main Developer</value>
+  </data>
+  <data name="JobName4" xml:space="preserve">
+    <value>.NET Developer</value>
+  </data>
+  <data name="Stack" xml:space="preserve">
+    <value>Stack</value>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Work Experience</value>
   </data>
