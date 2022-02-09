@@ -6,8 +6,8 @@ namespace leetCodeSolutions
     {
         static void Main(string[] args)
         {
-            var test = Solution.MergeTwoLists_TestCase();
-            var result =Solution.MergeTwoLists(test.Item1,test.Item2);
+            var test = Solution.RemoveDuplicates_TestCases();
+            var result =Solution.RemoveDuplicates(test);
         }
     }
 }
