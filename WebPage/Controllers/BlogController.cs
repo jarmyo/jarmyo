@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 namespace Personal.Controllers
 {
-    public class BlogController : Controller
+    public partial class BlogController : Controller
     {
-        private readonly PersonalBlogContext personal = new();
         private readonly BlogContext blogCtx = new();
         public BlogController()
         {
@@ -11,7 +10,7 @@ namespace Personal.Controllers
         public ActionResult Index()
         {
             ViewBag.Titulo = "Blog";
-            var model = new Models.BlogIndexModel
+            var model = new BlogIndexModel
             {
                 //TODO: This can be slice, order and filter
                 Entradas = blogCtx.Entradas.OrderByDescending(e => e.Fecha).ToList(),
@@ -19,15 +18,6 @@ namespace Personal.Controllers
                 DisableFoward = false,            
                 Etiquetas = blogCtx.Etiquetas.ToList(),
                 Archivo = blogCtx.Fechas.ToList()
-            };
-            return View(model);
-        }
-        public ActionResult Personal()
-        {
-            ViewBag.Titulo = "Blog Personal";
-            var model = new Models.BlogIndexModel
-            {
-                Entradas = personal.Entradas.OrderByDescending(e => e.Fecha).ToList()
             };
             return View(model);
         }
@@ -92,7 +82,6 @@ namespace Personal.Controllers
             blogCtx.SaveChanges();
             return RedirectToAction("Index");
         }
-
         private void ProcessTags(string etiquetas, string id)
         {
             List<string> usedTags = new();
@@ -119,7 +108,6 @@ namespace Personal.Controllers
             //save
             blogCtx.SaveChanges();
         }
-
         [Authorize]
         public IActionResult Delete(string id)
         {
