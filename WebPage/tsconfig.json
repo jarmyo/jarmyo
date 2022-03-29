@@ -6,6 +6,9 @@
     "removeComments": false,
     "sourceMap": true,
     "target": "ES2017",
-    "moduleResolution": "node"
-  }
+    "moduleResolution": "node",
+    "outDir": "wwwroot/js"
+  },
+  "exclude": ["node_modules/*"],
+  "include": ["wwwroot/scripts" ]
 }
