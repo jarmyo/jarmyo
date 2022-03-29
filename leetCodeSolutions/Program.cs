@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace leetCodeSolutions
+﻿namespace leetCodeSolutions
 {
     internal class Program
     {

@@ -1,9 +1,12 @@
-global using Personal.Data;
-global using Personal.Models;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.AspNetCore.Mvc.Razor;
+global using Microsoft.Data.Sqlite;
+global using Microsoft.EntityFrameworkCore;
+global using System.ComponentModel.DataAnnotations;
+global using Personal.Data;
+global using Personal.Models;
 using System.Reflection;
-[assembly: AssemblyVersionAttribute("1.0.1")]
+[assembly: AssemblyVersion("1.0.1")]
 namespace Personal
 {
     public class Program
