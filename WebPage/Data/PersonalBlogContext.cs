@@ -1,6 +1,4 @@
-﻿using Microsoft.Data.Sqlite;
-using Microsoft.EntityFrameworkCore;
-namespace Personal.Data
+﻿namespace Personal.Data
 {
     public class PersonalBlogContext : DbContext
     {

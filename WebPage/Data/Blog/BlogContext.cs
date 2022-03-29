@@ -1,7 +1,4 @@
-﻿global using System.ComponentModel.DataAnnotations;
-using Microsoft.Data.Sqlite;
-using Microsoft.EntityFrameworkCore;
-namespace Personal.Data
+﻿namespace Personal.Data
 {
     public class BlogContext : DbContext
     {
