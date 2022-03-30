@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-namespace Personal.Controllers
+﻿namespace Personal.Controllers
 {
     public partial class BlogController : Controller
     {
@@ -8,6 +7,7 @@ namespace Personal.Controllers
         {
             blogCtx = _blogCtx;
         }
+        [AllowAnonymous]
         public ActionResult Index()
         {
             ViewBag.Titulo = "Blog";

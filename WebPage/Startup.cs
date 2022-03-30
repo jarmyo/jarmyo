@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Localization;
-using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.Options;
 using System.Globalization;
 namespace Personal
 {

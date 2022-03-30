@@ -3,6 +3,7 @@
     public partial class BlogController : Controller
     {
         private readonly PersonalBlogContext personal = new();
+        [AllowAnonymous]
         public ActionResult Personal()
         {
             ViewBag.Titulo = "Blog Personal";
@@ -12,6 +13,7 @@
             };
             return View(model);
         }
+        [AllowAnonymous]
         public ActionResult Entrada(string id)
         {
             Post entrada;

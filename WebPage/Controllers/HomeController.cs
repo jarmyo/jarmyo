@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Localization;
-using Microsoft.Extensions.Localization;
+﻿using Microsoft.Extensions.Localization;
 namespace Personal.Controllers
 {
     public class HomeController : Controller

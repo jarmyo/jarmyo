@@ -1,11 +1,11 @@
 ﻿namespace Personal.Controllers
 {
+    [Authorize]
     public partial class BlogController : Controller
     {
-        [Authorize]
+        
         [HttpGet]
-        public ActionResult New() => RedirectToAction("Edit");
-        [Authorize]
+        public ActionResult New() => RedirectToAction("Edit");        
         [HttpGet]
         public ActionResult Edit(string id)
         {
@@ -25,8 +25,7 @@
                 entrada.Id = Guid.NewGuid().ToString();
             }
             return View(entrada);
-        }
-        [Authorize]
+        }        
         [HttpPost]
         public ActionResult Edit(BlogPostEntry formData)
         {
@@ -71,8 +70,7 @@
             blogCtx.EtiquetasEntradas.RemoveRange(unused);
             //save
             blogCtx.SaveChanges();
-        }
-        [Authorize]
+        }        
         public IActionResult Delete(string id)
         {
             if (id != null)
