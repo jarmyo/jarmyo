@@ -4,7 +4,7 @@
     public partial class BlogController : Controller
     {
         public ActionResult Admin() => View();
-        public ActionResult New() => RedirectToAction("Edit");        
+        public ActionResult New() => RedirectToAction("Edit");
         [HttpGet]
         public ActionResult Edit(string id)
         {
@@ -12,19 +12,19 @@
             ViewBag.IsUpdate = id != null;
             if (ViewBag.IsUpdate)
             {
-                ViewBag.Title = "Actualizar Entrada";
-                ViewBag.ButtonCaption = "Actualizar";
+                ViewBag.Title = "Update Post"; //TRANSLATE
+                ViewBag.ButtonCaption = "Update";
                 entrada = blogCtx.Entradas.Find(id);
             }
             else
             {
-                ViewBag.Title = "Nueva Entrada";
-                ViewBag.ButtonCaption = "Publicar";
+                ViewBag.Title = "New Post"; //TRANSLATE:
+                ViewBag.ButtonCaption = "Publish";
                 entrada.Fecha = DateTime.Now;
                 entrada.Id = Guid.NewGuid().ToString();
             }
             return View(entrada);
-        }        
+        }
         [HttpPost]
         public ActionResult Edit(BlogPostEntry formData)
         {
@@ -36,7 +36,6 @@
             OriginalPost.Fecha = DateTime.Parse(formData.Fecha);
             OriginalPost.Titulo = formData.Titulo;
             OriginalPost.Contenido = formData.Contenido;
-            //TODO: manage tags
             OriginalPost.Etiquetas = formData.Etiquetas.Trim().ToLower();
             ProcessTags(OriginalPost.Etiquetas, OriginalPost.Id);
             // end map
@@ -69,7 +68,21 @@
             blogCtx.EtiquetasEntradas.RemoveRange(unused);
             //save
             blogCtx.SaveChanges();
-        }        
+        }
+        public IActionResult DeleteTag(string id)
+        {
+            try
+            {
+                var tag = blogCtx.Etiquetas.Find(id);
+                blogCtx.Etiquetas.Remove(tag);
+                blogCtx.SaveChanges();
+                return Json("ok");
+            }
+            catch (Exception ex)
+            {
+                return Json("fail" + ex.Message);
+            }
+        }
         public IActionResult Delete(string id)
         {
             if (id != null)
