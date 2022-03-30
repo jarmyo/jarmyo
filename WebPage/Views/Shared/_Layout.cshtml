@@ -13,17 +13,15 @@
     @RenderSection("Styles", required: false)
 </head>
 <body id="page-top">
-        @RenderSection("Head", required: false)
+    @RenderSection("Head", required: false)
     <main id="main-section">
         @RenderBody()
     </main>
     <footer class="fixed-bottom footer d-flex flex-wrap justify-content-between align-items-center p-0 bg-dark">
         <a href="/" class="col-md-6 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-muted text-decoration-none">
-            @Localizer["Copyright"] &copy @DateTime.Now.Year Julián Augusto Ruiz            
-        </a>        
-        
-            @await Html.PartialAsync("_SelectLanguagePartial")
-        
+            @Localizer["Copyright"] &copy @DateTime.Now.Year Julián Augusto Ruiz
+        </a>
+        @await Html.PartialAsync("_SelectLanguagePartial")
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     @RenderSection("Scripts", required: false)

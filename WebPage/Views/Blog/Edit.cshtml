@@ -1,42 +1,55 @@
 ﻿@model Personal.Data.Post
+@inject BlogContext BlogCTX
 <div class="container">
     <div class="row mt-4">
         <h1>@ViewBag.Title</h1>
         <hr />
     </div>
     <div class="row">
-        <form method="post" >
-             <div class="row mb-3">
-                <label for="Id" class="col-sm-2 col-form-label">Id</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Id" id="Id" readonly value="@Model.Id"/>
+        <div class="col">
+            <form method="post">
+                <div class="row mb-3">
+                    <label for="Id" class="col-sm-2 col-form-label">Id</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Id" id="Id" readonly value="@Model.Id" />
+                    </div>
                 </div>
-            </div>
-            <div class="row mb-3">
-                <label for="Titulo" class="col-sm-2 col-form-label">Titulo</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Titulo" id="Titulo" required maxlength="50" value="@Model.Titulo"/>
+                <div class="row mb-3">
+                    <label for="Titulo" class="col-sm-2 col-form-label">Titulo</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Titulo" id="Titulo" required maxlength="50" value="@Model.Titulo" autocomplete="off" lang="en" />
+                    </div>
                 </div>
-            </div>
-             <div class="row mb-3 g-3">
-                <label for="Fecha" class="col-sm-2 col-form-label">Fecha</label>
-                <div class="col-sm-10">
-                    @Html.EditorFor(o => o.Fecha, new { htmlAttributes = new { @class="form-control", @required="" } })
+                <div class="row mb-3 g-3">
+                    <label for="Fecha" class="col-sm-2 col-form-label">Fecha</label>
+                    <div class="col-sm-10">
+                        @Html.EditorFor(o => o.Fecha, new { htmlAttributes = new { @class="form-control", @required="" } })
+                    </div>
                 </div>
-            </div>
-            <div class="row mb-3 g-3">
-                <label for="Etiquetas" class="col-sm-2 col-form-label">Etiquetas</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Etiquetas" id="Etiquetas" required value="@Model.Etiquetas" />
+                <div class="row mb-3 g-3">
+                    <label for="Etiquetas" class="col-sm-2 col-form-label">Etiquetas</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Etiquetas" id="Etiquetas" required value="@Model.Etiquetas" autocomplete="off" lang="en" />
+                    </div>
+                    <div class="col-sm-10">
+                        @foreach (var tag in BlogCTX.Etiquetas)
+                        {
+                            <button type="button" class="btn btn-success btn-sm" onclick="ToggleTag('@tag.Name')">@tag.Name</button>
+                        }
+                    </div>
                 </div>
-            </div>
-            <hr />
-            <div class="col">
-                <textarea rows="5" class="form-control" name="Contenido" id="Contenido" >@Model.Contenido</textarea>
-            </div>
-            <hr />
-            <input type="hidden" id="IsUpdate" name="IsUpdate" value="@ViewBag.IsUpdate.ToString().ToLower()" />
-            <button type="submit" class="btn btn-primary">@ViewBag.ButtonCaption</button>
-        </form>
+                <hr />
+                <div class="col">
+                    <textarea rows="10" class="form-control" name="Contenido" id="Contenido">@Model.Contenido</textarea>
+                </div>
+                <hr />
+                <input type="hidden" id="IsUpdate" name="IsUpdate" value="@ViewBag.IsUpdate.ToString().ToLower()" />
+                <button type="submit" class="btn btn-primary">@ViewBag.ButtonCaption</button>
+            </form>
+        </div>
     </div>
 </div>
+@section Scripts
+{
+    <script src="/js/Blog.js"></script>
+}

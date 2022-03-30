@@ -11,6 +11,18 @@
 {
     @await Html.PartialAsync("_NavigationPartial", new HeaderModel {Title = Localizer["Title"], Active = "Blog"})
 }
+ @if (SignInManager.IsSignedIn(User))
+{<div class="container">
+    <div class="row">
+        <div class="col">
+            <a asp-action="New" class="btn btn-primary">New Post</a> ||
+            <a asp-action="Admin" class="btn btn-info">Admin Post</a> ||
+            <a class="btn btn-danger">Logoff</a>
+            <hr />
+        </div>
+    </div>
+</div>
+}
 <div class="container mt-4 my-2">
     <div class="row g-5">
         <div class="col-md-8">

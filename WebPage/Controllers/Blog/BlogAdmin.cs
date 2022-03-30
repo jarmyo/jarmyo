@@ -3,8 +3,7 @@
     [Authorize]
     public partial class BlogController : Controller
     {
-        
-        [HttpGet]
+        public ActionResult Admin() => View();
         public ActionResult New() => RedirectToAction("Edit");        
         [HttpGet]
         public ActionResult Edit(string id)
@@ -50,7 +49,7 @@
             List<string> usedTags = new();
             foreach (var tags in etiquetas.Split(';'))
             {
-                var trimmedTag = tags.Trim();
+                var trimmedTag = tags.ToUpper().Trim();
                 usedTags.Add(trimmedTag);
                 // create tag if not exist
                 if (!blogCtx.Etiquetas.Any(t => t.Name == trimmedTag))
