@@ -3,9 +3,10 @@ namespace Personal.Controllers
 {
     public partial class BlogController : Controller
     {
-        private readonly BlogContext blogCtx = new();
-        public BlogController()
+        private readonly BlogContext blogCtx;
+        public BlogController(BlogContext _blogCtx)
         {
+            blogCtx = _blogCtx;
         }
         public ActionResult Index()
         {
@@ -21,26 +22,9 @@ namespace Personal.Controllers
             };
             return View(model);
         }
-        public ActionResult Entrada(string id)
-        {
-            Post entrada;
-            if (id != null)
-            {
-                entrada = personal.Entradas.Find(id);
-
-                return View(entrada);
-            }
-            else
-            {
-                return NoContent();
-            }
-        }
         [Authorize]
         [HttpGet]
-        public ActionResult New()
-        {
-            return RedirectToAction("Edit");
-        }
+        public ActionResult New() => RedirectToAction("Edit");
         [Authorize]
         [HttpGet]
         public ActionResult Edit(string id)

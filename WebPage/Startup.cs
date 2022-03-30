@@ -14,7 +14,7 @@ namespace Personal
         public void ConfigureServices(IServiceCollection services)
         {
             KeyVault.SpeechKey = Configuration["speechKey1"];
-
+            services.AddEntityFrameworkSqlite().AddDbContext<BlogContext>();
             services.AddEntityFrameworkSqlite().AddDbContext<SQLiteContext>();
             services.AddDbContext<SecurityContext>();
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
