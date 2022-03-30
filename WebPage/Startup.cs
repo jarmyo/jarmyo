@@ -56,6 +56,11 @@ namespace Personal
                 endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+            /// Initialize blog constants
+            var ctx = new BlogContext();
+            Controllers.BlogController.TotalPost = ctx.Entradas.Count();
+            Controllers.BlogController.TotalPages = Controllers.BlogController.TotalPost / Controllers.BlogController.MaxPages;
+            if (Controllers.BlogController.TotalPages == 0) Controllers.BlogController.TotalPages = 1;
         }
         private void ConfigureMvcOptions(MvcOptions mvcOptions)
         {            

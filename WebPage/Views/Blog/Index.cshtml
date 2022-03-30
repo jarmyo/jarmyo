@@ -11,18 +11,18 @@
 {
     @await Html.PartialAsync("_NavigationPartial", new HeaderModel {Title = Localizer["Title"], Active = "Blog"})
 }
- @if (SignInManager.IsSignedIn(User))
+@if (SignInManager.IsSignedIn(User))
 {
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <a asp-action="New" class="btn btn-primary">New Post</a> ||
-            <a asp-action="Admin" class="btn btn-info">Admin Post</a> ||
-            <a class="btn btn-danger">Logoff</a>
-            <hr />
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a asp-action="New" class="btn btn-primary">New Post</a> ||
+                <a asp-action="Admin" class="btn btn-info">Admin Post</a> ||
+                <a class="btn btn-danger">Logoff</a>
+                <hr />
+            </div>
         </div>
     </div>
-</div>
 }
 <div class="container mt-4 my-2">
     <div class="row g-5">
@@ -56,9 +56,18 @@
                     <li class="page-item @(Model.DisableBack ? "disabled" : "")">
                         <a class="page-link" href="#" aria-disabled="@Model.DisableBack.ToString().ToLower()">@Localizer["Prev"]</a>
                     </li>
-                    <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+
+                    @for (int pageNumber = 1; pageNumber <= Personal.Controllers.BlogController.TotalPages; pageNumber++)
+                    {
+                        if (pageNumber == Model.CurrentPage)
+                        {
+                            <li class="page-item active" aria-current="page"><span class="page-link">@pageNumber</span></li>
+                        }
+                        else
+                        {
+                            <li class="page-item"><a class="page-link" href="#">@pageNumber</a></li>
+                        }
+                    }
                     <li class="page-item @(Model.DisableFoward ? "disabled" : "")">
                         <a class="page-link" href="#" aria-disabled="@Model.DisableFoward.ToString().ToLower()">@Localizer["Next"]</a>
                     </li>
