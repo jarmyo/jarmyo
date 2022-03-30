@@ -12,5 +12,19 @@
             };
             return View(model);
         }
+        public ActionResult Entrada(string id)
+        {
+            Post entrada;
+            if (id != null)
+            {
+                entrada = personal.Entradas.Find(id);
+
+                return View(entrada);
+            }
+            else
+            {
+                return NoContent();
+            }
+        }
     }
 }
