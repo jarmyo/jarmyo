@@ -18,7 +18,7 @@
             <div class="col">
                 <a asp-action="New" class="btn btn-primary">New Post</a> ||
                 <a asp-action="Admin" class="btn btn-info">Admin Post</a> ||
-                <a class="btn btn-danger">Logoff</a>
+                <a asp-action="logoff" class="btn btn-danger">Logoff</a>
                 <hr />
             </div>
         </div>
@@ -65,7 +65,7 @@
                         }
                         else
                         {
-                            <li class="page-item"><a class="page-link" href="#">@pageNumber</a></li>
+                            <li class="page-item"><a class="page-link" href="/Blog/Index/@pageNumber">@pageNumber</a></li>
                         }
                     }
                     <li class="page-item @(Model.DisableFoward ? "disabled" : "")">
@@ -85,7 +85,7 @@
                     <ol class="list-unstyled mb-0">
                         @foreach (var year in Model.Archivo) //filter
                         {
-                            <li><a href="/blog/archive/@year.Id">@year.Name</a></li>
+                            <li><a href="/blog/archive/@year.Key">@year.Value</a></li>
                         }
                     </ol>
                 </div>

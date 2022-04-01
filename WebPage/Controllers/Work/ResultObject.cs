@@ -1,6 +1,6 @@
 ﻿namespace Personal.Controllers
 {
-    public class ResultObject :IDisposable
+    public class ResultObject : IDisposable
     {
         public ResultObject()
         {
@@ -14,6 +14,7 @@
         public Dictionary<string, string> Attributes { get; set; }
         public void Dispose()
         {
+            GC.SuppressFinalize(this);
             // clean all?
         }
     }

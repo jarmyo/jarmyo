@@ -2,8 +2,7 @@
 {
     public class MonthYear
     {
-        [Key]
-        public string Id { get; set; }
+        [Key]     
         public string Name { get; set; }
     }
 }

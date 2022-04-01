@@ -2,16 +2,13 @@
 {
     [AllowAnonymous]
     public class LoginModel : PageModel
-    {
-        //private readonly UserManager<IdentityUser> _userManager;
+    {        
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
 
         public LoginModel(SignInManager<IdentityUser> signInManager, 
-            ILogger<LoginModel> logger,
-            UserManager<IdentityUser> userManager)
-        {
-        //    _userManager = userManager;
+            ILogger<LoginModel> logger)
+        {        
             _signInManager = signInManager;
             _logger = logger;
         }

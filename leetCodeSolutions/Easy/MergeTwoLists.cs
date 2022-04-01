@@ -15,9 +15,9 @@
 
             if (l1 == null) return l2; //Optimization if one of the list is empty
             if (l2 == null) return l1;
-            ListNode result = new ListNode();
+            ListNode result = new();
             var node = result; //create a pointer of the first element.            
-            System.Collections.Generic.List<int> values = new System.Collections.Generic.List<int>();//Create a list to store the ordered numbers
+            System.Collections.Generic.List<int> values = new();//Create a list to store the ordered numbers
 
             //Fill with the first list
             while (l1 != null) 
@@ -53,12 +53,20 @@
 
         public static (ListNode, ListNode) MergeTwoLists_TestCase()
         {
-            var test = new ListNode(1);
-            test.next = new ListNode(2);
-            test.next.next = new ListNode(4);
-            var test2 = new ListNode(1);
-            test2.next = new ListNode(3);
-            test2.next.next = new ListNode(4);
+            var test = new ListNode(1)
+            {
+                next = new ListNode(2)
+                {
+                    next = new ListNode(4)
+                }
+            };
+            var test2 = new ListNode(1)
+            {
+                next = new ListNode(3)
+                {
+                    next = new ListNode(4)
+                }
+            };
             return (test, test2);
         }
     }

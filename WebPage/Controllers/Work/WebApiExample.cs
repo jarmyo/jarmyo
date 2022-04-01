@@ -13,10 +13,12 @@
             ResultObject response;
             if (id == null)
             {
-                response = new ResultObject();
-                response.OK = true;
-                response.Id = 9876;
-                response.Name = "this is an example response, add an 16Bits integer (WebApiExample/99) to obtain the square root of a number";
+                response = new ResultObject
+                {
+                    OK = true,
+                    Id = 9876,
+                    Name = "this is an example response, add an 16Bits integer (WebApiExample/99) to obtain the square root of a number"
+                };
             }
             else
             {

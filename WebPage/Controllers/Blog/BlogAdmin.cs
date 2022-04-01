@@ -32,23 +32,23 @@
             if (formData.IsUpdate) OriginalPost = blogCtx.Entradas.Find(formData.Id); //find original if update
             //map 
             OriginalPost.Id = formData.Id;
-            //TODO: Manage date index.
             OriginalPost.Fecha = DateTime.Parse(formData.Fecha);
             OriginalPost.Titulo = formData.Titulo;
             OriginalPost.Contenido = formData.Contenido;
             OriginalPost.Etiquetas = formData.Etiquetas.Trim().ToLower();
+            ProcessDates(OriginalPost.Fecha, OriginalPost.Id);
             ProcessTags(OriginalPost.Etiquetas, OriginalPost.Id);
             // end map
             if (!formData.IsUpdate) blogCtx.Entradas.Add(OriginalPost); //add if new
             blogCtx.SaveChanges();
             return RedirectToAction("Index");
         }
-        private void ProcessTags(string etiquetas, string id)
+        private void ProcessTags(string etiquetas, string idPost)
         {
             List<string> usedTags = new();
             foreach (var tags in etiquetas.Split(';'))
             {
-                var trimmedTag = tags.ToUpper().Trim();
+                var trimmedTag = tags.Trim();
                 usedTags.Add(trimmedTag);
                 // create tag if not exist
                 if (!blogCtx.Etiquetas.Any(t => t.Name == trimmedTag))
@@ -57,17 +57,42 @@
                     blogCtx.SaveChanges();
                 }
                 // now, check if has in the map.
-                if (!blogCtx.EtiquetasEntradas.Any(et => et.Tag == trimmedTag && et.IdPost == id))
+                if (!blogCtx.EtiquetasEntradas.Any(et => et.Tag == trimmedTag && et.IdPost == idPost))
                 {
-                    blogCtx.EtiquetasEntradas.Add(new PostTags() { IdPost = id, Tag = trimmedTag });
+                    blogCtx.EtiquetasEntradas.Add(new PostTags() { IdPost = idPost, Tag = trimmedTag });
                     blogCtx.SaveChanges();
                 }
             }
             //then remove unused tags.
-            var unused = blogCtx.EtiquetasEntradas.Where(et => et.IdPost == id && !usedTags.Contains(et.Tag));
+            var unused = blogCtx.EtiquetasEntradas.Where(et => et.IdPost == idPost && !usedTags.Contains(et.Tag));
             blogCtx.EtiquetasEntradas.RemoveRange(unused);
             //save
             blogCtx.SaveChanges();
+        }
+        private void ProcessDates(DateTime Date, string idPost)
+        {
+            var datename = Date.ToString("yy-M");
+            if (!blogCtx.Fechas.Any(d => d.Name == datename))
+            {
+                blogCtx.Fechas.Add(new MonthYear() { Name = datename });
+                blogCtx.SaveChanges();
+            }
+
+            var post = blogCtx.FechasEntradas.Find(idPost);
+            if (post != null)
+            {
+                post.IdMonthYear = datename;
+            }
+            else
+            {
+                blogCtx.FechasEntradas.Add(new PostMonthYear
+                {
+                    IdPost = idPost,
+                    IdMonthYear = datename
+                });
+            }
+            blogCtx.SaveChanges();
+
         }
         public IActionResult DeleteTag(string id)
         {
@@ -91,6 +116,11 @@
                 blogCtx.Entradas.Remove(entrada);
                 blogCtx.SaveChanges();
             }
+            return RedirectToAction("Index");
+        }
+        public IActionResult Logoff()
+        {
+            _signInManager.SignOutAsync();
             return RedirectToAction("Index");
         }
         public ActionResult Importar()
