@@ -1,4 +1,5 @@
-﻿namespace leetCodeSolutions
+﻿global using System.Collections.Generic;
+namespace leetCodeSolutions
 {
     internal class Program
     {
