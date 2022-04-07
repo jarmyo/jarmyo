@@ -10,5 +10,5 @@
     "outDir": "wwwroot/js"
   },
   "exclude": ["node_modules/*"],
-  "include": ["wwwroot/scripts" ]
+  "include": ["Assets/Typescript" ]
 }
