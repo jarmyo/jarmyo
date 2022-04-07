@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JulianAugusto.com", "WebPag
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JulianAugusto.comTests", "Tests\JulianAugusto.comTests.csproj", "{6A305936-A003-42B7-8847-4DEF3364C398}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leetCodeSolutions", "leetCodeSolutions\leetCodeSolutions.csproj", "{F846BDAD-461B-448B-B1B0-4BBBF5CC3730}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "leetCodeSolutions", "leetCodeSolutions\leetCodeSolutions.csproj", "{F846BDAD-461B-448B-B1B0-4BBBF5CC3730}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DBE07893-8BB8-4381-84E8-B9069A8D9A07}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
