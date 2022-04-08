@@ -49,18 +49,20 @@
             foreach (var tags in etiquetas.Split(';'))
             {
                 var trimmedTag = tags.Trim();
-                usedTags.Add(trimmedTag);
-                // create tag if not exist
-                if (!blogCtx.Etiquetas.Any(t => t.Name == trimmedTag))
+                if (trimmedTag != String.Empty) //No empty tags
                 {
-                    blogCtx.Etiquetas.Add(new Tag() { Name = trimmedTag });
-                    blogCtx.SaveChanges();
-                }
-                // now, check if has in the map.
-                if (!blogCtx.EtiquetasEntradas.Any(et => et.Tag == trimmedTag && et.IdPost == idPost))
-                {
-                    blogCtx.EtiquetasEntradas.Add(new PostTags() { IdPost = idPost, Tag = trimmedTag });
-                    blogCtx.SaveChanges();
+                    usedTags.Add(trimmedTag);
+                    if (!blogCtx.Etiquetas.Any(t => t.Name == trimmedTag)) // create tag if not exist
+                    {
+                        blogCtx.Etiquetas.Add(new Tag() { Name = trimmedTag });
+                        blogCtx.SaveChanges();
+                    }
+                    // now, check if has in the map.
+                    if (!blogCtx.EtiquetasEntradas.Any(et => et.Tag == trimmedTag && et.IdPost == idPost))
+                    {
+                        blogCtx.EtiquetasEntradas.Add(new PostTags() { IdPost = idPost, Tag = trimmedTag });
+                        blogCtx.SaveChanges();
+                    }
                 }
             }
             //then remove unused tags.
@@ -97,10 +99,18 @@
         {
             try
             {
-                var tag = blogCtx.Etiquetas.Find(id);
-                blogCtx.Etiquetas.Remove(tag);
+                if (id != null)
+                {
+                    var tag = blogCtx.Etiquetas.Find(id);
+                    blogCtx.Etiquetas.Remove(tag);
+                }
+                else
+                {
+                    blogCtx.Etiquetas.Remove(blogCtx.Etiquetas.First(t => t.Name == string.Empty));
+                }
                 blogCtx.SaveChanges();
                 return Json("ok");
+
             }
             catch (Exception ex)
             {
