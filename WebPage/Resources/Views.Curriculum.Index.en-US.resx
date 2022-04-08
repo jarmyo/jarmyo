@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="JobDate1" xml:space="preserve">
-    <value>August 2009 - March 2019</value>
+    <value>Aug 2009 - Mar 2019</value>
   </data>
   <data name="JobDate2" xml:space="preserve">
-    <value>March 2013 - Present</value>
+    <value>Mar 2013 - Present</value>
   </data>
   <data name="JobDate3" xml:space="preserve">
-    <value>November 2019 - September 2022</value>
+    <value>Nov 2019 - Sept 2022</value>
   </data>
   <data name="JobDate4" xml:space="preserve">
-    <value>September 2021 - March 2022</value>
+    <value>Sept 2021 - Mar 2022</value>
   </data>
   <data name="JobDescription1" xml:space="preserve">
     <value>Administration of technological assets in Chiapas Delegation, responsible for statistics and data analysis, software development for control of migratory stations. Telecommunications support and management.</value>

@@ -4,14 +4,14 @@
 @inject SignInManager<IdentityUser> SignInManager
 @model Personal.Models.BlogIndexModel
 @section Styles
-{
-<link rel="stylesheet" href="styles/blog.min.css">
+    {
+    <link rel="stylesheet" href="styles/blog.min.css">
 }
-@section Head
-{
+    @section Head
+    {
     @await Html.PartialAsync("_NavigationPartial", new HeaderModel {Title = Localizer["Title"], Active = "Blog"})
 }
-@if (SignInManager.IsSignedIn(User))
+    @if (SignInManager.IsSignedIn(User))
 {
     <div class="container">
         <div class="row">

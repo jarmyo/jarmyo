@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="JobDate1" xml:space="preserve">
-    <value>Agosto 2009 - Marzo 2019</value>
+    <value>Ago 2009 - Mar 2019</value>
   </data>
   <data name="JobDate2" xml:space="preserve">
-    <value>Marzo 2013 - Presente</value>
+    <value>Mar 2013 - Presente</value>
   </data>
   <data name="JobDate3" xml:space="preserve">
-    <value>Noviembre 2019 - Septiembre 2022</value>
+    <value>Nov 2019 - Sept 2022</value>
   </data>
   <data name="JobDate4" xml:space="preserve">
-    <value>Septiembre 2021 - Marzo 2022</value>
+    <value>Sept 2021 - Mar 2022</value>
   </data>
   <data name="JobDescription1" xml:space="preserve">
     <value>Control y administración de bienes informáticos de la Delegación en Chiapas, responsable de la estadística estatal, desarrollo de software para control de estaciones migratorias. Soporte y administración de telecomunicaciones.</value>
