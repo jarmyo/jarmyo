@@ -20,6 +20,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Data\store\blog.db" />
+    <Content Include="Data\store\personalblog.db" />
+    <Content Include="Data\store\Security.db" />
+    <Content Include="Data\store\security.db-shm" />
+    <Content Include="Data\store\security.db-wal" />
+    <Content Include="Data\store\SQLite.db" />
+  </ItemGroup>
   <ItemGroup>    
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.3" />    

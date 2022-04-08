@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "sqlite4": {
+      "secretStore": "LocalSecretsFile",
+      "type": "sqlite.local",
+      "connectionId": "ConnectionStrings:SQLiteConnection",
+      "dynamicId": null
+    },
+    "secrets1": {
+      "type": "secrets.user",
+      "dynamicId": null
+    },
+    "sqlite1": {
+      "secretStore": null,
+      "resourceId": null,
+      "type": "sqlite.local",
+      "connectionId": "ConnectionStrings:BlogConnection"
+    },
+    "sqlite2": {
+      "secretStore": null,
+      "resourceId": null,
+      "type": "sqlite.local",
+      "connectionId": "ConnectionStrings:PersonalBlogConnection"
+    },
+    "sqlite3": {
+      "secretStore": null,
+      "resourceId": null,
+      "type": "sqlite.local",
+      "connectionId": "ConnectionStrings:SecurityConnection"
+    }
+  }
+}

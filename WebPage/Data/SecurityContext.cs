@@ -14,7 +14,7 @@ namespace Personal.Data
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionStringBuilder = new SqliteConnectionStringBuilder { DataSource = @"wwwroot\data\security.db" };
+            var connectionStringBuilder = new SqliteConnectionStringBuilder { DataSource = @"Data\store\security.db" };
             var connectionString = connectionStringBuilder.ToString();
             var connection = new SqliteConnection(connectionString);
 

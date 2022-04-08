@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "sqlite4": {
+      "type": "sqlite",
+      "connectionId": "ConnectionStrings:SQLiteConnection",
+      "dynamicId": null
+    },
+    "secrets1": {
+      "type": "secrets",
+      "dynamicId": null
+    },
+    "sqlite1": {
+      "type": "sqlite",
+      "connectionId": "ConnectionStrings:BlogConnection"
+    },
+    "sqlite2": {
+      "type": "sqlite",
+      "connectionId": "ConnectionStrings:PersonalBlogConnection"
+    },
+    "sqlite3": {
+      "type": "sqlite",
+      "connectionId": "ConnectionStrings:SecurityConnection"
+    }
+  }
+}
