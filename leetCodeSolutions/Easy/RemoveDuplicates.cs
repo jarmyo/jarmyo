@@ -23,7 +23,7 @@
                     if (nums[x] == nums[y] ) //if found duplicate
                     {                      
                         k--; //reduce the result counter                        
-                        for (int z =y;z<k;z++) //move array element from current position to k
+                        for (int z =y; z<k; z++) //move array element from current position to k
                         {
                             nums[z] = nums[z+1];
                         }

@@ -17,7 +17,7 @@
             if (l2 == null) return l1;
             ListNode result = new();
             var node = result; //create a pointer of the first element.            
-            System.Collections.Generic.List<int> values = new();//Create a list to store the ordered numbers
+            System.Collections.Generic.List<int> values = new(); //Create a list to store the ordered numbers
 
             //Fill with the first list
             while (l1 != null) 

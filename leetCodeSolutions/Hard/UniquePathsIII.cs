@@ -39,7 +39,7 @@ namespace leetCodeSolutions.Hard
                     }
                 }
             }
-            List<Point> start = new();// { inicio };            
+            List<Point> start = new(); // { inicio };            
             return inicio.Mover(ref start, ref grid);
         }
         public class Point
@@ -70,7 +70,6 @@ namespace leetCodeSolutions.Hard
                 {
                     if ((stack.Count - 1) == nonObstacles)
                     {
-
                         // System.Diagnostics.Debug.WriteLine("OK");
                         foreach (var s in stack)
                         {
@@ -116,7 +115,7 @@ namespace leetCodeSolutions.Hard
                     var kr = new Point(x - 1, y);
                     if (!stack.Any(n => n.x == kr.x && n.y == kr.y))
                     {
-                        k = kr.Mover(ref stack, ref gridA);//arriba
+                        k = kr.Mover(ref stack, ref gridA); //arriba
                     }
                     else
                     {
@@ -144,6 +143,6 @@ namespace leetCodeSolutions.Hard
             }
             public int x;
             public int y;
-        };
+        }
     }
 }

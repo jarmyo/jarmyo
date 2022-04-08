@@ -92,7 +92,6 @@
                 });
             }
             blogCtx.SaveChanges();
-
         }
         public IActionResult DeleteTag(string id)
         {
