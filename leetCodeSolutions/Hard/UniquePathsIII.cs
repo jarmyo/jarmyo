@@ -17,9 +17,9 @@ namespace leetCodeSolutions.Hard
         /// </summary>
         /// <param name="grid"></param>
         /// <returns></returns>
-        public int UniquePathsIII(int[][] grid)
+        public static int UniquePathsIII(int[][] grid)
         {
-            point inicio = new point(0, 0);
+            Point inicio = new(0, 0);
             filasX = grid.Length;
             columnasY = grid[0].Length;
             nonObstacles = 0;
@@ -39,12 +39,12 @@ namespace leetCodeSolutions.Hard
                     }
                 }
             }
-            List<point> start = new List<point>();// { inicio };            
+            List<Point> start = new();// { inicio };            
             return inicio.Mover(ref start, ref grid);
         }
-        public class point
+        public class Point
         {
-            public int Mover(ref List<point> stack, ref int[][] gridA)
+            public int Mover(ref List<Point> stack, ref int[][] gridA)
             {
                 if (y == columnasY)
                 {
@@ -95,7 +95,7 @@ namespace leetCodeSolutions.Hard
                     //   System.Diagnostics.Debug.Write($"({x},{y})");
                     stack.Add(this);
                     int j = 0, k = 0, l = 0, m = 0;
-                    var jr = new point(x + 1, y);
+                    var jr = new Point(x + 1, y);
                     if (!stack.Any(n => n.x == jr.x && n.y == jr.y))
                     {
                         j = jr.Mover(ref stack, ref gridA); //abajo.
@@ -104,7 +104,7 @@ namespace leetCodeSolutions.Hard
                     {
                         // System.Diagnostics.Debug.WriteLine($"\tno puedo volver abajo ({x},{y})");
                     }
-                    var lr = new point(x, y + 1);
+                    var lr = new Point(x, y + 1);
                     if (!stack.Any(n => n.x == lr.x && n.y == lr.y))
                     {
                         l = lr.Mover(ref stack, ref gridA); //derecha
@@ -113,7 +113,7 @@ namespace leetCodeSolutions.Hard
                     {
                         //  System.Diagnostics.Debug.WriteLine($"\tno puedo volver a la derecha ({x},{y})");
                     }
-                    var kr = new point(x - 1, y);
+                    var kr = new Point(x - 1, y);
                     if (!stack.Any(n => n.x == kr.x && n.y == kr.y))
                     {
                         k = kr.Mover(ref stack, ref gridA);//arriba
@@ -122,7 +122,7 @@ namespace leetCodeSolutions.Hard
                     {
                         // System.Diagnostics.Debug.WriteLine($"\tno puedo volver arriba ({x},{y})");
                     }
-                    var mr = new point(x, y - 1);
+                    var mr = new Point(x, y - 1);
                     if (!stack.Any(n => n.x == mr.x && n.y == mr.y))
                     {
                         m = mr.Mover(ref stack, ref gridA); //izquierda
@@ -137,7 +137,7 @@ namespace leetCodeSolutions.Hard
                     return result;
                 }
             }
-            public point(int _x, int _Y)
+            public Point(int _x, int _Y)
             {
                 x = _x;
                 y = _Y;

@@ -14,7 +14,7 @@
         {
             long divisor = 10;
             bool signed = false;
-            List<long> digits = new List<long>();
+            List<long> digits = new();
             long y = x;
             if (x < 0)
             {
@@ -24,7 +24,7 @@
             long result = y;
             while (result != 0)
             {
-                digits.Add((y % divisor) / (divisor / 10));
+                digits.Add(y % divisor / (divisor / 10));
                 result = result / 10;
                 divisor *= 10;
             }

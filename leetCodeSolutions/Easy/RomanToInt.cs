@@ -12,7 +12,7 @@
         public static int RomanToInt(string s)
         {
             int result = 0;
-            Dictionary<char, int> romanValues = new Dictionary<char, int>()
+            Dictionary<char, int> romanValues = new()
             {
                 ['I'] = 1,
                 ['V'] = 5,
@@ -23,15 +23,15 @@
                 ['M'] = 1000
             };
 
-            Dictionary<char, char[]> romanPrevs = new Dictionary<char, char[]>()
+            Dictionary<char, char[]> romanPrevs = new()
             {
                 ['I'] = new char[] { 'X', 'V' },
-                ['V'] = new char[0],
+                ['V'] = System.Array.Empty<char>(),
                 ['X'] = new char[] { 'L', 'C' },
-                ['L'] = new char[0],
+                ['L'] = System.Array.Empty<char>(),
                 ['C'] = new char[] { 'D', 'M' },
-                ['D'] = new char[0],
-                ['M'] = new char[0]
+                ['D'] = System.Array.Empty<char>(),
+                ['M'] = System.Array.Empty<char>()
             };
             int i;
             for (i = 0; i < s.Length; i++)

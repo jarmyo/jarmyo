@@ -14,15 +14,15 @@
         public static bool IsValid(string s)
         {
             if (s.Length % 2 != 0) return false;
-            Stack<char> stack = new Stack<char>();
+            Stack<char> stack = new();
             int inx = 0;
-            Dictionary<char, char> open = new Dictionary<char, char>()
+            Dictionary<char, char> open = new()
             {
                 ['('] = ')',
                 ['['] = ']',
                 ['{'] = '}',
             };
-            Dictionary<char, char> close = new Dictionary<char, char>()
+            Dictionary<char, char> close = new()
             {
                 [')'] = '(',
                 [']'] = '[',

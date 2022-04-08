@@ -16,7 +16,7 @@ namespace leetCodeSolutions.Hard
         /// <returns>Return the length of left after such a partitioning.  It is guaranteed that such a partitioning exists.</returns>
         public static int PartitionDisjoint(int[] nums)
         {
-            List<int> left = new List<int>();
+            List<int> left = new();
             List<int> right = nums.ToList();
             right.RemoveAt(0);
             left.Add(nums[0]);
