@@ -21,12 +21,30 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\SCSS\Blog.scss" />
+    <None Remove="Assets\SCSS\Site.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\SCSS\site.scss">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Assets\SCSS\Blog.scss">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
     <Content Include="Data\store\blog.db" />
     <Content Include="Data\store\personalblog.db" />
     <Content Include="Data\store\Security.db" />
     <Content Include="Data\store\security.db-shm" />
     <Content Include="Data\store\security.db-wal" />
     <Content Include="Data\store\SQLite.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
   </ItemGroup>
   <ItemGroup>    
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.3" />

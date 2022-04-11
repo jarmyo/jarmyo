@@ -1,0 +1,17 @@
+﻿//modify a little bootstrap.
+.btn {
+    border-radius: 5px;
+}
+//TODO: Use mixins to show how to use mixins
+.DarkMode
+{
+    p
+    {
+        color: white;
+    }
+}
+.LightMode{
+    P{
+        color:black;
+    }
+}

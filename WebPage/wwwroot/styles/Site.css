@@ -1,15 +1,11 @@
-﻿/*body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿.btn {
+  border-radius: 5px;
 }
 
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.DarkMode p {
+  color: white;
 }
 
-input,
-select,
-textarea {
-    max-width: 280px;
-}*/
+.LightMode P {
+  color: black;
+}

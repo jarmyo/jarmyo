@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "wwwroot/styles/Blog.css",
+    "inputFile": "Assets/SCSS/Blog.scss"
+  },
+  {
+    "outputFile": "wwwroot/styles/site.css",
+    "inputFile": "Assets/SCSS/site.scss"
+  }
+]
