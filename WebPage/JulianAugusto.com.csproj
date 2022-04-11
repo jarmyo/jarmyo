@@ -36,12 +36,20 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Include="Data\store\blog.db" />
-    <Content Include="Data\store\personalblog.db" />
-    <Content Include="Data\store\Security.db" />
+    <Content Include="Data\store\blog.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\store\personalblog.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\store\Security.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\store\security.db-shm" />
     <Content Include="Data\store\security.db-wal" />
-    <Content Include="Data\store\SQLite.db" />
+    <Content Include="Data\store\SQLite.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="compilerconfig.json" />
