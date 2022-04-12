@@ -56,7 +56,6 @@ namespace Personal
                 endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
-            BlogHelper.Configure(app.ApplicationServices.GetService<BlogContext>());
             /// Initialize blog constants
             using (var ctx = new BlogContext())
             {

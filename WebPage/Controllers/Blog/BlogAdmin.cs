@@ -28,6 +28,7 @@
         [HttpPost]
         public ActionResult Edit(BlogPostEntry formData)
         {
+            BlogHelper.Configure(blogCtx);
             Post OriginalPost = new();
             if (formData.IsUpdate) OriginalPost = blogCtx.Entradas.Find(formData.Id); //find original if update
             //map 
