@@ -19,7 +19,7 @@ namespace Personal
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<SecurityContext>();
             services.AddLocalization(options => options.ResourcesPath = "Resources");
-            services.AddRazorPages().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();            
+            services.AddRazorPages().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
             services.AddControllersWithViews(ConfigureMvcOptions);
             services.AddScoped<IScopedService, ExampleService>();
             services.AddSingleton<ISingletonService, ExampleService>();
@@ -40,7 +40,7 @@ namespace Personal
         {
             var locOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
             app.UseRequestLocalization(locOptions.Value);
-            if (env.IsDevelopment())            
+            if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
             else
             {
@@ -49,21 +49,24 @@ namespace Personal
             app.UseStaticFiles();
             app.UseRouting();
             app.UseAuthentication();
-            app.UseAuthorization();            
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(name: "areas", pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}/{offset?}");
                 endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+            BlogHelper.Configure(app.ApplicationServices.GetService<BlogContext>());
             /// Initialize blog constants
-            var ctx = new BlogContext();
-            Controllers.BlogController.TotalPost = ctx.Entradas.Count();
-            Controllers.BlogController.TotalPages = Controllers.BlogController.TotalPost / Controllers.BlogController.MaxPages;
-            if (Controllers.BlogController.TotalPages == 0) Controllers.BlogController.TotalPages = 1;
+            using (var ctx = new BlogContext())
+            {
+                Controllers.BlogController.TotalPost = ctx.Entradas.Count();
+                Controllers.BlogController.TotalPages = Controllers.BlogController.TotalPost / Controllers.BlogController.MaxPages;
+                if (Controllers.BlogController.TotalPages == 0) Controllers.BlogController.TotalPages = 1;
+            }
         }
         private void ConfigureMvcOptions(MvcOptions mvcOptions)
-        {            
+        {
         }
     }
 }
