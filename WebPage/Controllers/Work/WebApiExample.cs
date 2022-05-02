@@ -3,10 +3,11 @@
     public partial class WorkController : Controller
     {
         /// <summary>
-        /// Square root API Service. Just to demostrate that i know how to use this.
+        /// Square root API Service. Just to demostrate that I know how to use this.
         /// </summary>
         /// <param name="id">optional value </param>
         /// <returns>square root of given number if id is provided</returns>
+        [HttpGet]
         public JsonResult WebApiExample(string id)
         {
             //TODO: max number of request.
@@ -32,12 +33,12 @@
             }
 
             return Json(response);
-        }
+        }       
         /// <summary>
         /// Backend function, just for testing purposes.
         /// </summary>
         /// <param name="number">Value of number</param>
-        /// <returns>square root of given number</returns>
+        /// <returns>square root of given number</returns>       
         public ResultObject SquareResult(string number)
         {
             //TODO: translate, globalization            
@@ -69,12 +70,10 @@
         {
             return !long.TryParse(number, out _);
         }
-
         public static bool IsNot16Bits(string number)
         {
             return !short.TryParse(number, out _);
         }
-
         public static ResultObject BadResult(string msg)
         {
             using (var response = new ResultObject())
