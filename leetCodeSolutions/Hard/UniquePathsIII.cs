@@ -44,96 +44,98 @@ namespace leetCodeSolutions.Hard
         }
         public class Point
         {
+            public int Mover_Obstacles(ref List<Point> stack)
+            {
+                if ((stack.Count - 1) == nonObstacles)
+                {
+                    // System.Diagnostics.Debug.WriteLine("OK");
+                    /*foreach (var s in stack)
+                    {
+                        System.Diagnostics.Debug.Write($"({s.x},{s.y}) ");
+                    }
+                    System.Diagnostics.Debug.WriteLine("");*/
+                    return 1;
+                }
+                else
+                {
+                    return 0; //  System.Diagnostics.Debug.WriteLine($"\tincompleta");
+                }
+            }
+            public int Mover_Rest(ref List<Point> stack, ref int[][] gridA)
+            {
+                stack.Add(this);
+                int j = 0, k = 0, l = 0, m = 0;
+                var jr = new Point(x + 1, y);
+                if (!stack.Any(n => n.x == jr.x && n.y == jr.y))
+                {
+                    j = jr.Mover(ref stack, ref gridA); //abajo.
+                }
+                else
+                {
+                    // System.Diagnostics.Debug.WriteLine($"\tno puedo volver abajo ({x},{y})");
+                }               
+                var lr = new Point(x, y + 1);
+                if (!stack.Any(n => n.x == lr.x && n.y == lr.y))
+                {
+                    l = lr.Mover(ref stack, ref gridA); //derecha
+                }
+                else
+                {
+                    //  System.Diagnostics.Debug.WriteLine($"\tno puedo volver a la derecha ({x},{y})");
+                }
+                var kr = new Point(x - 1, y);
+                if (!stack.Any(n => n.x == kr.x && n.y == kr.y))
+                {
+                    k = kr.Mover(ref stack, ref gridA); //arriba
+                }
+                else
+                {
+                    // System.Diagnostics.Debug.WriteLine($"\tno puedo volver arriba ({x},{y})");
+                }
+                var mr = new Point(x, y - 1);
+                if (!stack.Any(n => n.x == mr.x && n.y == mr.y))
+                {
+                    m = mr.Mover(ref stack, ref gridA); //izquierda
+                }
+                else
+                {
+                    //  System.Diagnostics.Debug.WriteLine($"\tno puedo volver izquierda ({x},{y})");
+                }
+                var result = j + k + l + m;
+                stack.Remove(this);
+                //System.Diagnostics.Debug.WriteLine("<=====");
+                return result;
+            }
             public int Mover(ref List<Point> stack, ref int[][] gridA)
             {
                 if (y == columnasY)
                 {
-                    //   System.Diagnostics.Debug.WriteLine($"\t< tope derecho ({x},{y})");
-                    return 0;
+                    return 0; //   System.Diagnostics.Debug.WriteLine($"\t< tope derecho ({x},{y})");
                 }//no se puede avanzar finalizar ruta
                 else if (x == filasX)
                 {
-                    //  System.Diagnostics.Debug.WriteLine($"\t^ tope abajo ({x},{y})");
-                    return 0;
+                    return 0;                     //  System.Diagnostics.Debug.WriteLine($"\t^ tope abajo ({x},{y})");
                 }//no se puede avanzar fin de ruta
                 else if (y < 0)
                 {
-                    //  System.Diagnostics.Debug.WriteLine($"\t< tope izquierdo ({x},{y})");
-                    return 0;
+                    return 0; //  System.Diagnostics.Debug.WriteLine($"\t< tope izquierdo ({x},{y})");
                 }//no se puede avanzar finalizar ruta
                 else if (x < 0)
                 {
-                    //      System.Diagnostics.Debug.WriteLine($"\tv tope arriba ({x},{y})");
-                    return 0;
+                    return 0;                     //      System.Diagnostics.Debug.WriteLine($"\tv tope arriba ({x},{y})");
                 }//no se puede avanzar fin de ruta
                 else if (gridA[x][y] == 2)
                 {
-                    if ((stack.Count - 1) == nonObstacles)
-                    {
-                        // System.Diagnostics.Debug.WriteLine("OK");
-                        foreach (var s in stack)
-                        {
-                            System.Diagnostics.Debug.Write($"({s.x},{s.y}) ");
-                        }
-                        System.Diagnostics.Debug.WriteLine("");
-                        return 1;
-                    }
-                    else
-                    {
-                        //  System.Diagnostics.Debug.WriteLine($"\tincompleta");
-                        return 0;
-                    }
+                    return Mover_Obstacles(ref stack);
                 }
                 else if (gridA[x][y] == -1)
                 {
-                    //System.Diagnostics.Debug.WriteLine($"\tobstaculo ({x},{y})");
-                    return 0;
+                    return 0;                     //System.Diagnostics.Debug.WriteLine($"\tobstaculo ({x},{y})");
                 }
                 else
                 {
                     //   System.Diagnostics.Debug.Write($"({x},{y})");
-                    stack.Add(this);
-                    int j = 0, k = 0, l = 0, m = 0;
-                    var jr = new Point(x + 1, y);
-                    if (!stack.Any(n => n.x == jr.x && n.y == jr.y))
-                    {
-                        j = jr.Mover(ref stack, ref gridA); //abajo.
-                    }
-                    else
-                    {
-                        // System.Diagnostics.Debug.WriteLine($"\tno puedo volver abajo ({x},{y})");
-                    }
-                    var lr = new Point(x, y + 1);
-                    if (!stack.Any(n => n.x == lr.x && n.y == lr.y))
-                    {
-                        l = lr.Mover(ref stack, ref gridA); //derecha
-                    }
-                    else
-                    {
-                        //  System.Diagnostics.Debug.WriteLine($"\tno puedo volver a la derecha ({x},{y})");
-                    }
-                    var kr = new Point(x - 1, y);
-                    if (!stack.Any(n => n.x == kr.x && n.y == kr.y))
-                    {
-                        k = kr.Mover(ref stack, ref gridA); //arriba
-                    }
-                    else
-                    {
-                        // System.Diagnostics.Debug.WriteLine($"\tno puedo volver arriba ({x},{y})");
-                    }
-                    var mr = new Point(x, y - 1);
-                    if (!stack.Any(n => n.x == mr.x && n.y == mr.y))
-                    {
-                        m = mr.Mover(ref stack, ref gridA); //izquierda
-                    }
-                    else
-                    {
-                        //  System.Diagnostics.Debug.WriteLine($"\tno puedo volver izquierda ({x},{y})");
-                    }
-                    var result = j + k + l + m;
-                    stack.Remove(this);
-                    //System.Diagnostics.Debug.WriteLine("<=====");
-                    return result;
+                    return Mover_Rest(ref stack, ref gridA);
                 }
             }
             public Point(int _x, int _Y)
