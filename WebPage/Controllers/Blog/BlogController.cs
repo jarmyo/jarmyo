@@ -7,14 +7,14 @@ namespace Personal.Controllers
         internal const int MaxPages = 10; //10 post by page
         internal static int TotalPost;
         internal static int TotalPages;
-        private readonly BlogContext blogCtx;
+        private readonly BlogContext _blogCtx;
         private readonly SignInManager<IdentityUser> _signInManager;
 
-        public BlogController(BlogContext _blogCtx, SignInManager<IdentityUser> signInManager,
+        public BlogController(BlogContext blogCtx, SignInManager<IdentityUser> signInManager,
             UserManager<IdentityUser> userManager)
         {
             _signInManager = signInManager;
-            blogCtx = _blogCtx;
+            _blogCtx = blogCtx;
         }
         [AllowAnonymous]
         public ActionResult Index(string id)
@@ -26,19 +26,19 @@ namespace Personal.Controllers
                 _ = int.TryParse(id, out currentPage);
             }
 
-            var model = new BlogIndexModel
+            var model = new Models.Blog.BlogIndexModel
             {
                 //TODO: This can be slice, order and filter
-                Entradas = blogCtx.Entradas.OrderByDescending(e => e.Fecha).ToList(),
+                Entradas = _blogCtx.Entradas.OrderByDescending(e => e.Fecha).ToList(),
                 DisableBack = currentPage == 1,
                 DisableFoward = currentPage == TotalPages,
                 CurrentPage = currentPage,
-                Etiquetas = blogCtx.Etiquetas.ToList(),
+                Etiquetas = _blogCtx.Etiquetas.ToList(),
             };
 
             var culture = Request.HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.Culture;
             model.Archivo = new Dictionary<string, string>();
-            foreach (var date in blogCtx.Fechas)
+            foreach (var date in _blogCtx.Fechas)
             {
                 var dateparts = date.Name.Split('-');
                 var year = 2000 + int.Parse(dateparts[0]);

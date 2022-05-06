@@ -7,7 +7,7 @@
         public ActionResult Personal()
         {
             ViewBag.Titulo = "Blog Personal";
-            var model = new BlogIndexModel
+            var model = new Models.Blog.BlogIndexModel
             {
                 Entradas = personal.Entradas.OrderByDescending(e => e.Fecha).ToList()
             };

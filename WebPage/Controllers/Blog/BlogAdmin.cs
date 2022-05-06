@@ -14,7 +14,7 @@
             {
                 ViewBag.Title = "Update Post"; //TRANSLATE
                 ViewBag.ButtonCaption = "Update";
-                entrada = blogCtx.Entradas.Find(id);
+                entrada = _blogCtx.Entradas.Find(id);
             }
             else
             {
@@ -28,9 +28,9 @@
         [HttpPost]
         public ActionResult Edit(BlogPostEntry formData)
         {
-            BlogHelper.Configure(blogCtx);
+            BlogHelper.Configure(_blogCtx);
             Post OriginalPost = new();
-            if (formData.IsUpdate) OriginalPost = blogCtx.Entradas.Find(formData.Id); //find original if update
+            if (formData.IsUpdate) OriginalPost = _blogCtx.Entradas.Find(formData.Id); //find original if update
             //map 
             OriginalPost.Id = formData.Id;
             OriginalPost.Fecha = DateTime.Parse(formData.Fecha);
@@ -40,8 +40,8 @@
             BlogHelper.ProcessDates(OriginalPost.Fecha, OriginalPost.Id);
             BlogHelper.ProcessTags(OriginalPost.Etiquetas, OriginalPost.Id);
             // end map
-            if (!formData.IsUpdate) blogCtx.Entradas.Add(OriginalPost); //add if new
-            blogCtx.SaveChanges();
+            if (!formData.IsUpdate) _blogCtx.Entradas.Add(OriginalPost); //add if new
+            _blogCtx.SaveChanges();
             return RedirectToAction("Index");
         }
         public IActionResult DeleteTag(string id)
@@ -50,14 +50,14 @@
             {
                 if (id != null)
                 {
-                    var tag = blogCtx.Etiquetas.Find(id);
-                    blogCtx.Etiquetas.Remove(tag);
+                    var tag = _blogCtx.Etiquetas.Find(id);
+                    _blogCtx.Etiquetas.Remove(tag);
                 }
                 else
                 {
-                    blogCtx.Etiquetas.Remove(blogCtx.Etiquetas.First(t => t.Name == string.Empty));
+                    _blogCtx.Etiquetas.Remove(_blogCtx.Etiquetas.First(t => t.Name == string.Empty));
                 }
-                blogCtx.SaveChanges();
+                _blogCtx.SaveChanges();
                 return Json("ok");
 
             }
@@ -70,9 +70,9 @@
         {
             if (id != null)
             {
-                var entrada = blogCtx.Entradas.Find(id);
-                blogCtx.Entradas.Remove(entrada);
-                blogCtx.SaveChanges();
+                var entrada = _blogCtx.Entradas.Find(id);
+                _blogCtx.Entradas.Remove(entrada);
+                _blogCtx.SaveChanges();
             }
             return RedirectToAction("Index");
         }
