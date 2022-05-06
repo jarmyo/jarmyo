@@ -24,7 +24,7 @@
             long result = y;
             while (result != 0)
             {
-                digits.Add(y % divisor / divisor / 10);
+                digits.Add( (y % divisor) / (divisor / 10));
                 result = result / 10;
                 divisor *= 10;
             }

@@ -59,7 +59,6 @@
                 }
                 _blogCtx.SaveChanges();
                 return Json("ok");
-
             }
             catch (Exception ex)
             {

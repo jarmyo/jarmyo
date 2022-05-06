@@ -9,7 +9,6 @@
         {
             _signInManager = signInManager;
             _schoolCtx = schoolCtx;
-
         }
         #region Views
         public IActionResult Index()
@@ -29,7 +28,6 @@
                 return View();
             }
             return NotFound();
-            
         }
         public IActionResult New(string id)
         {
