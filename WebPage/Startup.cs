@@ -13,6 +13,7 @@ namespace Personal
         {
             KeyVault.SpeechKey = Configuration["speechKey1"];
             services.AddEntityFrameworkSqlite().AddDbContext<BlogContext>();
+            services.AddEntityFrameworkSqlite().AddDbContext<SchoolContext>();
             services.AddEntityFrameworkSqlite().AddDbContext<SQLiteContext>();
             services.AddDbContext<SecurityContext>();
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
@@ -41,10 +42,14 @@ namespace Personal
             var locOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
             app.UseRequestLocalization(locOptions.Value);
             if (env.IsDevelopment())
-                app.UseDeveloperExceptionPage();
+            {
+                app.UseStatusCodePagesWithReExecute("/Home/Error", "?code={0}");
+                //app.UseDeveloperExceptionPage();
+            }
             else
             {
                 app.UseHsts();
+                app.UseStatusCodePagesWithReExecute("/Home/Error", "?code={0}");
             }
             app.UseStaticFiles();
             app.UseRouting();

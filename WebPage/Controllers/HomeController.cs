@@ -13,6 +13,24 @@ namespace Personal.Controllers
             ViewBag.Titulo = _localizer["Title"];
             return View();
         }
+        public ActionResult Error(string code)
+        {
+            ViewBag.Titulo = _localizer["Title"];
+            ViewBag.Code = code;
+            //TODO: handle diferent a notfound and a server errors.
+            switch (code)
+            {
+                case "404":
+                    {
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+            }
+            return View();
+        }
         [HttpPost]
         public IActionResult SetLanguage(string culture, string returnUrl)
         {
