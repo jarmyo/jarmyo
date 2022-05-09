@@ -124,7 +124,7 @@
     <value>Libros</value>
   </data>
   <data name="Current activities" xml:space="preserve">
-    <value>En que me ocupo</value>
+    <value>En que me ocupo y ocupaba</value>
   </data>
   <data name="Interest1" xml:space="preserve">
     <value>Escribo &lt;a href="https://shinjistudio.blogspot.com/search/label/Poetico"&gt;poesía&lt;/a&gt; y &lt;a href="https://shinjistudio.blogspot.com/search/label/Filosofico"&gt;prosa&lt;/a&gt; en mi blog personal desde 2006</value>
@@ -133,7 +133,7 @@
     <value>Me gusta tocar la &lt;a href="https://www.instagram.com/p/CF07YvKhl4r/"&gt;Guitarra&lt;/a&gt;</value>
   </data>
   <data name="Interest3" xml:space="preserve">
-    <value>Me gusta componer &lt;a href="/assets/mas.mp3"&gt;musica instrumental minimalista &lt;/a&gt; y otros&lt;a href="/assets/zapato.mp3"&gt;tipos de música&lt;/a&gt;</value>
+    <value>Me gusta componer &lt;a href="/assets/mas.mp3"&gt;musica instrumental minimalista &lt;/a&gt; y otros &lt;a href="/assets/zapato.mp3"&gt;tipos de música&lt;/a&gt;</value>
   </data>
   <data name="Languages" xml:space="preserve">
     <value>Idiomas</value>
@@ -141,23 +141,23 @@
   <data name="Lead" xml:space="preserve">
     <value>Hola, bienvenido a mi pagina personal, soy un desarrollador de software especializado en tecnologías .NET y ecosistemas de Microsoft, tengo mas de 10 años creando software. Disfruto aprendiendo y creando cosas nuevas.</value>
   </data>
-  <data name="LeadActivities" xml:space="preserve">
+  <data name="My_Activities" xml:space="preserve">
     <value>No hago mucho, pero lo que hago, lo hago con pasión</value>
   </data>
-  <data name="LeadActivities1" xml:space="preserve">
-    <value>Desarrollo web en &lt;a href="https://education.ti.com"&gt;Texas Instruments&lt;/a&gt;</value>
+  <data name="My_Activities1" xml:space="preserve">
+    <value>&lt;a href="https://github.com/jarmyo?tab=repositories"&gt;Hago un poco de software libre&lt;/a&gt;</value>
   </data>
-  <data name="LeadActivities2" xml:space="preserve">
+  <data name="My_Activities2" xml:space="preserve">
+    <value>Jefe del Departamento de Informatica, Programación y Estadistica del &lt;a href="https://www.inm.gob.mx"&gt;Instituto Nacional de Migración en Chiapas&lt;/a&gt;; Enlace y responsable técnologico estatal</value>
+  </data>
+  <data name="My_Activities3" xml:space="preserve">
+    <value>Soy el Director tecnologico de &lt;a href="https://repos.mx"&gt;Repos Software&lt;/a&gt;</value>
+  </data>
+  <data name="My_Activities4" xml:space="preserve">
     <value>Desarrollo de software biometrico y de seguridad en la &lt;a href="https://www.aguascalientes.gob.mx/ssp/"&gt;Secretaría de Seguridad Pública de Aguascalientes&lt;/a&gt;</value>
   </data>
-  <data name="LeadActivities3" xml:space="preserve">
-    <value>Soy el Director tecnologico &lt;a href="https://repos.mx"&gt;Repos Software&lt;/a&gt;</value>
-  </data>
-  <data name="LeadActivities4" xml:space="preserve">
-    <value>&lt;a href="https://www.freecodecamp.org/fccdc754e81-1b3c-43ac-b223-dce2f274982a"&gt;Estoy aprendiendo desarrollo web&lt;/a&gt;</value>
-  </data>
-  <data name="LeadActivities5" xml:space="preserve">
-    <value>&lt;a href="https://github.com/jarmyo/"&gt;Hago software libre&lt;/a&gt;</value>
+  <data name="My_Activities5" xml:space="preserve">
+    <value>Desarrollo web en &lt;a href="https://education.ti.com"&gt;Texas Instruments&lt;/a&gt; via &lt;a href="https://www2.deloitte.com/us/en.html"&gt;Deloitte&lt;/a&gt;</value>
   </data>
   <data name="LeadSocial" xml:space="preserve">
     <value>Mis redes sociales</value>
@@ -169,7 +169,7 @@
     <value>Otras actividades</value>
   </data>
   <data name="Other2" xml:space="preserve">
-    <value>Otras cosas</value>
+    <value>Mas registros digitales</value>
   </data>
   <data name="Other3" xml:space="preserve">
     <value>Mas cosas</value>
@@ -179,5 +179,14 @@
   </data>
   <data name="Work Playgroud" xml:space="preserve">
     <value>Area de Pruebas</value>
+  </data>
+  <data name="Finalized" xml:space="preserve">
+    <value>Finalizado</value>
+  </data>
+  <data name="Paused" xml:space="preserve">
+    <value>En Pausa</value>
+  </data>
+  <data name="My_Activities6" xml:space="preserve">
+    <value>Desarrollo de software en &lt;a href="https://www.sterlingcheck.com"&gt;Sterling&lt;/a&gt; via &lt;a href="https://www2.deloitte.com/us/en.html"&gt;Hexaware&lt;/a&gt;</value>
   </data>
 </root>

@@ -1,9 +1,12 @@
-﻿.Post .Header {
+.Post .Header {
   font-weight: 600;
 }
+
 .Post P {
   line-height: 10px;
 }
+
 .Post Image {
   border: 1px solid black;
 }
+/*# sourceMappingURL=Blog.css.map */

@@ -124,7 +124,7 @@
     <value>Books</value>
   </data>
   <data name="Current activities" xml:space="preserve">
-    <value>Current activities</value>
+    <value>Current and some past activities</value>
   </data>
   <data name="Interest1" xml:space="preserve">
     <value>I write &lt;a href="https://shinjistudio.blogspot.com/search/label/Poetico"&gt;poetry&lt;/a&gt; and &lt;a href="https://shinjistudio.blogspot.com/search/label/Filosofico"&gt;prose&lt;/a&gt; at my personal blog since 2006</value>
@@ -141,23 +141,23 @@
   <data name="Lead" xml:space="preserve">
     <value>Hello, welcome to my personal page, I am a software developer specialized in .NET technologies and Microsoft ecosystems, I have more than 10 years creating software. I love learning and building new things.</value>
   </data>
-  <data name="LeadActivities" xml:space="preserve">
+  <data name="My_Activities" xml:space="preserve">
     <value>Well, I don't do much, but what I do, I do with passion.</value>
   </data>
-  <data name="LeadActivities1" xml:space="preserve">
-    <value>Web Development at &lt;a href="https://education.ti.com"&gt;Texas Instruments&lt;/a&gt;</value>
+  <data name="My_Activities1" xml:space="preserve">
+    <value>&lt;a href="https://github.com/jarmyo?tab=repositories"&gt;I code software for the love of art&lt;/a&gt;</value>
   </data>
-  <data name="LeadActivities2" xml:space="preserve">
-    <value>Development of biometric security systems at &lt;a href="https://www.aguascalientes.gob.mx/ssp/"&gt;Aguascalientes Goverment&lt;/a&gt;</value>
+  <data name="My_Activities2" xml:space="preserve">
+    <value>Informatics Deparment Head on &lt;a href="https://www.inm.gob.mx"&gt;México's Inmigration Federal Bureau&lt;/a&gt; for Chiapas state</value>
   </data>
-  <data name="LeadActivities3" xml:space="preserve">
+  <data name="My_Activities3" xml:space="preserve">
     <value>I am responsible for the technological development of &lt;a href="https://repos.mx"&gt;Repos Software&lt;/a&gt;</value>
   </data>
-  <data name="LeadActivities4" xml:space="preserve">
-    <value>&lt;a href="https://www.freecodecamp.org/fccdc754e81-1b3c-43ac-b223-dce2f274982a"&gt;I'm learning about web development&lt;/a&gt;</value>
+  <data name="My_Activities4" xml:space="preserve">
+    <value>Development of biometric security systems at &lt;a href="https://www.aguascalientes.gob.mx/ssp/"&gt;Aguascalientes Goverment&lt;/a&gt;</value>
   </data>
-  <data name="LeadActivities5" xml:space="preserve">
-    <value>&lt;a href="https://github.com/jarmyo/"&gt;I code software for the love of art&lt;/a&gt;</value>
+  <data name="My_Activities5" xml:space="preserve">
+    <value>Web Development at &lt;a href="https://education.ti.com"&gt;Texas Instruments&lt;/a&gt; via &lt;a href="https://www2.deloitte.com/us/en.html"&gt;Deloitte&lt;/a&gt;</value>
   </data>
   <data name="LeadSocial" xml:space="preserve">
     <value>There are my personal social media</value>
@@ -179,5 +179,14 @@
   </data>
   <data name="Work Playgroud" xml:space="preserve">
     <value>Work Playground</value>
+  </data>
+  <data name="Finalized" xml:space="preserve">
+    <value>Finalized</value>
+  </data>
+  <data name="My_Activities6" xml:space="preserve">
+    <value>Software developer at &lt;a href="https://www.sterlingcheck.com"&gt;Sterling&lt;/a&gt; via &lt;a href="https://www2.deloitte.com/us/en.html"&gt;Hexaware&lt;/a&gt;</value>
+  </data>
+  <data name="Paused" xml:space="preserve">
+    <value>Paused</value>
   </data>
 </root>

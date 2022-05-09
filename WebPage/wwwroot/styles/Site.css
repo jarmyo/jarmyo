@@ -2,6 +2,10 @@
   border-radius: 5px;
 }
 
+.line-through {
+  text-decoration: line-through;
+}
+
 .DarkMode p {
   color: white;
 }
