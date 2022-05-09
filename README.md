@@ -3,25 +3,28 @@ This repository contains all code from <https://JulianAugusto.com>, my personal 
 [![CodeFactor](https://www.codefactor.io/repository/github/jarmyo/jarmyo/badge)](https://www.codefactor.io/repository/github/jarmyo/jarmyo)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=jarmyo)
 
-## Hello visitor 👋
+This repository is not intended to public contribution.
 
-Here are some things about me:
+# Julian Augusto Ruiz Martinez
 
-SKILLS
+## SKILLS
 
-- C# Development, I've been working for about 12 years in **.NET technologies**: WinForms-WPF-WinUI, ASP.NET Webforms-Razor Pages, ClickOnce Deployment, Linq & EntityFramework.
-- SQL Server Database: Queries, Security, Triggers, Functions, Stored Procedures, Schemas, Indexes, etc.
+- C# Development, I've been working for about 12 years in **.NET technologies**.
+- User Interfaces: WPF, Windows Forms, WinUI and Razor Pages
+- Middle SQL Server Database: Queries, Security, Triggers, Functions, Stored Procedures, Schemas, Indexes, etc, EntityFramework ORM and Linq Queries
+- Frontend Web development: Bootstrap, SCSS, Vainilla Javascript and Typescript.
 - Version control: Microsoft TeamFundation, bitbucket and Github.
-- I'm relatively new in [Web development](https://www.freecodecamp.org/fccdc754e81-1b3c-43ac-b223-dce2f274982a), but I'm able to build a responsibe web site with MVC, Razor and Webforms; Bootstrap, CSS and Vainilla Javascript or Typescript.
+- Project Management: Atlassian tools; Jira and Confluence, kanban, scrum and Agile methologies.
 - Tech Support: I have a lot of knowledge fixing Printers and PCs. Windows Server and services deployment (Domains, FTP, IIS, Policies, etc). And the basics of scripting in PowerShell and bash.
-- Languages: Spanish native and fluent. English: profesional conversations.
+- Languages: Spanish native. English: profesional conversations.
 - Hacking skills: network sniffing, .NET disassembling, bruteforce logins, SQL injection.
 
-PROFESSIONAL BACKGROUND
-- I've working 10 years in the INM (Instituto Nacional de Migración) in Chiapas, as the director of informatics in the State, Building software for [administrative control](https://www.behance.net/gallery/4752143/Rol-de-Servicios), Telecomunications administration (CISCO and Nortel switches and BCM's, Ubiquiti antennas), all network configuration (VPN and Domain Control) and Tech support.
+## PROFESSIONAL BACKGROUND
+- I Worked 10 years in the INM (Instituto Nacional de Migración) in Chiapas, as the director of informatics in the State, Building software for [administrative control](https://www.behance.net/gallery/4752143/Rol-de-Servicios), Telecomunications administration (CISCO and Nortel switches and BCM's, Ubiquiti antennas), all network configuration (VPN and Domain Control) and Tech support.
 - I’m the CTO of [Repos Software](https://repos.mx) we have a POS for restaurants, we apply all our tech knowledge: Web. Movile and Desktop development, Huge normalized Databases, Cloud Security, biometrics, online payments, deployment and support. We are only two people, but we have about 20 clients in México and USA.
 - I’ve working on Secretaría de Seguridad Pública del Estado de Aguascalientes, in a In-House security development from 2019 to 2022.
 - Sitecore 8.2 Backend Development for Texas Instruments Education Page as Deloitte contractor.
+- Currently Sterling background checks development as Hexaware contractor.
 
 ### Contact forms
 [![Gmail](https://img.shields.io/badge/-GMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jarm.yo@gmail.com)
