@@ -129,6 +129,9 @@
   <data name="JobDate4" xml:space="preserve">
     <value>Sept 2021 - Mar 2022</value>
   </data>
+  <data name="JobDate5" xml:space="preserve">
+    <value>Mar 2022 - Presente</value>
+  </data>
   <data name="JobDescription1" xml:space="preserve">
     <value>Control y administración de bienes informáticos de la Delegación en Chiapas, responsable de la estadística estatal, desarrollo de software para control de estaciones migratorias. Soporte y administración de telecomunicaciones.</value>
   </data>
@@ -141,6 +144,9 @@
   <data name="JobDescription4" xml:space="preserve">
     <value>Mantenimiento y desarrollo backend del CMS en sitecore del area de educación de &lt;a href="https://education.ti.com"&gt;Texas Instruments&lt;/a&gt;</value>
   </data>
+  <data name="JobDescription5" xml:space="preserve">
+    <value>Desarrollo de software &lt;a href="https://www.sterlingcheck.com"&gt;Sterlings&lt;/a&gt;</value>
+  </data>
   <data name="JobName1" xml:space="preserve">
     <value>Jefe de Departamento</value>
   </data>
@@ -152,6 +158,9 @@
   </data>
   <data name="JobName4" xml:space="preserve">
     <value>Desarrollador .NET</value>
+  </data>
+  <data name="JobName5" xml:space="preserve">
+    <value>Analista de Sistemas</value>
   </data>
   <data name="Stack" xml:space="preserve">
     <value>Tecnologías</value>

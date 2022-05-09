@@ -10,6 +10,26 @@
     </div>
     <hr />
     <div class="col-11">
+         <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <h3 class="mb-0">@Localizer["JobName5"]</h3>
+                <div class="subheading mb-3"><a href="https://hexaware.com/">Hexaware</a></div>
+                <p>@Localizer["JobDescription5"]</p>
+                <p>
+                    <strong>@Localizer["Stack"]: </strong>
+                    @*TODO: create a foreach, save on a database, auto render this tags*@
+                    <span class="badge bg-primary">.NET Framework</span>
+                    <span class="badge bg-primary">ASP.NET</span>
+                    <span class="badge bg-primary">C#</span>
+                    <span class="badge bg-success">SQL Server</span>
+                    <span class="badge bg-light text-dark">npm</span>
+                    <span class="badge bg-info">AWS</span>
+                    <span class="badge bg-dark">Windows OS</span>
+                    <span class="badge bg-dark">github</span>
+                </p>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">@Localizer["JobDate5"]</span></div>
+        </div>
         <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
             <div class="flex-grow-1">
                 <h3 class="mb-0">@Localizer["JobName4"]</h3>
@@ -17,7 +37,6 @@
                 <p>@Localizer["JobDescription4"]</p>
                 <p>
                     <strong>@Localizer["Stack"]: </strong>
-                    @*TODO: create a foreach, save on a database, auto render this tags*@
                     <span class="badge bg-primary">.NET Framework</span>
                     <span class="badge bg-primary">ASP.NET</span>
                     <span class="badge bg-primary">C#</span>

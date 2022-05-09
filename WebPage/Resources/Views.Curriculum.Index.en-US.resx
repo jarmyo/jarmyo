@@ -129,6 +129,9 @@
   <data name="JobDate4" xml:space="preserve">
     <value>Sept 2021 - Mar 2022</value>
   </data>
+  <data name="JobDate5" xml:space="preserve">
+    <value>Mar 2022 - Present</value>
+  </data>
   <data name="JobDescription1" xml:space="preserve">
     <value>Administration of technological assets in Chiapas Delegation, responsible for statistics and data analysis, software development for control of migratory stations. Telecommunications support and management.</value>
   </data>
@@ -141,6 +144,9 @@
   <data name="JobDescription4" xml:space="preserve">
     <value>Backend maintenance and development of &lt;a href="https://education.ti.com"&gt;Texas Instruments&lt;/a&gt; sitecore-CMS education area.</value>
   </data>
+  <data name="JobDescription5" xml:space="preserve">
+    <value>Software Development for &lt;a href="https://www.sterlingcheck.com"&gt;Sterlings&lt;/a&gt;</value>
+  </data>
   <data name="JobName1" xml:space="preserve">
     <value>Informatics Department Head</value>
   </data>
@@ -152,6 +158,9 @@
   </data>
   <data name="JobName4" xml:space="preserve">
     <value>.NET Developer</value>
+  </data>
+  <data name="JobName5" xml:space="preserve">
+    <value>System Analyst</value>
   </data>
   <data name="Stack" xml:space="preserve">
     <value>Stack</value>
