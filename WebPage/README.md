@@ -2,7 +2,7 @@
 
 This page is stored on Azure Web app container.
 
-Here is placed some of the thins I learn in time about web development.
+Here is placed some of the things I learn about web development.
 
 - SEO
 - ASP.NET
