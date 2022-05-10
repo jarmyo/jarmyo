@@ -44,7 +44,7 @@ namespace leetCodeSolutions.Hard
         }
         public class Point
         {
-            public int Mover_Obstacles(ref List<Point> stack)
+            public static int Mover_Obstacles(ref List<Point> stack)
             {
                 if ((stack.Count - 1) == nonObstacles)
                 {
