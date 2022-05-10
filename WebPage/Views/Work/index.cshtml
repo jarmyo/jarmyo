@@ -1,125 +1,205 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer Localizer
 @section Head
-{
+    {
     @await Html.PartialAsync("_NavigationPartial", new HeaderModel {Title = Localizer["Title"], Active = "Work"})
 }
-<div class="container my-2">
-    <h2>Samples</h2>    
-    <div>
-        <p class="lead">Code examples and using technologies I've worked on or I am learning.</p>
-        <p class="lead">This place is under construction, because i'm always learning'.</p>
+    <div class="container my-2">
+        <div class="row">
+            <div>
+                <p class="lead">Code examples and using technologies I've worked on or I am learning.</p>
+                <p class="lead">This place is under construction, because i'm always learning'.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Functional Samples</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card m-1">
+                    <div class="card-body">
+                        <h5 class="card-title">MVC WebAPI</h5>
+                        <p class="card-text">Backend fundamentals on ASP .NET</p>
+                        <p>
+                            <a href="/Work/WebApiExample" class="btn btn-sm btn-primary">Click to Example</a>
+                            <a href="https://github.com/jarmyo/jarmyo/blob/main/WebPage/Controllers/Work/WebApiExample.cs" class="btn btn-sm btn-info">Github source</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card m-1 text-white bg-primary">
+                    <div class="card-body">
+                        <h5 class="card-title">Javascript</h5>
+                        <p class="card-text">Ritch user interfaces</p>
+                        <p>
+                            <button onclick="demoFunction()" class="btn btn-sm btn-danger" type="button">Click Me</button>
+                            <a href="https://github.com/jarmyo/jarmyo/blob/main/WebPage/Assets/TypeScript/WorkFrontEnd.ts" class="btn btn-sm btn-info">Github source</a>
+                            <a class="link-info" href="https://www.freecodecamp.org/fccdc754e81-1b3c-43ac-b223-dce2f274982a">freecodeCamp</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card m-1 text-white bg-info">
+                    <div class="card-body">
+                        <h5 class="card-title">SQLite</h5>
+                        <p class="card-text">A simple form to store data on SQL Lite engine.</p>
+                        <a href="/Work/SQLite" class="btn btn-sm btn-primary" type="button">Web Form</a>
+                        <a href="https://github.com/jarmyo/jarmyo/blob/main/WebPage/Controllers/Work/SQLiteExample.cs" class="btn btn-sm btn-danger">Github source</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card m-1 text-white bg-success">
+                    <div class="card-body">
+                        <h5 class="card-title">WPF</h5>
+                        <p class="card-text">
+                            <a class="link-dark" href="https://www.behance.net/gallery/4752143/Rol-de-Servicios">for desktop</a>;
+                            and also for <a class="link-dark" href="https://github.com/jarmyo/WindowsPhoneStopWatch">Windows Phone</a>, ModernUI y Xamarin
+                        </p>
+                        <a href="/Work/WPFAPP" class="btn btn-sm btn-primary" type="button">Donwload APP Example</a>
+                        <a href="https://github.com/jarmyo/jarmyo/blob/main/WebPage/Controllers/Work/WPF.xaml" class="btn btn-sm btn-info">Github source</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card m-1 text-white bg-warning">
+                    <div class="card-body">
+                        <h5 class="card-title">CSS</h5>
+                        <p class="card-text"></p>
+                        <a href="/Work/SQLite" class="btn btn-sm btn-primary" type="button">CSS Transformation</a>
+                        <a href="https://github.com/jarmyo/jarmyo/blob/main/WebPage/wwwroot/styles.Site.css" class="btn btn-sm btn-info">Github source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-8">
+                <h2>@Localizer["Utils"]</h2>
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white">
+                            <h2 class="border-bottom p-3">C#</h2>
+                            <div class="list-group list-group-flush border-bottom scrollarea">
+                                <a href="#" class="list-group-item list-group-item-action lh-tight">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <strong class="mb-1">Base64 Encode/Decode</strong>
+                                        <small class="text-muted">security</small>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-actionlh-tight">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <strong class="mb-1">REST API Call</strong>
+                                        <small class="text-muted">web</small>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action lh-tight">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <strong class="mb-1">Run CMD</strong>
+                                        <small class="text-muted">shell</small>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action lh-tight">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <strong class="mb-1">Execute SQL command</strong>
+                                        <small class="text-muted">shell</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white">
+                            <h2 class="border-bottom p-3">Scripting</h2>
+                            <div class="list-group list-group-flush border-bottom scrollarea">
+                                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <strong class="mb-1">Tamaño de tablas en una base</strong>
+                                        <small class="text-muted">SQL</small>
+                                    </div>
+                                    <div class="col mb-1 small">
+                                        <code class="font-monospace" id="sql1" onclick="copymeInput('sql1c')">SELECT t.NAME AS TableName, s.Name AS SchemaName, p.rows, CAST(ROUND(((SUM(a.total_pages) * 8) ...</code>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <strong class="mb-1">Reiniciar identity</strong>
+                                        <small class="text-muted">SQL</small>
+                                    </div>
+                                    <div class="col mb-1 small">
+                                        <code class="font-monospace" id="sql2" onclick="copyme('sql2')">DBCC CHECKIDENT ('product', RESEED, 0);</code>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <strong class="mb-1">Fetching</strong>
+                                        <small class="text-muted">Typescript</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white">
+                            <h2 class="border-bottom p-3">Misc</h2>
+                            <div class="list-group list-group-flush border-bottom scrollarea">
+                                <a href="#" class="list-group-item list-group-item-action lh-tight">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <strong class="mb-1">New SSL key</strong>
+                                        <small class="text-muted">ssl</small>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action lh-tight">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <strong class="mb-1">Git remove password</strong>
+                                        <small class="text-muted">git</small>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action lh-tight">
+                                    <div class="d-flex w-100 align-items-center justify-content-between">
+                                        <strong class="mb-1">List group item heading</strong>
+                                        <small class="text-muted">Mon</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-4">
+                <h2>@Localizer["Links"]</h2>
+            </div>
+        </div>
+        <hr />
     </div>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card m-1">
-                <div class="card-body">
-                    <h5 class="card-title">MVC WebAPI</h5>
-                    <p class="card-text">Backend fundamentals on ASP .NET</p>
-                    <p>
-                        <a href="/Work/WebApiExample" class="btn btn-sm btn-primary">Click to Example</a>
-                        <a href="https://github.com/jarmyo/jarmyo/blob/main/WebPage/Controllers/Work/WebApiExample.cs" class="btn btn-sm btn-info">Github source</a>
-                    </p>
+    <input type="hidden" id="sql1c" value="SELECT t.NAME AS TableName, s.Name AS SchemaName, p.rows, CAST(ROUND(((SUM(a.total_pages) * 8) / 1024.00), 2) AS NUMERIC(36, 2)) AS TotalSpaceMB, CAST(ROUND(((SUM(a.used_pages) * 8) / 1024.00), 2) AS NUMERIC(36, 2)) AS UsedSpaceMB, CAST(ROUND(((SUM(a.total_pages) - SUM(a.used_pages)) * 8) / 1024.00, 2) AS NUMERIC(36, 2)) AS UnusedSpaceMB FROM sys.tables t INNER JOIN sys.indexes i ON t.OBJECT_ID = i.object_id INNER JOIN sys.partitions p ON i.object_id = p.OBJECT_ID AND i.index_id = p.index_id INNER JOIN sys.allocation_units a ON p.partition_id = a.container_id LEFT OUTER JOIN sys.schemas s ON t.schema_id = s.schema_id WHERE t.NAME NOT LIKE 'dt%' AND t.is_ms_shipped = 0 AND i.OBJECT_ID > 255 GROUP BY t.Name, s.Name, p.Rows ORDER BY TotalSpaceMB DESC, t.Name">
+    <div class="modal" tabindex="-1" id="javascriptModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card m-1 text-white bg-primary">
-                <div class="card-body">
-                    <h5 class="card-title">Javascript</h5>
-                    <p class="card-text">Ritch user interfaces</p>
-                    <p>
-                        <button onclick="demoFunction()" class="btn btn-sm btn-danger" type="button">Click Me</button>
-                        <a href="https://github.com/jarmyo/jarmyo/blob/main/WebPage/Assets/TypeScript/WorkFrontEnd.ts" class="btn btn-sm btn-info">Github source</a>
-                        <a class="link-info" href="https://www.freecodecamp.org/fccdc754e81-1b3c-43ac-b223-dce2f274982a">freecodeCamp</a>
-                    </p>
+                <div class="modal-body">
+                    <p>All the magic is in the console!</p>
+                    <div id="containerGrid"></div>
+                    <div id="secondcontainerGrid"></div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card m-1 text-white bg-info">
-                <div class="card-body">
-                    <h5 class="card-title">SQLite</h5>
-                    <p class="card-text">A simple form to store data on SQL Lite engine.</p>
-                    <a href="/Work/SQLite" class="btn btn-sm btn-primary" type="button">Web Form</a>
-                    <a href="https://github.com/jarmyo/jarmyo/blob/main/WebPage/Controllers/Work/SQLiteExample.cs" class="btn btn-sm btn-danger">Github source</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card m-1 text-white bg-success">
-                <div class="card-body">
-                    <h5 class="card-title">WPF</h5>
-                    <p class="card-text">
-                        <a class="link-dark" href="https://www.behance.net/gallery/4752143/Rol-de-Servicios">for desktop</a>;
-                        and also for <a class="link-dark" href="https://github.com/jarmyo/WindowsPhoneStopWatch">Windows Phone</a>, ModernUI y Xamarin
-                    </p>
-                    <a href="/Work/WPFAPP" class="btn btn-sm btn-primary" type="button">Donwload APP Example</a>
-                    <a href="https://github.com/jarmyo/jarmyo/blob/main/WebPage/Controllers/Work/WPF.xaml" class="btn btn-sm btn-info">Github source</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card m-1 text-white bg-danger">
-                <div class="card-body">
-                    <h5 class="card-title">MS SQL Server</h5>
-                    <p class="card-text">A video of me explaining all concepts I know.</p>
-                    <a href="/Work/SQLServer" class="btn btn-sm btn-primary" type="button">Web Form</a>
-                    <a href="https://github.com/jarmyo/jarmyo/blob/main/WebPage/Controllers/Work/SQLSever.mdf" class="btn btn-sm btn-info">Github source</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card m-1 text-white bg-warning">
-                <div class="card-body">
-                    <h5 class="card-title">CSS</h5>
-                    <p class="card-text">Me encanta usar esta tecnología para crear interfaces <a class="link-dark" href="https://www.behance.net/gallery/4752143/Rol-de-Servicios">usables</a>; Tambien he creado apps para <a class="link-dark" href="https://github.com/jarmyo/WindowsPhoneStopWatch">Windows Phone</a>, ModernUI y Xamarin </p>
-                    <a href="/Work/SQLite" class="btn btn-sm btn-primary" type="button">CSS Transformation</a>
-                    <a href="https://github.com/jarmyo/jarmyo/blob/main/WebPage/wwwroot/styles.Site.css" class="btn btn-sm btn-info">Github source</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card m-1">
-                <div class="card-body">
-                    <h5 class="card-title">Azure Cosmos DB</h5>
-                    <p class="card-text">Store and retrieve Data in noSQL Azure service</p>
-                    <p>
-                        <a href="/Work/WebApiExample" class="btn btn-sm btn-primary">Click to Example</a>
-                        <a href="https://github.com/jarmyo/jarmyo/blob/main/WebPage/Controllers/Work/WebApiExample.cs" class="btn btn-sm btn-info">Github source</a>
-                    </p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Great</button>
                 </div>
             </div>
         </div>
     </div>
-    <hr />
-    <div class="row">
-        <div class="col">
-            <h1>@Localizer["Utils"]</h1>
-        </div>
-    </div>
-</div>
-<div class="modal" tabindex="-1" id="javascriptModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>All the magic is in the console!</p>
-                <div id="containerGrid"></div>
-                <div id="secondcontainerGrid"></div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Great</button>
-            </div>
-        </div>
-    </div>
-</div>
-@section Scripts
-{
-<script src="/js/WorkFrontEnd.js"></script>
-<script src="/js/WorkCommon.js"></script>
+    @section Scripts
+    {
+    <script src="/js/WorkFrontEnd.js"></script>
+    <script src="/js/WorkCommon.js"></script>
+    <script src="/js/WorkSnippets.js"></script>
 }

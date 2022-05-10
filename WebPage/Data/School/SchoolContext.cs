@@ -17,7 +17,6 @@
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //Configure domain classes using modelBuilder here   
             modelBuilder.Entity<ClientAppointment>()
                 .HasKey(o => new { o.IdClient, o.IdAppointment });
         }
