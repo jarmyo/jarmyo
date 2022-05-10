@@ -56,7 +56,7 @@
                     else
                     {
                         var number_ = short.Parse(number);
-                        var square = (double)Math.Sqrt(number_);
+                        var square = Math.Sqrt(number_).ToString("#.00000");
                         response.Name = $"The Square root of {number} is {square}";
                         response.Id = number_;
                         response.OK = true;
