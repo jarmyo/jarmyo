@@ -4,7 +4,7 @@ namespace Personal
 {
     public static class KeyVault
     {
-        public static string SpeechKey {  get; set; }
+        public static string SpeechKey { get; set; }
         public class TextoAVoz
         {
             public async Task Generar(string s)
