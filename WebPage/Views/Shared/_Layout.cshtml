@@ -9,7 +9,7 @@
     <meta name="author" content="Julián Augusto Ruiz Martinez" />
     <meta name="robots" content="index, follow">
     <title>Julián Augusto Ruíz Martinez - @ViewBag.Titulo</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.1/dist/lux/bootstrap.min.css" id="luxStyleSheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/@Personal.ThemeHelper.CurrentTheme(Context)/bootstrap.min.css" id="themeSheet">
     <link rel="stylesheet" href="styles/site.min.css">
     @RenderSection("HeadScripts", required: false)
     @RenderSection("Styles", required: false)
@@ -20,12 +20,13 @@
         @RenderBody()
     </main>
     <footer class="fixed-bottom footer d-flex flex-wrap justify-content-between align-items-center p-0 bg-dark">
+        @await Html.PartialAsync("_SelectThemePartial")
         <a href="/" class="col-md-6 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-muted text-decoration-none">
             @Localizer["Copyright"] &copy @DateTime.Now.Year Julián Augusto Ruiz
-        </a>
+        </a>        
         @await Html.PartialAsync("_SelectLanguagePartial")
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

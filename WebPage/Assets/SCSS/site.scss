@@ -6,17 +6,3 @@
 .line-through {
     text-decoration: line-through;
 }
-
-//TODO: Use mixins to show how to use mixins
-.DarkMode
-{
-    p
-    {
-        color: white;
-    }
-}
-.LightMode{
-    P{
-        color:black;
-    }
-}

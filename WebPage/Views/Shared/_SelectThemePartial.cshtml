@@ -1,0 +1,17 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Http.Features
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+@{
+    var requestTheme = Personal.ThemeHelper.CurrentTheme(Context);
+    var ThemeItems = Personal.ThemeHelper.Themes.Select(c => new SelectListItem { Value = c.ToLower(), Text = c}) .ToList();
+    var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+}
+<div title="Request theme provider:CookieRequestThemeProvider " class="justify-content-end">
+    <form id="selectTheme" asp-controller="Home" asp-action="SetTheme" asp-route-returnUrl="@returnUrl" method="post" class="form-horizontal" role="form">
+        <select name="theme" title="Styles" class="form-select form-select-sm" onchange="this.form.submit();" asp-for="@requestTheme" asp-items="ThemeItems"></select>
+    </form>
+</div>

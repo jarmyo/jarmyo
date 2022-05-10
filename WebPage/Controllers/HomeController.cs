@@ -41,5 +41,11 @@ namespace Personal.Controllers
             );
             return LocalRedirect(returnUrl);
         }
+        [HttpPost]
+        public IActionResult SetTheme(string theme, string returnUrl)
+        {
+            Response.Cookies.Append(ThemeHelper.CookieName, theme, new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) });
+            return LocalRedirect(returnUrl);
+        }
     }
 }

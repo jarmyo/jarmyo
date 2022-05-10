@@ -5,11 +5,3 @@
 .line-through {
   text-decoration: line-through;
 }
-
-.DarkMode p {
-  color: white;
-}
-
-.LightMode P {
-  color: black;
-}
