@@ -39,7 +39,7 @@
         /// </summary>
         /// <param name="number">Value of number</param>
         /// <returns>square root of given number</returns>       
-        public ResultObject SquareResult(string number)
+        public static ResultObject SquareResult(string number)
         {
             //TODO: translate, globalization            
             using (var response = new ResultObject())
@@ -56,7 +56,7 @@
                     else
                     {
                         var number_ = short.Parse(number);
-                        var square = (int)Math.Sqrt(number_);
+                        var square = (double)Math.Sqrt(number_);
                         response.Name = $"The Square root of {number} is {square}";
                         response.Id = number_;
                         response.OK = true;
@@ -75,7 +75,7 @@
             return !short.TryParse(number, out _);
         }
         public static ResultObject BadResult(string msg)
-        {
+        {            
             using (var response = new ResultObject())
             {
                 response.Id = -1;
