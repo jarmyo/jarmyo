@@ -7,7 +7,7 @@ namespace Personal.Controllers.Work.Tests
     [TestClass()]
     public class WorkControllerTests
     {
-        private static Dictionary<short, string> ResultStack = new Dictionary<short, string>()
+        private static readonly Dictionary<short, string> ResultStack = new()
         {
             [1] = "1.00000",
             [2] = "1.41421",
@@ -29,13 +29,13 @@ namespace Personal.Controllers.Work.Tests
             [18] = "4.24264",
             [19] = "4.35890"
         };
-        private static List<string> ValidShort = new List<string>()
+        private static readonly List<string> ValidShort = new()
         {
             "0",
             "12345678901",
             "-12345678901"
         };
-        private static List<string> NotValidShort = new List<string>()
+        private static readonly List<string> NotValidShort = new()
         {
              "1239223372036854775809",
             "-1239223372036854775809",
