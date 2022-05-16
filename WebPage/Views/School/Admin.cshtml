@@ -1,18 +1,43 @@
-﻿@section Head
+﻿@model Personal.Models.School.SchoolAdminModel
+@section Head
     {
     <header>
     </header>
 }
-    <div class="container my-5">
-        <div class="px-4 py-5 my-5 text-center">
-            <img class="d-block mx-auto mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-            <h1 class="display-5 fw-bold">SistemaDeCitas</h1>
-            <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Esta aplicación permite manejar citas de una micro empresa de servicios, es una alternativa a <a href="https://www.microsoft.com/es-mx/microsoft-365/business/scheduling-and-booking-app">Microsoft Bookings</a>, como projecto final para el seminario de titulación.</p>
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <a href="school/new" class="btn btn-primary btn-lg px-4 gap-3">Crear una cita</a>
-                    <a href="school/admin" class="btn btn-outline-secondary btn-lg px-4">Manejar las citas</a>
-                </div>
-            </div>
-        </div>
+<hr />
+<div class="row">
+    <h2>Admin your catalogs</h2>
+    <hr />
+    <div class="col">
+        <h3>Clients</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th colspan="2">...</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var client in Model.Clients)
+                {
+                <tr>
+                    <td>@client.Id</td>
+                    <td>@client.Name</td>
+                    <td>@client.Phone</td>
+                    <td><a class="btn btn-sm btn-info" href="">Edit</a></td>
+                    <td><a href="">Delete</a></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        <button class="btn btn-primary">New</button>
     </div>
+    <div class="col">
+        <h3>Services</h3>
+    </div>
+    <div class="col">
+        <h3>Appointments</h3>
+    </div>
+</div>

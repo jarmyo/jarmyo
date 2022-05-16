@@ -12,7 +12,7 @@
         }
         #region Views
         public IActionResult Index()
-        {
+        {            
             ViewBag.Titulo = "School Project";
             return View();
         }
@@ -21,11 +21,15 @@
             if (string.IsNullOrEmpty(id))
                 id = IdDefaultBusinness;
 
+            
             var selectedBusiness = _schoolCtx.Businesses.Where(b => b.Id == id);
+            
             if (selectedBusiness.Any())
             {
+                var model = new Models.School.SchoolAdminModel();
+                model.Clients = _schoolCtx.Clients.ToList();
                 ViewBag.Titulo = "Admin your Appointments";
-                return View();
+                return View(model);
             }
             return NotFound();
         }
@@ -70,7 +74,17 @@
         [HttpDelete]
         public IActionResult Appointments(string id)
         {
-            return Json(new { result = "OK" });
+            //delete the appointment
+            var app = _schoolCtx.Appointments.Find(id);
+            if (app != null)
+            {
+                _schoolCtx.Appointments.Remove(app);
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
         }
         #endregion
     }
