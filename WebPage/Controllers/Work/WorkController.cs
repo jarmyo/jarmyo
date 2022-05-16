@@ -1,4 +1,7 @@
-﻿namespace Personal.Controllers.Work
+﻿
+using Personal.Helpers;
+
+namespace Personal.Controllers.Work
 {
     public partial class WorkController : Controller
     {
@@ -11,6 +14,7 @@
         }
         public ActionResult Index()
         {
+            var c = new CosmosDBHelper();
             ViewBag.Titulo = "Work";
             return View();
         }

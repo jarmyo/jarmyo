@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Options;
+using Personal.Helpers;
 using System.Globalization;
 namespace Personal
 {
@@ -11,7 +12,9 @@ namespace Personal
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
-            KeyVault.SpeechKey = Configuration["speechKey1"];
+            AzureServiceHelper.SpeechKey = Configuration["speechKey1"];
+            CosmosDBHelper.PrimaryKey = Configuration["cosmosDBKey"];
+            CosmosDBHelper.EndpointUri = Configuration["cosmosDBEndPoint"];
             services.AddEntityFrameworkSqlite().AddDbContext<BlogContext>();
             services.AddEntityFrameworkSqlite().AddDbContext<SchoolContext>();
             services.AddEntityFrameworkSqlite().AddDbContext<SQLiteContext>();            

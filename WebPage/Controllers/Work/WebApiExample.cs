@@ -30,10 +30,9 @@
             foreach (var header in Request.Headers)
             {
                 response.Attributes.Add("Header-" + header.Key, header.Value);
-            }
-
+            }            
             return Json(response);
-        }       
+        }
         /// <summary>
         /// Backend function, just for testing purposes.
         /// </summary>
@@ -75,7 +74,7 @@
             return !short.TryParse(number, out _);
         }
         public static ResultObject BadResult(string msg)
-        {            
+        {
             using (var response = new ResultObject())
             {
                 response.Id = -1;

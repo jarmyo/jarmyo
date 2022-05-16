@@ -1,8 +1,8 @@
 ﻿using Microsoft.CognitiveServices.Speech;
 
-namespace Personal
+namespace Personal.Helpers
 {
-    public static class KeyVault
+    public static class AzureServiceHelper
     {
         public static string SpeechKey { get; set; }
         public class TextoAVoz
