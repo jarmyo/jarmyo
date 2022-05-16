@@ -21,7 +21,7 @@
             if (string.IsNullOrEmpty(id))
                 id = IdDefaultBusinness;
 
-            var selectedBusiness = _schoolCtx.Businesses.Where(b=> b.Id == id);
+            var selectedBusiness = _schoolCtx.Businesses.Where(b => b.Id == id);
             if (selectedBusiness.Any())
             {
                 ViewBag.Titulo = "Admin your Appointments";
@@ -43,12 +43,32 @@
 
         #region WebAPI
         [HttpPost]
-        public IActionResult CreateAppointment()
+        public IActionResult Cients([FromBody] Client client)
         {
-            return Json(new { result="OK" });
+            return Json(new { result = "OK" });
+        }
+        [HttpGet]
+        public IActionResult Cients()
+        {
+            return Json(_schoolCtx.Clients);
+        }
+        [HttpDelete]
+        public IActionResult Cients(string id)
+        {
+            return Json(new { result = "OK" });
+        }
+        [HttpPost]
+        public IActionResult Appointments([FromBody] Appointment appointment)
+        {
+            return Json(_schoolCtx.Clients);
         }
         [HttpGet]
         public IActionResult Appointments()
+        {
+            return Json(_schoolCtx.Appointments);
+        }
+        [HttpDelete]
+        public IActionResult Appointments(string id)
         {
             return Json(new { result = "OK" });
         }
