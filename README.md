@@ -3,13 +3,14 @@ This repository contains all code from <https://JulianAugusto.com>, my personal 
 [![CodeFactor](https://www.codefactor.io/repository/github/jarmyo/jarmyo/badge)](https://www.codefactor.io/repository/github/jarmyo/jarmyo)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=jarmyo)
 
-This repository is not intended to public contribution.
+This repository is not intended to public contribution, but its public for educational purposes.
 
 # Julian Augusto Ruiz Martinez
 
 ## SKILLS
 
 - C# Development, I've been working for about 12 years in **.NET technologies**.
+- I've been programing for the love of code for about 20 years (QBasic, VBasic6, Pascal, DBase, Clipper, C, C++, Java)
 - User Interfaces: WPF, Windows Forms, WinUI and Razor Pages
 - Middle SQL Server Database: Queries, Security, Triggers, Functions, Stored Procedures, Schemas, Indexes, etc, EntityFramework ORM and Linq Queries
 - Frontend Web development: Bootstrap, SCSS, Vainilla Javascript and Typescript.
