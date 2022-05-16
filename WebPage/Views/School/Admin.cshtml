@@ -32,7 +32,12 @@
                 }
             </tbody>
         </table>
-        <button class="btn btn-primary">New</button>
+        <hr />
+        <form id="clientForm">
+        <input type="text" id="Name" name="Name" placeholder="Name" />
+        <input type="tel" id="Phone" name="Phone" placeholder="Phone Number" />
+        <button type="button" class="btn btn-primary" onclick="CreateNewClient()">Create New</button>
+        </form>
     </div>
     <div class="col">
         <h3>Services</h3>
@@ -41,3 +46,13 @@
         <h3>Appointments</h3>
     </div>
 </div>
+@section Scripts
+{
+    <script>
+        //Here we fecth via API the appointments data
+        //get data from the form
+        //post data to api
+        //retrieve the result.
+        //get the updated list with fetch.
+    </script>
+}

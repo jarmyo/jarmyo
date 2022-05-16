@@ -8,11 +8,9 @@
     {
         public SchoolAdminModel() {
             Clients = new List<Client>();
-            Services = new List<Service>();
-            Appointments = new List<Appointment>();
+            Services = new List<Service>();            
         }
         public List<Client> Clients { get; set; }
-        public List<Service> Services { get; set; }
-        public List<Appointment> Appointments { get; set; }
+        public List<Service> Services { get; set; }        
     }
 }

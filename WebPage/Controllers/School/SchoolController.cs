@@ -20,15 +20,14 @@
         {
             if (string.IsNullOrEmpty(id))
                 id = IdDefaultBusinness;
-
             
-            var selectedBusiness = _schoolCtx.Businesses.Where(b => b.Id == id);
-            
+            var selectedBusiness = _schoolCtx.Businesses.Where(b => b.Id == id);            
             if (selectedBusiness.Any())
             {
                 var model = new Models.School.SchoolAdminModel();
                 model.Clients = _schoolCtx.Clients.ToList();
-                ViewBag.Titulo = "Admin your Appointments";
+                model.Services = _schoolCtx.Services.ToList();
+                ViewBag.Titulo = "Admin your Data";
                 return View(model);
             }
             return NotFound();
@@ -45,22 +44,7 @@
         }
         #endregion
 
-        #region WebAPI
-        [HttpPost]
-        public IActionResult Cients([FromBody] Client client)
-        {
-            return Json(new { result = "OK" });
-        }
-        [HttpGet]
-        public IActionResult Cients()
-        {
-            return Json(_schoolCtx.Clients);
-        }
-        [HttpDelete]
-        public IActionResult Cients(string id)
-        {
-            return Json(new { result = "OK" });
-        }
+        #region WebAPI      
         [HttpPost]
         public IActionResult Appointments([FromBody] Appointment appointment)
         {
