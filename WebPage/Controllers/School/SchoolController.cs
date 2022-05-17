@@ -12,7 +12,7 @@
         }
         #region Views
         public IActionResult Index()
-        {            
+        {
             ViewBag.Titulo = "School Project";
             return View();
         }
@@ -20,14 +20,15 @@
         {
             if (string.IsNullOrEmpty(id))
                 id = IdDefaultBusinness;
-            
-            var selectedBusiness = _schoolCtx.Businesses.Where(b => b.Id == id);            
+
+            var selectedBusiness = _schoolCtx.Businesses.Where(b => b.Id == id);
             if (selectedBusiness.Any())
             {
                 var model = new Models.School.SchoolAdminModel();
                 model.Clients = _schoolCtx.Clients.ToList();
                 model.Services = _schoolCtx.Services.ToList();
                 ViewBag.Titulo = "Admin your Data";
+                ViewBag.IdBusiness = id;
                 return View(model);
             }
             return NotFound();
@@ -44,7 +45,47 @@
         }
         #endregion
 
-        #region WebAPI      
+        #region WebAPI    
+        [HttpPost]
+        public IActionResult Clients([FromForm] Client client)
+        {
+            if (client.IdBusiness != null)
+            {
+                string resultMessage;
+                try
+                {
+                    _schoolCtx.Clients.Add(client);
+                    _schoolCtx.SaveChanges();
+                    resultMessage = "ok";
+                }
+                catch (Exception e)
+                {
+                    resultMessage = e.Message;
+                }
+                return Json(new { result = resultMessage });
+
+            }
+            return NotFound();
+        }
+        [HttpDelete]
+        public IActionResult Clients(string id)
+        {
+            var Matchingclients = _schoolCtx.Clients.Where(c => c.Id == id);
+            string resultMessage;
+            if (Matchingclients.Any())
+            {
+                var client = Matchingclients.First();
+                _schoolCtx.Clients.Remove(client);
+                _schoolCtx.SaveChanges();
+                resultMessage = "ok";
+            }
+            else
+            {
+                resultMessage = "NotFound";
+            }
+            return Json(new { result = resultMessage });
+        }
+
         [HttpPost]
         public IActionResult Appointments([FromBody] Appointment appointment)
         {

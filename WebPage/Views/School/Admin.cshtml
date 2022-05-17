@@ -4,39 +4,45 @@
     <header>
     </header>
 }
-<hr />
-<div class="row">
-    <h2>Admin your catalogs</h2>
     <hr />
-    <div class="col">
-        <h3>Clients</h3>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Phone</th>
-                    <th colspan="2">...</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var client in Model.Clients)
+    <div class="row">
+        <h2>Admin your catalogs</h2>
+        <hr />
+        <div class="col">
+            <h3>Clients</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th colspan="2">...</th>
+                    </tr>
+                </thead>
+                <tbody id="clientTable">
+                    @foreach (var client in Model.Clients)
                 {
-                <tr>
-                    <td>@client.Id</td>
-                    <td>@client.Name</td>
-                    <td>@client.Phone</td>
-                    <td><a class="btn btn-sm btn-info" href="">Edit</a></td>
-                    <td><a href="">Delete</a></td>
-                </tr>
+                    <tr id="client-@client.Id">
+                        <td>@client.Id</td>
+                        <td>@client.Name</td>
+                        <td>@client.Phone</td>
+                        <td><button type="button" onclick="EditClient('@client.Id')" class="btn btn-sm btn-info">Edit</button></td>
+                        <td><button type="button" onclick="DeleteClient('@client.Id')" class="btn btn-sm btn-danger">Delete</button></td>
+                    </tr>
                 }
             </tbody>
         </table>
         <hr />
         <form id="clientForm">
-        <input type="text" id="Name" name="Name" placeholder="Name" />
-        <input type="tel" id="Phone" name="Phone" placeholder="Phone Number" />
-        <button type="button" class="btn btn-primary" onclick="CreateNewClient()">Create New</button>
+            <div class="row g-3">
+                <div class="col">
+                    <input class="form-control" type="text" id="clientName" name="clientName" placeholder="Name" />
+                </div>
+                <div class="col">
+                    <input class="form-control" type="tel" id="clientPhone" name="clientPhone" placeholder="Phone Number" />
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="CreateNewClient()">Create New</button>
         </form>
     </div>
     <div class="col">
@@ -46,9 +52,12 @@
         <h3>Appointments</h3>
     </div>
 </div>
+<input type="hidden" id="IdBusiness" name="IdBusiness" value="@ViewBag.IdBusiness" />
 @section Scripts
-{
+    {
+    <script src="/js/SchoolAdmin.js"></script>
     <script>
+
         //Here we fecth via API the appointments data
         //get data from the form
         //post data to api
