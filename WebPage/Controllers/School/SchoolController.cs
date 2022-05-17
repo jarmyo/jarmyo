@@ -85,11 +85,16 @@
             }
             return Json(new { result = resultMessage });
         }
+        [HttpGet]
+        public IActionResult Clients()
+        {
+            return Json(_schoolCtx.Clients.ToList());
+        }
 
         [HttpPost]
         public IActionResult Appointments([FromBody] Appointment appointment)
         {
-            return Json(_schoolCtx.Clients);
+            return Json(_schoolCtx.Appointments);
         }
         [HttpGet]
         public IActionResult Appointments()
