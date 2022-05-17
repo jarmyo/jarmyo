@@ -7,7 +7,7 @@
 }
 type Client = {
     Id: string;
-    Name: string;  
+    Name: string;
     Phone: string;
-    IdBusiness: string;    
+    IdBusiness: string;
 }
