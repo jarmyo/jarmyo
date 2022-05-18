@@ -20,7 +20,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
-  <ItemGroup>
+  <ItemGroup>    
     <Content Remove="compilerconfig.json" />
   </ItemGroup>
   <ItemGroup>

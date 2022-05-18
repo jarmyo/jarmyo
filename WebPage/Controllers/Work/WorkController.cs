@@ -11,8 +11,7 @@ namespace Personal.Controllers.Work
             _singletonService = singleton;
         }
         public ActionResult Index()
-        {
-          //  var c = new CosmosDBHelper();
+        {            
             ViewBag.Titulo = "Work";
             return View();
         }
