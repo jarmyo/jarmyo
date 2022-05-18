@@ -10,7 +10,6 @@ namespace Personal.Helpers
             try
             {
                 GetStartedDemoAsync();
-
             }
             catch (CosmosException de)
             {

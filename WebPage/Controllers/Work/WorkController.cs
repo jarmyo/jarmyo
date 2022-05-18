@@ -12,7 +12,7 @@ namespace Personal.Controllers.Work
         }
         public ActionResult Index()
         {
-            var c = new CosmosDBHelper();
+          //  var c = new CosmosDBHelper();
             ViewBag.Titulo = "Work";
             return View();
         }
