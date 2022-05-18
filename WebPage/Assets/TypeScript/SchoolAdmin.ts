@@ -1,7 +1,5 @@
 ﻿function CreateNewClient(): void {
     var data = new FormData();
-
-
     var clientName: HTMLInputElement = <HTMLInputElement>document.getElementById('clientName');
     var clientPhone: HTMLInputElement = <HTMLInputElement>document.getElementById('clientPhone');
 
@@ -33,23 +31,6 @@
         );
 }
 
-function CreateTableRow(client: Client): HTMLTableRowElement {
-    var row: HTMLTableRowElement = <HTMLTableRowElement>document.createElement('tr');
-    row.id = "client-" + client.Id;
-    var cell1: HTMLTableCellElement = row.insertCell(0);
-    var cell2: HTMLTableCellElement = row.insertCell(1);
-    var cell3: HTMLTableCellElement = row.insertCell(2);
-    var cell4: HTMLTableCellElement = row.insertCell(3);
-    var cell5: HTMLTableCellElement = row.insertCell(4);
-    cell1.innerHTML = client.Id;
-    cell2.innerHTML = client.Name;
-    cell3.innerHTML = client.Phone;
-    cell4.innerHTML = '<button type="button" onclick="EditClient(\'' + client.Id + '\')" class="btn btn-sm btn-info">Edit</button>';
-    cell5.innerHTML = '<button type="button" onclick="DeleteClient(\'' + client.Id + '\)" class="btn btn-sm btn-danger">Delete</button>';
-    return row;
-}
-
-
 function DeleteClient(id: string): void {
     fetch('/School/Clients/' + id, { method: "DELETE" })
         .then(
@@ -74,4 +55,20 @@ function uuid(): string {
         var randomUuid: number = Math.random() * 16 | 0, randomVar = c == 'x' ? randomUuid : (randomUuid & 0x3 | 0x8);
         return randomVar.toString(16);
     });
+}
+
+function CreateTableRow(client: Client): HTMLTableRowElement {
+    var row: HTMLTableRowElement = <HTMLTableRowElement>document.createElement('tr');
+    row.id = "client-" + client.Id;
+    var cell1: HTMLTableCellElement = row.insertCell(0);
+    var cell2: HTMLTableCellElement = row.insertCell(1);
+    var cell3: HTMLTableCellElement = row.insertCell(2);
+    var cell4: HTMLTableCellElement = row.insertCell(3);
+    var cell5: HTMLTableCellElement = row.insertCell(4);
+    cell1.innerHTML = client.Id;
+    cell2.innerHTML = client.Name;
+    cell3.innerHTML = client.Phone;
+    cell4.innerHTML = '<button type="button" onclick="EditClient(\'' + client.Id + '\')" class="btn btn-sm btn-info">Edit</button>';
+    cell5.innerHTML = '<button type="button" onclick="DeleteClient(\'' + client.Id + '\)" class="btn btn-sm btn-danger">Delete</button>';
+    return row;
 }
