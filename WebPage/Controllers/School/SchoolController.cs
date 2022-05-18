@@ -63,7 +63,6 @@
                     resultMessage = e.Message;
                 }
                 return Json(new { result = resultMessage });
-
             }
             return NotFound();
         }
