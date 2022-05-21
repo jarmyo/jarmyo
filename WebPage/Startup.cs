@@ -79,7 +79,7 @@ namespace Personal
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MVCCallWebAPI");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "JulianWebAPI");
             });
         }
         private void ConfigureMvcOptions(MvcOptions mvcOptions)
