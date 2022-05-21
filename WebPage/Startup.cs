@@ -41,7 +41,7 @@ namespace Personal
             });
             services.AddSwaggerGen(c =>
     {
-        c.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "JulianWebAPI", Version = "v1" });
+        c.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "JulianWebAPI", Version = "v2" });
     });
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -79,7 +79,7 @@ namespace Personal
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "JulianWebAPI");
+                c.SwaggerEndpoint("/swagger/v2/swagger.json", "JulianWebAPI");
             });
         }
         private void ConfigureMvcOptions(MvcOptions mvcOptions)
