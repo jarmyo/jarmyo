@@ -17,7 +17,7 @@ namespace Personal
             CosmosDBHelper.EndpointUri = Configuration["cosmosDBEndPoint"];
             services.AddEntityFrameworkSqlite().AddDbContext<BlogContext>();
             services.AddEntityFrameworkSqlite().AddDbContext<SchoolContext>();
-            services.AddEntityFrameworkSqlite().AddDbContext<SQLiteContext>();            
+            services.AddEntityFrameworkSqlite().AddDbContext<SQLiteContext>();
             services.AddDbContext<SecurityContext>();
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddRoles<IdentityRole>()
@@ -39,6 +39,10 @@ namespace Personal
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
             });
+            services.AddSwaggerGen(c =>
+    {
+        c.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "JulianWebAPI", Version = "v1" });
+    });
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -71,6 +75,12 @@ namespace Personal
                 Controllers.BlogController.TotalPages = Controllers.BlogController.TotalPost / Controllers.BlogController.MaxPages;
                 if (Controllers.BlogController.TotalPages == 0) Controllers.BlogController.TotalPages = 1;
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MVCCallWebAPI");
+            });
         }
         private void ConfigureMvcOptions(MvcOptions mvcOptions)
         {
