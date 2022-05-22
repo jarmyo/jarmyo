@@ -56,32 +56,6 @@ namespace Personal.Controllers.School
         {
             return Json(_schoolCtx.Clients.ToList());
         }
-
-        [HttpPost("Appointments")]
-        public IActionResult Appointments([FromBody] Appointment appointment)
-        {
-            return Json(_schoolCtx.Appointments);
-        }
-        [HttpGet("Appointments")]
-        public IActionResult Appointments()
-        {
-            return Json(_schoolCtx.Appointments);
-        }
-        [HttpDelete("Appointments")]
-        public IActionResult Appointments(string id)
-        {
-            //delete the appointment
-            var app = _schoolCtx.Appointments.Find(id);
-            if (app != null)
-            {
-                _schoolCtx.Appointments.Remove(app);
-                return Ok();
-            }
-            else
-            {
-                return NotFound();
-            }
-        }
         #endregion
     }
 }
