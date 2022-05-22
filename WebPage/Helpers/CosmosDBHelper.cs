@@ -9,6 +9,8 @@ namespace Personal.Helpers
             try
             {
                 cosmosClient = new CosmosClient(EndpointUri, PrimaryKey, new CosmosClientOptions() { ApplicationName = "JulianAugusto.com" });
+                database = cosmosClient.GetDatabase(databaseId);
+                container = database.GetContainer(containerId);
             }
             catch (CosmosException de)
             {
