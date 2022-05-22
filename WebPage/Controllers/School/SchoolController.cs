@@ -39,7 +39,6 @@
                 id = IdDefaultBusinness;
 
             //Search for the id and send to sessión.
-
             ViewBag.Titulo = "Create a new appointment";
             return View();
         }
