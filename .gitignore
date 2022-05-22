@@ -17,3 +17,5 @@ wwwroot/data/SQLite.db
 /WebPage/wwwroot/data/SQLite.db
 /leetCodeSolutions/bin
 /leetCodeSolutions/obj
+WebPage/obj/
+WebPage/bin/
