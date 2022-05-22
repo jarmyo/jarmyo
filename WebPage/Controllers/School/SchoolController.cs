@@ -10,8 +10,8 @@
             _signInManager = signInManager;
             _schoolCtx = schoolCtx;
         }
-        #region Views
-        public IActionResult Index()
+        #region Views       
+        public ActionResult Index()
         {
             ViewBag.Titulo = "School Project";
             return View();
@@ -42,78 +42,6 @@
 
             ViewBag.Titulo = "Create a new appointment";
             return View();
-        }
-        #endregion
-
-        #region WebAPI    
-        [HttpPost]
-        public IActionResult Clients([FromForm] Client client)
-        {
-            if (client.IdBusiness != null)
-            {
-                string resultMessage;
-                try
-                {
-                    _schoolCtx.Clients.Add(client);
-                    _schoolCtx.SaveChanges();
-                    resultMessage = "ok";
-                }
-                catch (Exception e)
-                {
-                    resultMessage = e.Message;
-                }
-                return Json(new { result = resultMessage });
-            }
-            return NotFound();
-        }
-        [HttpDelete]
-        public IActionResult Clients(string id)
-        {
-            var Matchingclients = _schoolCtx.Clients.Where(c => c.Id == id);
-            string resultMessage;
-            if (Matchingclients.Any())
-            {
-                var client = Matchingclients.First();
-                _schoolCtx.Clients.Remove(client);
-                _schoolCtx.SaveChanges();
-                resultMessage = "ok";
-            }
-            else
-            {
-                resultMessage = "NotFound";
-            }
-            return Json(new { result = resultMessage });
-        }
-        [HttpGet]
-        public IActionResult Clients()
-        {
-            return Json(_schoolCtx.Clients.ToList());
-        }
-
-        [HttpPost]
-        public IActionResult Appointments([FromBody] Appointment appointment)
-        {
-            return Json(_schoolCtx.Appointments);
-        }
-        [HttpGet]
-        public IActionResult Appointments()
-        {
-            return Json(_schoolCtx.Appointments);
-        }
-        [HttpDelete]
-        public IActionResult Appointments(string id)
-        {
-            //delete the appointment
-            var app = _schoolCtx.Appointments.Find(id);
-            if (app != null)
-            {
-                _schoolCtx.Appointments.Remove(app);
-                return Ok();
-            }
-            else
-            {
-                return NotFound();
-            }
         }
         #endregion
     }
