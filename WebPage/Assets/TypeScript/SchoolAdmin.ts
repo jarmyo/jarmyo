@@ -15,7 +15,7 @@
     data.append("Phone", newClient.Phone);
     data.append("IdBusiness", newClient.IdBusiness);
 
-    fetch('/School/Clients/', { method: "POST", body: data })
+    fetch('/api/v2/Schools/Clients/', { method: "POST", body: data })
         .then(
             function (result) { return result.json() }
         ).then(function (result) {
@@ -32,7 +32,7 @@
 }
 
 function DeleteClient(id: string): void {
-    fetch('/School/Clients/' + id, { method: "DELETE" })
+    fetch('/api/v2/Schools/Clients/' + id, { method: "DELETE" })
         .then(
             function (result) { return result.json() }
         ).then(function (result) {
