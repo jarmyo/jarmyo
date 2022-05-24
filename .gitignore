@@ -19,3 +19,5 @@ wwwroot/data/SQLite.db
 /leetCodeSolutions/obj
 WebPage/obj/
 WebPage/bin/
+/SecretDrawer/bin/
+/SecretDrawer/obj/
