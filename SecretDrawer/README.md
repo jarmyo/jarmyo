@@ -7,10 +7,33 @@ Work In progress...
 ## Components to develop.
 
 ### Notification Icon
+
+works with windows
+
 ### Local database
+
+Could be Sqlite, or localdb  SQLExpress
+
 ### Encryption
+
+Just encryptfiles with strong Asymetric code.
+
 ### Memory Safe
+
+Background task to remove main key from memory
+
 ### Cloud Syncronization
+
+Let Sync with API and open the api to let other implements his own Cloud
+
 ### Local Settings
+
+Use Regedit and local ini files
+
 ### Instalation
+
+User Registry data to let users destroy data
+
 ### ClickOnce Deployment
+
+Maybe use my own implementation of autoinstaller
