@@ -1,9 +1,7 @@
-This repository contains all code from <https://JulianAugusto.com>, my personal page and blog.
+This repository contains all code from <https://JulianAugusto.com>, my personal page and blog. Is not intended to public contribution, but its public for educational purposes.
 
 [![CodeFactor](https://www.codefactor.io/repository/github/jarmyo/jarmyo/badge)](https://www.codefactor.io/repository/github/jarmyo/jarmyo)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=jarmyo)
-
-This repository is not intended to public contribution, but its public for educational purposes.
 
 # Julian Augusto Ruiz Martinez
 
@@ -12,7 +10,7 @@ This repository is not intended to public contribution, but its public for educa
 - C# Development, I've been working for about 12 years in **.NET technologies**.
 - I've been programing for the love of code for about 20 years (QBasic, VBasic6, Pascal, DBase, Clipper, C, C++, Java)
 - User Interfaces: WPF, Windows Forms, WinUI and Razor Pages
-- Middle SQL Server Database: Queries, Security, Triggers, Functions, Stored Procedures, Schemas, Indexes, etc, EntityFramework ORM and Linq Queries
+- SQL Server Database at middle level: Queries, Security, Triggers, Functions, Stored Procedures, Schemas, Indexes, etc, EntityFramework ORM and Linq Queries
 - Frontend Web development: Bootstrap, SCSS, Vainilla Javascript and Typescript.
 - Version control: Microsoft TeamFundation, bitbucket and Github.
 - Project Management: Atlassian tools; Jira and Confluence, kanban, scrum and Agile methologies.
@@ -22,7 +20,7 @@ This repository is not intended to public contribution, but its public for educa
 
 ## PROFESSIONAL BACKGROUND
 - I Worked 10 years in the INM (Instituto Nacional de Migración) in Chiapas, as the director of informatics in the State, Building software for [administrative control](https://www.behance.net/gallery/4752143/Rol-de-Servicios), Telecomunications administration (CISCO and Nortel switches and BCM's, Ubiquiti antennas), all network configuration (VPN and Domain Control) and Tech support.
-- I’m the CTO of [Repos Software](https://repos.mx) we have a POS for restaurants, we apply all our tech knowledge: Web. Movile and Desktop development, Huge normalized Databases, Cloud Security, biometrics, online payments, deployment and support. We are only two people, but we have about 20 clients in México and USA.
+- I’m the CTO of [Repos Software](https://repos.mx) we have a POS for restaurants, we apply all our tech knowledge: Web. Mobile and Desktop development, Huge normalized Databases, Cloud Security, biometrics, online payments, deployment and support. We are only two people, but we have about 20 clients in México and USA.
 - I’ve working on Secretaría de Seguridad Pública del Estado de Aguascalientes, in a In-House security development from 2019 to 2022.
 - Sitecore 8.2 Backend Development for Texas Instruments Education Page as Deloitte contractor.
 - Currently Sterling background checks development as Hexaware contractor.
