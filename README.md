@@ -9,7 +9,7 @@ This repository contains all code from <https://JulianAugusto.com>, my personal 
 
 - C# Development, I've been working for about 12 years in **.NET technologies**.
 - I've been programing for the love of code for about 20 years (QBasic, VBasic6, Turbo Pascal, dBase, Clipper 5, C, C++, Prolog, Perl, PHP, Python, Java)
-- User Interfaces: WPF, Windows Forms, WinUI and Razor Pages
+- User Interfaces Design: WPF, Windows Forms, WinUI and Razor Pages
 - SQL Server Database at middle level: Queries, Security, Triggers, Functions, Stored Procedures, Schemas, Indexes, etc, EntityFramework ORM and Linq Queries
 - Frontend Web development: Bootstrap, SCSS, Vainilla Javascript and Typescript.
 - Version control: Microsoft TeamFundation, bitbucket and Github.
