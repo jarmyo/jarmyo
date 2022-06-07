@@ -51,9 +51,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Language" Version="6.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />    
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.5" />    
-    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.27.0" />    
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.27.2" />    
     <PackageReference Include="Microsoft.CodeAnalysis.Razor" Version="6.0.5" />
-    <PackageReference Include="Microsoft.CognitiveServices.Speech" Version="1.21.0" />
+    <PackageReference Include="Microsoft.CognitiveServices.Speech" Version="1.22.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="6.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="6.0.5" />
@@ -72,7 +72,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.2-mauipre.1.22102.15" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.2-mauipre.1.22102.15" />
-    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.7.0-beta">
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.7.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
