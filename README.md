@@ -2,6 +2,7 @@ This repository contains all code from <https://JulianAugusto.com>, my personal 
 
 [![CodeFactor](https://www.codefactor.io/repository/github/jarmyo/jarmyo/badge)](https://www.codefactor.io/repository/github/jarmyo/jarmyo)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=jarmyo)
+[![Build and deploy to Azure](https://github.com/jarmyo/jarmyo/actions/workflows/main_julianaugusto.yml/badge.svg?branch=main)](https://github.com/jarmyo/jarmyo/actions/workflows/main_julianaugusto.yml)
 
 # Julian Augusto Ruiz Martinez
 
