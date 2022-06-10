@@ -1,9 +1,9 @@
 This repository contains all code from <https://JulianAugusto.com>, my personal page and blog. Is not intended to public contribution, but its public for educational purposes.
 
-[![CodeFactor](https://www.codefactor.io/repository/github/jarmyo/jarmyo/badge)](https://www.codefactor.io/repository/github/jarmyo/jarmyo)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=jarmyo)
+[![CodeFactor](https://www.codefactor.io/repository/github/jarmyo/jarmyo/badge)](https://www.codefactor.io/repository/github/jarmyo/jarmyo)
 [![Build and deploy to Azure](https://github.com/jarmyo/jarmyo/actions/workflows/main_julianaugusto.yml/badge.svg?branch=main)](https://github.com/jarmyo/jarmyo/actions/workflows/main_julianaugusto.yml)
-
+[![CodeQL](https://github.com/jarmyo/jarmyo/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/jarmyo/jarmyo/actions/workflows/codeql.yml)
 # Julian Augusto Ruiz Martinez
 
 ## SKILLS
