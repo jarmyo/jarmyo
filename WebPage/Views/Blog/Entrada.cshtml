@@ -1,8 +1,37 @@
 ﻿@model Personal.Data.Post
+@{
+    var datetime = Model.Fecha.ToString("o", System.Globalization.CultureInfo.GetCultureInfo("en-US"));
+    var description = Model.Contenido.Substring(0, 40);
+    //TODO: add brief description field to blog post
+    //TODO: check if image in the article, map to twitter image.
+}
+@section Metas
+{
+<meta property="article:section" content="Technical Blog Post">
+<meta property="article:published_time" content="@datetime">
+<meta property="article:modified_time" content="@datetime">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="@Model.Titulo">
+<meta property="og:description" content="@description">
+<meta property="og:url" content="https://julianaugusto.com/Blog/Entrada/@Model.Id">
+<meta property="og:site_name" content="Julián Augusto Ruíz Martinez Blog">
+<meta property="og:updated_time" content="@datetime">
+<meta property="og:image" content="https://julianaugusto.com/assets/blogLogo.png">
+<meta property="og:image:secure_url" content="https://julianaugusto.com/assets/blogLogo.png">
+<meta property="og:image:width" content="702">
+<meta property="og:image:height" content="307">
+<meta property="og:image:alt" content="@Model.Titulo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="@description">
+<meta name="twitter:title" content="@Model.Titulo">
+<meta name="twitter:site" content="@@jarmyo">
+<meta name="twitter:image" content="https://julianaugusto.com/assets/blogLogo.png">
+<meta name="twitter:creator" content="@@jamyo">
+}
 <div class="container">
     <h1>@Model.Titulo</h1>
-    <h2>@Model.Fecha</h2>
-    <p>
-        @Html.Raw(Model.Contenido)
-    </p>
+    <h3>@Model.Fecha.ToLongDateString()</h3>
+    <hr />    
+        @Html.Raw(Model.Contenido)    
 </div>
