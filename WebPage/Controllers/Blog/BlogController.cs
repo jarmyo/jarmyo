@@ -9,7 +9,6 @@ namespace Personal.Controllers
         internal static int TotalPages;
         private readonly BlogContext _blogCtx;
         private readonly SignInManager<IdentityUser> _signInManager;
-
         public BlogController(BlogContext blogCtx, SignInManager<IdentityUser> signInManager,
             UserManager<IdentityUser> userManager)
         {
@@ -46,9 +45,21 @@ namespace Personal.Controllers
                 var monthName = month.ToString("MMMM", culture);
                 //Localize date names
                 model.Archivo.Add(date.Name, year + "-" + monthName);
-            }
+            }            
 
             return View(model);
+        }        
+        [AllowAnonymous]
+        public ActionResult Entrada(string id)
+        {
+            Post entrada;
+            if (id != null)
+            {
+                entrada = _blogCtx.Entradas.Find(id);
+                return View(entrada);
+            }
+            else
+                return NoContent();
         }
     }
 }

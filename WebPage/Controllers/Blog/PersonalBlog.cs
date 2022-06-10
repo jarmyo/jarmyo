@@ -14,14 +14,14 @@
             return View(model);
         }
         [AllowAnonymous]
-        public ActionResult Entrada(string id)
+        public ActionResult EntradaPersonal(string id)
         {
             Post entrada;
             if (id != null)
             {
                 entrada = personal.Entradas.Find(id);
-
-                return View(entrada);
+                 
+                return View("Entrada",entrada);
             }
             else
             {
