@@ -56,7 +56,7 @@ jobs:
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
     - if: matrix.language == 'csharp' 
-    - name: Build dotnet
+      name: Build dotnet
       run: dotnet build --configuration Release
 
     # ℹ️ Command-line programs to run using the OS shell.
