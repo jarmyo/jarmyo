@@ -12,6 +12,14 @@
     <title>Julián Augusto Ruíz Martinez - @ViewBag.Titulo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/@Personal.ThemeHelper.CurrentTheme(Context)/bootstrap.min.css" id="themeSheet">
     <link rel="stylesheet" href="styles/site.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDL9QS9GDS"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CDL9QS9GDS');
+    </script>
     @RenderSection("HeadScripts", required: false)
     @RenderSection("Styles", required: false)
 </head>
