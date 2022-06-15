@@ -6,11 +6,11 @@
     createModalGUI();
     //inherance.
     //DOM
-    let myModal = new bootstrap.Modal(document.getElementById('javascriptModal'))
+    const myModal = new bootstrap.Modal(document.getElementById('javascriptModal'))
     myModal.show();
 
-    let c1 = ClosureFunction(8);
-    let c2 = ClosureFunction(4);
+    const c1 = ClosureFunction(8);
+    const c2 = ClosureFunction(4);
 
     for (let x = 0; x < 20; x++) {
         c1.Increment();
@@ -22,19 +22,19 @@
 
 function createModalGUI(): void {
 
-    let container = <HTMLDivElement>document.getElementById('containerGrid');
+    const container = <HTMLDivElement>document.getElementById('containerGrid');
     container.innerText = "";
 
-    let paragraphNode = document.createElement('p');
+    const paragraphNode = document.createElement('p');
     paragraphNode.innerText = "This paragraph is dymaic created";
     container.appendChild(paragraphNode);
 
     container.appendChild(document.createElement('hr'));
 
-    let inputGroup = document.createElement('div');
+    const inputGroup = document.createElement('div');
     inputGroup.classList.add('input-group');
 
-    let inputText = document.createElement('input');
+    const inputText = document.createElement('input');
     inputText.id = "sendValue";
     inputText.type = "number";
     inputText.placeholder = "a number between 1 and 100";
@@ -43,7 +43,7 @@ function createModalGUI(): void {
     inputText.className = "form-control";
     inputGroup.appendChild(inputText);
 
-    let inputButton = document.createElement('input');
+    const inputButton = document.createElement('input');
     inputButton.type = "button";
     inputButton.value = "Fetch API";
     inputButton.addEventListener('click', () => { SendDataToAPI() });
@@ -56,10 +56,10 @@ function createModalGUI(): void {
 
 function SendDataToAPI(): void {
     //fetch data from API, obtain from FORM
-    let valueField = <HTMLInputElement>document.getElementById('sendValue');
-    let container = <HTMLDivElement>document.getElementById('secondcontainerGrid');
+    const valueField = <HTMLInputElement>document.getElementById('sendValue');
+    const container = <HTMLDivElement>document.getElementById('secondcontainerGrid');
     let outputString: string = "";
-    let valueData = valueField.value;
+    const valueData = valueField.value;
     fetch('/Work/WebApiExample/' + valueData).then(
         function (result) { return result.json() }
     ).then(
