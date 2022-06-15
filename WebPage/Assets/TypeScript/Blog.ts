@@ -1,7 +1,7 @@
 ﻿//Add or remove tags.
 function ToggleTag(tag: string): void {
-    var inputTag = <HTMLInputElement>document.getElementById('Etiquetas');
-    var oldvalue: string = inputTag.value;
+    const inputTag = <HTMLInputElement>document.getElementById('Etiquetas');
+    const oldvalue: string = inputTag.value;
     if (oldvalue.includes(tag)) {
         inputTag.value = oldvalue.replace(tag + ';', '').trim();
     }
@@ -18,8 +18,8 @@ function removeTag(tag: string): void {
         }
     ).then(function (result) {
         if (result == "ok") {
-            var row = <HTMLTableRowElement>document.getElementById('tagrow-' + tag);
-            var table = <HTMLTableElement>document.getElementById('TagTable');
+            const row = <HTMLTableRowElement>document.getElementById('tagrow-' + tag);
+            const table = <HTMLTableElement>document.getElementById('TagTable');
             table.removeChild(row);
         }
     });
