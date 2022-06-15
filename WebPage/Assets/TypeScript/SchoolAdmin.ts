@@ -65,10 +65,14 @@ function CreateTableRow(client: Client): HTMLTableRowElement {
     const cell3: HTMLTableCellElement = row.insertCell(2);
     const cell4: HTMLTableCellElement = row.insertCell(3);
     const cell5: HTMLTableCellElement = row.insertCell(4);
-    cell1.innerHTML = client.Id;
-    cell2.innerHTML = client.Name;
-    cell3.innerHTML = client.Phone;
+    cell1.innerHTML = SanitizeHtmlString(client.Id);
+    cell2.innerHTML = SanitizeHtmlString(client.Name);
+    cell3.innerHTML = SanitizeHtmlString(client.Phone);
     cell4.innerHTML = '<button type="button" onclick="EditClient(\'' + client.Id + '\')" class="btn btn-sm btn-info">Edit</button>';
     cell5.innerHTML = '<button type="button" onclick="DeleteClient(\'' + client.Id + '\)" class="btn btn-sm btn-danger">Delete</button>';
     return row;
+}
+
+function SanitizeHtmlString(data: string): string {
+    return data.replace(/[^a-zA-Z0-9]/g, '');
 }
