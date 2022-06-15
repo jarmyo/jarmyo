@@ -4,9 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SecretDrawer"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="300">
+        xmlns:tb="http://www.hardcodet.net/taskbar"
+        mc:Ignorable="d"        
+        Title="Secret Drawer" Height="400" Width="300" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" >
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <tb:TaskbarIcon GeneratedIconText="❤️" GeneratedIconForeground="Red" ToolTipText="Secret Drawer" MenuActivation="LeftOrRightClick" PopupActivation="DoubleClick" Grid.RowSpan="2"/>
+        <Grid Grid.Row="0" Background="#FF252525"></Grid>
+        <Grid Grid.Row="1" Background="Black"></Grid>
     </Grid>
 </Window>
