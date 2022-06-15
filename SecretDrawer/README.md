@@ -8,7 +8,7 @@ Work In progress...
 
 ### Notification Icon
 
-works with windows
+In progress, we use a nuget library
 
 ### Local database
 
