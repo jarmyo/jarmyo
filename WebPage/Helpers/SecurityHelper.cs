@@ -13,7 +13,7 @@ namespace Personal.Helpers
                 using (var tripDes = TripleDES.Create())
                 {
                     tripDes.Key = keys;
-                    tripDes.Mode = CipherMode.ECB;
+                    tripDes.Mode = CipherMode.CTS;
                     tripDes.Padding = PaddingMode.PKCS7;
                     ICryptoTransform transform = tripDes.CreateEncryptor();
                     byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
@@ -30,7 +30,7 @@ namespace Personal.Helpers
                 using (var tripDes = TripleDES.Create())
                 {
                     tripDes.Key = keys;
-                    tripDes.Mode = CipherMode.ECB;
+                    tripDes.Mode = CipherMode.CTS;
                     tripDes.Padding = PaddingMode.PKCS7;
                     ICryptoTransform transform = tripDes.CreateDecryptor();
                     byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
