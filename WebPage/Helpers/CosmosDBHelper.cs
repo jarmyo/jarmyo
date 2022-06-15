@@ -24,22 +24,22 @@ namespace Personal.Helpers
         }
         public static string PrimaryKey { get; set; }
         public static string EndpointUri { get; set; }
-        private CosmosClient cosmosClient;
-        private Database database;
-        private Container container;
+        private readonly CosmosClient cosmosClient;
+        private readonly Database database;
+        private readonly Container container;
         private readonly string databaseId = "JulianAugusto.com";
         private readonly string containerId = "Items";
         public async Task AddItemsToContainerAsync(CosmoItem andersenFamily)
         {
             try
             {
-                ItemResponse<CosmoItem> andersenFamilyResponse = await container.ReadItemAsync<CosmoItem>(andersenFamily.id, new PartitionKey(andersenFamily.partitionKey));
-                Console.WriteLine("Item in database with id: {0} already exists\n", andersenFamilyResponse.Resource.id);
+                ItemResponse<CosmoItem> andersenFamilyResponse = await container.ReadItemAsync<CosmoItem>(andersenFamily.Id, new PartitionKey(andersenFamily.PartitionKey));
+                Console.WriteLine("Item in database with id: {0} already exists\n", andersenFamilyResponse.Resource.Id);
             }
             catch (CosmosException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
             {
-                ItemResponse<CosmoItem> andersenFamilyResponse = await container.CreateItemAsync(andersenFamily, new PartitionKey(andersenFamily.partitionKey));
-                Console.WriteLine("Created item in database with id: {0} Operation consumed {1} RUs.\n", andersenFamilyResponse.Resource.id, andersenFamilyResponse.RequestCharge);
+                ItemResponse<CosmoItem> andersenFamilyResponse = await container.CreateItemAsync(andersenFamily, new PartitionKey(andersenFamily.PartitionKey));
+                Console.WriteLine("Created item in database with id: {0} Operation consumed {1} RUs.\n", andersenFamilyResponse.Resource.Id, andersenFamilyResponse.RequestCharge);
             }
         }
         public async Task QueryItemsAsync()
@@ -68,8 +68,8 @@ namespace Personal.Helpers
             ItemResponse<CosmoItem> wakefieldFamilyResponse = await container.ReadItemAsync<CosmoItem>(itemID, new PartitionKey(partitionKeyValue));
             var itemBody = wakefieldFamilyResponse.Resource;
             itemBody.IsRegistered = true;
-            wakefieldFamilyResponse = await container.ReplaceItemAsync(itemBody, itemBody.id, new PartitionKey(itemBody.partitionKey));
-            Console.WriteLine("Updated Item [{0},{1}].\n \tBody is now: {2}\n", itemBody.Name, itemBody.id, wakefieldFamilyResponse.Resource);
+            wakefieldFamilyResponse = await container.ReplaceItemAsync(itemBody, itemBody.Id, new PartitionKey(itemBody.PartitionKey));
+            Console.WriteLine("Updated Item [{0},{1}].\n \tBody is now: {2}\n", itemBody.Name, itemBody.Id, wakefieldFamilyResponse.Resource);
         }
         public async Task DeleteFamilyItemAsync(string partitionKeyValue, string ItemId)
         {

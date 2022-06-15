@@ -3,7 +3,7 @@
     public static class ThemeHelper
     {
         public const string CookieName = ".AspNetCore.Theme";
-        public static List<string> Themes = new()
+        public static List<string> Themes { get; set; } = new()
         {
             "Lux",
             "Minty",

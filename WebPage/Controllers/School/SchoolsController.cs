@@ -4,11 +4,11 @@
     public class SchoolsController : Controller
     {
         private readonly SchoolContext _schoolCtx;
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private const string IdDefaultBusinness = "juliansoft"; //for testing purpouses.
-        public SchoolsController(SchoolContext schoolCtx, SignInManager<IdentityUser> signInManager)
+        //private readonly SignInManager<IdentityUser> _signInManager;
+        //private const string IdDefaultBusinness = "juliansoft"; //for testing purpouses.
+        public SchoolsController(SchoolContext schoolCtx/*, SignInManager<IdentityUser> signInManager*/)
         {
-            _signInManager = signInManager;
+          //  _signInManager = signInManager;
             _schoolCtx = schoolCtx;
         }
         #region WebAPI    

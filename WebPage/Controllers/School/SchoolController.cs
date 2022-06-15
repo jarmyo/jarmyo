@@ -24,9 +24,11 @@
             var selectedBusiness = _schoolCtx.Businesses.Where(b => b.Id == id);
             if (selectedBusiness.Any())
             {
-                var model = new Models.School.SchoolAdminModel();
-                model.Clients = _schoolCtx.Clients.ToList();
-                model.Services = _schoolCtx.Services.ToList();
+                var model = new Models.School.SchoolAdminModel
+                {
+                    Clients = _schoolCtx.Clients.ToList(),
+                    Services = _schoolCtx.Services.ToList()
+                };
                 ViewBag.Titulo = "Admin your Data";
                 ViewBag.IdBusiness = id;
                 return View(model);
