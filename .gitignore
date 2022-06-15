@@ -9,8 +9,6 @@ Webpage/obj/
 packages/
 Webpage/bin/
 .vs/
-wwwroot/scripts/*.js
-wwwroot/styles/*.min.css
 Properties/PublishProfiles/*
 Properties/ServiceDependencies/*
 wwwroot/data/SQLite.db

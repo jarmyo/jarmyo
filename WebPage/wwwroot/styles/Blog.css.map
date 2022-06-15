@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACI,KADC,CACD,OAAO,CAAC;EACJ,WAAW,EAAE,GAAG;CACnB;;AAHL,AAKI,KALC,CAKD,CAAC,CAAC;EACE,WAAW,EAAE,IAAI;CACpB;;AAPL,AAQI,KARC,CAQD,KAAK,CACD;EACA,MAAM,EAAE,eAAe;CAC1B",
-    "sources": [
-        "Blog.scss"
-    ],
-    "names": [],
-    "file": "Blog.css"
-}
