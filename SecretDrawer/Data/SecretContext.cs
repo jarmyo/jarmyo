@@ -1,12 +1,13 @@
 ﻿global using System.ComponentModel.DataAnnotations;
 global using Microsoft.Data.Sqlite;
 global using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace SecretDrawer.Data
 {
     public class SecretContext : DbContext
-    {
-        public DbSet<Secret>? Secrets{ get; set; }
+    {        
+        public DbSet<Secret>? Secrets { get; set; }
         public DbSet<Category>? Categories { get; set; }     
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
