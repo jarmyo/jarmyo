@@ -15,10 +15,7 @@
         <tb:TaskbarIcon GeneratedIconText="❤️" GeneratedIconForeground="Red" ToolTipText="Secret Drawer" MenuActivation="LeftOrRightClick" PopupActivation="DoubleClick" Grid.RowSpan="2"/>
         <Grid Grid.Row="0" Background="#FF252525">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <StackPanel>
-                    <Controls:SecretButton Title="Github"/>
-                    <Controls:SecretButton Title="AWS"/>
-                    <Controls:SecretButton Title="Sterling"/>
+                <StackPanel x:Name="SecretsList" >
                 </StackPanel>
             </ScrollViewer>
 

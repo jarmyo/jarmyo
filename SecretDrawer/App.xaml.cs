@@ -6,13 +6,16 @@ namespace SecretDrawer
     public partial class App : Application
     {
         public App()
-        {
+        {            
            //TODO: update
         }
         internal static Data.SecretContext? DataContext;
-        
+
+        public static string Pass { get; internal set; } = "SecretDrawer";
+
         protected override async void OnStartup(StartupEventArgs e)
         {            
+            //TODO: get the global pass
             //TODO: Check updates
             //TODO: Check logs
             Directory.CreateDirectory(AppContext.BaseDirectory + "\\Data");

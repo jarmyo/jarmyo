@@ -1,43 +1,56 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace SecretDrawer.Controls
 {
-    /// <summary>
-    /// Interaction logic for SecretButton.xaml
-    /// </summary>
     public partial class SecretButton : Grid
     {
         public SecretButton()
         {
             InitializeComponent();
         }
-        private string _title = string.Empty;
+
+        private readonly Data.Secret secretItem = new();
+        public SecretButton(Data.Secret secret)
+        {
+            secretItem = secret;
+            InitializeComponent();
+            Title = secret.Title;
+            Color = secret.Color;
+        }
         public string? Title
         {
-            get
-            {
-                return _title;
-            }
+            get => secretItem.Title;
+            set => TitleLabel.Text = value;
+        }
+        public string? Color
+        {
+            get => secretItem.Color;
             set
             {
-                _title = value ?? string.Empty;
-                TitleLabel.Text = _title;
+                Background = new System.Windows.Media.SolidColorBrush(FromHex(value ?? "000000"));
             }
         }
-        public string? Color { get; set; }
-        public string? Hash { get; set; }
+        private void Grid_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            //Get the secret hash            
+            var c =  GlobalCode.DecryptText( secretItem.Content, secretItem.Hash);
+            MessageBox.Show(c);
+            //Clipboard.SetText(c);
+            //decrypt with global secret.
+            //copy to clipboard.
+            //start timer to destroy clipboard.
+
+        }
+        private static System.Windows.Media.Color FromHex(string hex)
+        {
+            var r = Convert.ToByte(hex.Substring(0, 2), 16);
+            var g = Convert.ToByte(hex.Substring(2, 2), 16);
+            var b = Convert.ToByte(hex.Substring(4, 2), 16);
+            return System.Windows.Media.Color.FromRgb(r, g, b);
+        }
     }
 }

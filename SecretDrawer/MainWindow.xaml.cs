@@ -1,29 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace SecretDrawer
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
             MoveWindowToRightCorder();
+            LoadItems();
+        }
+
+        private void LoadItems()
+        {
+            SecretsList.Children.Clear();
+            if (App.DataContext != null && App.DataContext.Secrets != null)
+            {
+                App.DataContext.Secrets.RemoveRange(App.DataContext.Secrets);
+                App.DataContext.SaveChanges();
+                var data = GlobalCode.CreateSecret("Github", "1234512345_12345_12345");
+                App.DataContext.Secrets.Add(data);
+                App.DataContext.SaveChanges();
+
+                foreach (var secret in from item in App.DataContext.Secrets.OrderBy(s => s.Order).ToList()
+                                       let secret = new Controls.SecretButton(item)
+                                       select secret)
+                {
+                    SecretsList.Children.Add(secret);
+                }
+            }
         }
 
         private void MoveWindowToRightCorder()
