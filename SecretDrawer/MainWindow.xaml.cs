@@ -23,6 +23,14 @@ namespace SecretDrawer
         public MainWindow()
         {
             InitializeComponent();
+            MoveWindowToRightCorder();
+        }
+
+        private void MoveWindowToRightCorder()
+        {
+            this.Height = SystemParameters.PrimaryScreenHeight;
+            this.Top = SystemParameters.PrimaryScreenHeight - this.Height;
+            this.Left = SystemParameters.PrimaryScreenWidth - this.Width;
         }
     }
 }

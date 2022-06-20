@@ -1,4 +1,4 @@
-﻿<Window x:Class="SecretDrawer.MainWindow"
+﻿<Window xmlns:Controls="clr-namespace:SecretDrawer.Controls"  x:Class="SecretDrawer.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,14 +6,23 @@
         xmlns:local="clr-namespace:SecretDrawer"
         xmlns:tb="http://www.hardcodet.net/taskbar"
         mc:Ignorable="d"        
-        Title="Secret Drawer" Height="400" Width="300" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" >
+        Title="Secret Drawer" Width="200" ShowInTaskbar="False" WindowStyle="SingleBorderWindow" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <tb:TaskbarIcon GeneratedIconText="❤️" GeneratedIconForeground="Red" ToolTipText="Secret Drawer" MenuActivation="LeftOrRightClick" PopupActivation="DoubleClick" Grid.RowSpan="2"/>
-        <Grid Grid.Row="0" Background="#FF252525"></Grid>
+        <Grid Grid.Row="0" Background="#FF252525">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <Controls:SecretButton Title="Github"/>
+                    <Controls:SecretButton Title="AWS"/>
+                    <Controls:SecretButton Title="Sterling"/>
+                </StackPanel>
+            </ScrollViewer>
+
+        </Grid>
         <Grid Grid.Row="1" Background="Black"></Grid>
     </Grid>
 </Window>
