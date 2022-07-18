@@ -48,7 +48,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.6" />    
     <PackageReference Include="Microsoft.AspNetCore.Razor" Version="2.2.0" />    
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Language" Version="6.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Language" Version="6.0.7" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />    
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.7" />    
     <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.28.0" />    
@@ -76,7 +76,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.7" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.3.2" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.3.2" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.3.2" />
