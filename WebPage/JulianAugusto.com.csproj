@@ -54,7 +54,7 @@
     <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.28.0" />    
     <PackageReference Include="Microsoft.CodeAnalysis.Razor" Version="6.0.7" />
     <PackageReference Include="Microsoft.CognitiveServices.Speech" Version="1.22.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="6.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="6.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Cosmos" Version="6.0.7" />
