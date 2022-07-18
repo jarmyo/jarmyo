@@ -1,11 +1,17 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
 
 namespace SecretDrawer
 {
     public static class GlobalCode
     {
+        private static Data.SecretContext? DataContext;
+        private static string Pass { get; set; } = "SecretDrawer";
         public static Data.Secret CreateSecret(string _title, string content, int _order, string _color, int? category)
         {
             var _hash = RandomHash();
@@ -42,7 +48,7 @@ namespace SecretDrawer
         private static Aes CreateAES()
         {
             var aes = Aes.Create();
-            aes.Key = SHA256.Create().ComputeHash(Encoding.UTF8.GetBytes(App.Pass));
+            aes.Key = SHA256.Create().ComputeHash(Encoding.UTF8.GetBytes(Pass));
             aes.Mode = CipherMode.ECB;
             aes.Padding = PaddingMode.PKCS7;
             return aes;
@@ -102,6 +108,27 @@ namespace SecretDrawer
                 encryptedText = Convert.ToBase64String(encryptedBytes);
             }
             return encryptedText;
+        }
+
+        internal static async Task<bool> InitDataBase()
+        {
+            DataContext = new Data.SecretContext();
+            if (!File.Exists(AppContext.BaseDirectory + @"\Data\Secrets.db"))
+            {
+                if (!await DataContext.Database.EnsureCreatedAsync())
+                {
+                    MessageBox.Show("Fail Creating Database context");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        internal static System.Collections.Generic.List<Data.Secret> GetSecrets()
+        {
+            return DataContext != null && DataContext.Secrets != null
+                ? DataContext.Secrets.OrderBy(s => s.Order).ToList()
+                : new System.Collections.Generic.List<Data.Secret>();
         }
     }
 }

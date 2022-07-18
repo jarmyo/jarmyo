@@ -8,10 +8,7 @@ namespace SecretDrawer
         public App()
         {            
            //TODO: update
-        }
-        internal static Data.SecretContext? DataContext;
-
-        public static string Pass { get; internal set; } = "SecretDrawer";
+        }        
 
         protected override async void OnStartup(StartupEventArgs e)
         {            
@@ -19,18 +16,11 @@ namespace SecretDrawer
             //TODO: Check updates
             //TODO: Check logs
             Directory.CreateDirectory(AppContext.BaseDirectory + "\\Data");
-            DataContext = new Data.SecretContext();
-            if (!File.Exists(AppContext.BaseDirectory + @"\Data\Secrets.db"))
+            if (await GlobalCode.InitDataBase())
             {
-                if (!await DataContext.Database.EnsureCreatedAsync())
-                {
-                    MessageBox.Show("Fail Creating Database context");
-                    return;
-                }
-            }
-
-            var w = new MainWindow();
-            w.Show();
+                var w = new MainWindow();
+                w.Show();
+            }            
         }
     }
 }
