@@ -1,11 +1,3 @@
-This repository contains all code from <https://JulianAugusto.com>, my personal page and blog. Is not intended to public contribution, but its public for educational purposes.
-
-![visitors](https://visitor-badge.glitch.me/badge?page_id=jarmyo)
-[![CodeFactor](https://www.codefactor.io/repository/github/jarmyo/jarmyo/badge)](https://www.codefactor.io/repository/github/jarmyo/jarmyo)
-[![Build and deploy to Azure](https://github.com/jarmyo/jarmyo/actions/workflows/main_julianaugusto.yml/badge.svg?branch=main)](https://github.com/jarmyo/jarmyo/actions/workflows/main_julianaugusto.yml)
-[![CodeQL](https://github.com/jarmyo/jarmyo/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/jarmyo/jarmyo/actions/workflows/codeql.yml)
-# Julian Augusto Ruiz Martinez
-
 ## SKILLS
 
 - C# Development, I've been working for about 12 years in **.NET technologies**.
@@ -20,18 +12,19 @@ This repository contains all code from <https://JulianAugusto.com>, my personal 
 - Hacking skills: network sniffing, .NET disassembling, bruteforce logins, SQL injection.
 
 ## PROFESSIONAL BACKGROUND
-- I Worked 10 years in the INM (Instituto Nacional de Migración) in Chiapas, as the director of informatics in the State, Building software for [administrative control](https://www.behance.net/gallery/4752143/Rol-de-Servicios), Telecomunications administration (CISCO and Nortel switches and BCM's, Ubiquiti antennas), all network configuration (VPN and Domain Control) and Tech support.
+
+- I Worked 10 years in the INM ([Instituto Nacional de Migración](https://www.inm.gob.mx)) in Chiapas, as the director of informatics in the State, Building software for [administrative control](https://www.behance.net/gallery/4752143/Rol-de-Servicios), Telecomunications administration (CISCO and Nortel switches and BCM's, Ubiquiti antennas), all network configuration (VPN and Domain Control) and Tech support.
 - I’m the CTO of [Repos Software](https://repos.mx) we have a POS for restaurants, we apply all our tech knowledge: Web. Mobile and Desktop development, Huge normalized Databases, Cloud Security, biometrics, online payments, deployment and support. We are only two people, but we have about 20 clients in México and USA.
-- I’ve working on Secretaría de Seguridad Pública del Estado de Aguascalientes, in a In-House security development from 2019 to 2022.
-- Sitecore 8.2 Backend Development for Texas Instruments Education Page as Deloitte contractor.
+- I’ve working on (Secretaría de Seguridad Pública del Estado de Aguascalientes)[https://www.aguascalientes.gob.mx/SSP], in a In-House security development from 2019 to 2022.
+- Sitecore 8.2 Backend Development for (Texas Instruments Education Page)[https://education.ti.com/] as [Deloitte](https://www2.deloitte.com/us/en.html) contractor.
 - Currently Sterling background checks development as Hexaware contractor.
 
-### Contact forms
+### CONTACT FORMS
 [![Gmail](https://img.shields.io/badge/-GMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jarm.yo@gmail.com)
 [![Telegram](https://img.shields.io/badge/-TELEGRAM-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/jarmyo)
 [![LinkedIn](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shinjistudio/)
 
-### Skills badget
+### SKILLS BADGETS
 ![JavaScript](https://img.shields.io/badge/javascript-323330.svg?&style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-1572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)
@@ -49,3 +42,19 @@ This repository contains all code from <https://JulianAugusto.com>, my personal 
 ![Nginx](https://img.shields.io/badge/nginx-009639.svg?&style=for-the-badge&logo=nginx&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+
+# THIS REPO
+
+
+
+![visitors](https://visitor-badge.glitch.me/badge?page_id=jarmyo)
+[![CodeFactor](https://www.codefactor.io/repository/github/jarmyo/jarmyo/badge)](https://www.codefactor.io/repository/github/jarmyo/jarmyo)
+[![Build and deploy to Azure](https://github.com/jarmyo/jarmyo/actions/workflows/main_julianaugusto.yml/badge.svg?branch=main)](https://github.com/jarmyo/jarmyo/actions/workflows/main_julianaugusto.yml)
+[![CodeQL](https://github.com/jarmyo/jarmyo/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/jarmyo/jarmyo/actions/workflows/codeql.yml)
+
+## STRUCTURE
+
+- WebPage --> This repository contains all code from <https://JulianAugusto.com>, my personal page and blog. Is not intended to public contribution, but its public for educational purposes.
+- Leetcode Solutions --> Saved my leetcode solutions
+- Test --> Just to show I know about testing
+- Secret Drawer --> New desktop project to help store secrets and desgined to be helpful for developers.
