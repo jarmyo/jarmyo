@@ -8,15 +8,15 @@
 - Version control: Microsoft TeamFundation, bitbucket and Github.
 - Project Management: Atlassian tools; Jira and Confluence, kanban, scrum and Agile methologies.
 - Tech Support: I have a lot of knowledge fixing Printers and PCs. Windows Server and services deployment (Domains, FTP, IIS, Policies, etc). And the basics of scripting in PowerShell and bash.
-- Languages: Spanish native. English: profesional conversations.
+- Languages: Spanish native. English: profesional conversations. French: Beginner (read and listen)
 - Hacking skills: network sniffing, .NET disassembling, bruteforce logins, SQL injection.
 
 ## PROFESSIONAL BACKGROUND
 
-- I Worked 10 years in the INM ([Instituto Nacional de Migración](https://www.inm.gob.mx)) in Chiapas, as the director of informatics in the State, Building software for [administrative control](https://www.behance.net/gallery/4752143/Rol-de-Servicios), Telecomunications administration (CISCO and Nortel switches and BCM's, Ubiquiti antennas), all network configuration (VPN and Domain Control) and Tech support.
+- I Worked 10 years at INM ([Instituto Nacional de Migración](https://www.inm.gob.mx)) in Chiapas, as the director of informatics in the State, Building software for [administrative control](https://www.behance.net/gallery/4752143/Rol-de-Servicios), Telecomunications administration (CISCO and Nortel switches and BCM's, Ubiquiti antennas), all network configuration (VPN and Domain Control) and Tech support.
 - I’m the CTO of [Repos Software](https://repos.mx) we have a POS for restaurants, we apply all our tech knowledge: Web. Mobile and Desktop development, Huge normalized Databases, Cloud Security, biometrics, online payments, deployment and support. We are only two people, but we have about 20 clients in México and USA.
-- I’ve working on (Secretaría de Seguridad Pública del Estado de Aguascalientes)[https://www.aguascalientes.gob.mx/SSP], in a In-House security development from 2019 to 2022.
-- Sitecore 8.2 Backend Development for (Texas Instruments Education Page)[https://education.ti.com/] as [Deloitte](https://www2.deloitte.com/us/en.html) contractor.
+- I’ve working at [Secretaría de Seguridad Pública del Estado de Aguascalientes](https://www.aguascalientes.gob.mx/SSP), in a In-House security development from 2019 to 2022.
+- Sitecore 8.2 Backend Development for [Texas Instruments Education Page](https://education.ti.com) as [Deloitte](https://www2.deloitte.com) contractor.
 - Currently Sterling background checks development as Hexaware contractor.
 
 ### CONTACT FORMS
