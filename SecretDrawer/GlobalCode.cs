@@ -15,7 +15,7 @@ namespace SecretDrawer
         public static Data.Secret CreateSecret(string _title, string content, int _order, string _color, int? category)
         {
             var _hash = RandomHash();
-            return new Data.Secret
+            var NewSecret = new Data.Secret
             {
                 Title = _title,
                 Hash = _hash,
@@ -23,7 +23,14 @@ namespace SecretDrawer
                 Order = _order,
                 Color = _color,
                 IdCategory = category
-            }; ;
+            };
+
+            if (DataContext != null && DataContext.Secrets != null)
+            {
+                NewSecret = DataContext.Secrets.Add(NewSecret).Entity;
+                DataContext.SaveChanges();
+            }
+            return NewSecret;
         }
         public static Data.Secret CreateSecret(string _title, string content, int _order, string _color)
         {
@@ -37,14 +44,12 @@ namespace SecretDrawer
         {
             return CreateSecret(_title, content, 1);
         }
-
         public static string RandomHash()
         {
             var buffer = new byte[10];
             RandomNumberGenerator.Create().GetBytes(buffer);
             return Convert.ToBase64String(buffer);
         }
-
         private static Aes CreateAES()
         {
             var aes = Aes.Create();
@@ -109,7 +114,6 @@ namespace SecretDrawer
             }
             return encryptedText;
         }
-
         internal static async Task<bool> InitDataBase()
         {
             DataContext = new Data.SecretContext();
@@ -123,7 +127,6 @@ namespace SecretDrawer
             }
             return true;
         }
-
         internal static System.Collections.Generic.List<Data.Secret> GetSecrets()
         {
             return DataContext != null && DataContext.Secrets != null

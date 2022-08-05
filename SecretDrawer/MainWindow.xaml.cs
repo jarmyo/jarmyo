@@ -16,8 +16,8 @@ namespace SecretDrawer
         {
             SecretsList.Children.Clear();
             foreach (var secret in from item in GlobalCode.GetSecrets()
-                                   let secret = new Controls.SecretButton(item)
-                                   select secret)
+                                   let secretButton = new Controls.SecretButton(item)
+                                   select secretButton)
             {
                 SecretsList.Children.Add(secret);
             }
@@ -32,13 +32,10 @@ namespace SecretDrawer
 
         private void AddNewSecret(object sender, RoutedEventArgs e)
         {
-            var newScret = new NewSecretWindow();
-            if (newScret.ShowDialog() == true)
-            {
-                //update the list
-                LoadItems();
-            }
-            //Open add new window.
+            var newSecretWindow = new NewSecretWindow();
+            if (newSecretWindow.ShowDialog() == true)
+                if (newSecretWindow.NewSecret != null)
+                    SecretsList.Children.Add(new Controls.SecretButton(newSecretWindow.NewSecret));
         }
 
         private void ConfigApplication(object sender, RoutedEventArgs e)
