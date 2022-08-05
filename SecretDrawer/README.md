@@ -6,13 +6,6 @@ Work In progress...
 
 ## Components to develop.
 
-### Notification Icon
-
-In progress, we use a nuget library
-
-### Local database
-
-Could be Sqlite, or localdb  SQLExpress
 
 ### Encryption
 
