@@ -162,6 +162,12 @@
   <data name="JobName5" xml:space="preserve">
     <value>System Analyst</value>
   </data>
+  <data name="SchoolName1" xml:space="preserve">
+    <value>Licentiate Degree, Computer Engineering</value>
+  </data>
+  <data name="SchoolName2" xml:space="preserve">
+    <value>Licentiate Degree, Mathematics NOT COMPLETED</value>
+  </data>
   <data name="Stack" xml:space="preserve">
     <value>Stack</value>
   </data>

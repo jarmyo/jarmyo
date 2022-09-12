@@ -162,6 +162,12 @@
   <data name="JobName5" xml:space="preserve">
     <value>Analyste de systèmes</value>
   </data>
+  <data name="SchoolName1" xml:space="preserve">
+    <value>Baccalauréat ès sciences en informatique</value>
+  </data>
+  <data name="SchoolName2" xml:space="preserve">
+    <value>Baccalauréat en mathématiques</value>
+  </data>
   <data name="Stack" xml:space="preserve">
     <value>Technologies utilisées</value>
   </data>

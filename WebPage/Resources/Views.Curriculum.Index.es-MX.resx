@@ -162,6 +162,12 @@
   <data name="JobName5" xml:space="preserve">
     <value>Analista de Sistemas</value>
   </data>
+  <data name="SchoolName1" xml:space="preserve">
+    <value>Licenciatura en Sistemas Computacionales</value>
+  </data>
+  <data name="SchoolName2" xml:space="preserve">
+    <value>Licenciatura en Matematicas</value>
+  </data>
   <data name="Stack" xml:space="preserve">
     <value>Tecnologías</value>
   </data>
