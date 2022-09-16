@@ -5,8 +5,6 @@ namespace leetCodeSolutions
     {
         static void Main(string[] args)
         {
-            var test = Solution.RemoveDuplicates_TestCases();
-            var result =Solution.RemoveDuplicates(test);
         }
     }
 }

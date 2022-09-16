@@ -49,8 +49,7 @@
                 }
             }
             return node; //return the pointer of first element of result.
-        }   
-
+        }
         public static (ListNode, ListNode) MergeTwoLists_TestCase()
         {
             var test = new ListNode(1)
