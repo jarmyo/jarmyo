@@ -6,6 +6,7 @@
 Tests/bin/
 Tests/obj/
 Webpage/obj/
+Webpage/node_modules/
 packages/
 Webpage/bin/
 .vs/
