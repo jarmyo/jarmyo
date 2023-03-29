@@ -22,7 +22,10 @@ jobs:
           node-version: 12.x
       
       - name: Install NPM
-        run: npm --prefix ./WebPage install ./WebPage
+        run:  |
+         cd ./WebPage
+         npm install
+         cd ..
        
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
