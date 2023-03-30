@@ -55,6 +55,7 @@ jobs:
       run: |
        cd ./WebPage
        npm install
+       cd ..
        dotnet build WebPage --configuration Release /p:UseSharedCompilation=false
 
     # ℹ️ Command-line programs to run using the OS shell.
