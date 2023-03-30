@@ -52,7 +52,10 @@ jobs:
     # If this step fails, then you should remove it and run the build manually (see below)
     - if: matrix.language == 'csharp' 
       name: Build dotnet
-      run: dotnet build WebPage --configuration Release /p:UseSharedCompilation=false
+      run: |
+       cd ./WebPage
+       npm install
+       dotnet build WebPage --configuration Release /p:UseSharedCompilation=false
 
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 See https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
