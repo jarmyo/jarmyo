@@ -51,7 +51,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Language" Version="6.0.15" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />    
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.4" />    
-    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.32.2" />    
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.32.3" />    
     <PackageReference Include="Microsoft.CodeAnalysis.Razor" Version="6.0.15" />
     <PackageReference Include="Microsoft.CognitiveServices.Speech" Version="1.26.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
@@ -72,7 +72,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
-    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="5.0.2">
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="5.0.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
