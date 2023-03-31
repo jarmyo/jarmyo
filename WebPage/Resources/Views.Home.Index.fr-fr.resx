@@ -139,7 +139,7 @@
     <value>Langues</value>
   </data>
   <data name="Lead" xml:space="preserve">
-    <value>Bonjour, bienvenue sur ma page personnelle, je suis un développeur de software spécialisé dans les technologies .NET et les écosystèmes Microsoft, j’ai plus de 10 ans de création de software. J’aime apprendre et construire de nouvelles choses.</value>
+    <value>Bienvenue sur ma page personnelle. Je suis un développeur de logiciels avec plus de 15 ans d'expérience dans .NET et les écosystèmes Microsoft. Je suis passionné par l'apprentissage et la création de nouvelles choses, et je suis toujours à la recherche de nouveaux défis et opportunités pour grandir en tant que professionnel.</value>
   </data>
   <data name="My_Activities" xml:space="preserve">
     <value>Eh bien, je ne fais pas grand-chose, mais ce que je fais, je le fais avec passion.</value>
@@ -148,7 +148,7 @@
     <value>&lt;a href="https://github.com/jarmyo?tab=repositories"&gt;Je code pour l'amour de l'art&lt;/a&gt;</value>
   </data>
   <data name="My_Activities2" xml:space="preserve">
-    <value>Responsable du département informatique sur &lt;a href="https://www.inm.gob.mx"&gt;Bureau fédéral de l’immigration du Mexique pour l’État&lt;/a&gt; du Chiapas</value>
+    <value>Responsable du département informatique sur &lt;a href="https://www.inm.gob.mx"&gt;Bureau fédéral de l'immigration du Mexique pour l'État&lt;/a&gt; du Chiapas</value>
   </data>
   <data name="My_Activities3" xml:space="preserve">
     <value>Je suis responsable du développement technologique du &lt;a href="https://repos.mx"&gt;Repos Software&lt;/a&gt;</value>
