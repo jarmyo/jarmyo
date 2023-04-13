@@ -1,15 +1,12 @@
 ## SKILLS
 
-- C# Development, I've been working for about 12 years in **.NET technologies**.
-- I've been programing for the love of code for about 20 years (QBasic, VBasic6, Turbo Pascal, dBase, Clipper 5, C, C++, Prolog, Perl, PHP, Python, Java)
-- User Interfaces Design: WPF, Windows Forms, WinUI and Razor Pages
-- SQL Server Database at middle level: Queries, Security, Triggers, Functions, Stored Procedures, Schemas, Indexes, etc, EntityFramework ORM and Linq Queries
-- Frontend Web development: Bootstrap, SCSS, Vainilla Javascript and Typescript.
-- Version control: Microsoft TeamFundation, bitbucket and Github.
-- Project Management: Atlassian tools; Jira and Confluence, kanban, scrum and Agile methologies.
-- Tech Support: I have a lot of knowledge fixing Printers and PCs. Windows Server and services deployment (Domains, FTP, IIS, Policies, etc). And the basics of scripting in PowerShell and bash.
-- Languages: Spanish native. English: profesional conversations. French: Beginner (read and listen)
-- Hacking skills: network sniffing, .NET disassembling, bruteforce logins, SQL injection.
+- I have been a passionate programmer for 20 years, working with various languages and technologies such as QBasic, VBasic6, Turbo Pascal, dBase, Clipper 5, C, C++, Prolog, Perl, PHP, Python, and Java. For the past 12 years, I have specialized in C# development and .NET technologies.
+
+- I have experience in designing user interfaces with WPF, Windows Forms, WinUI and Razor Pages. I also have skills in SQL Server database management, including queries, security, triggers, functions, stored procedures, schemas, indexes, EntityFramework ORM and Linq queries.
+
+- In addition to backend development, I can handle frontend web development with Bootstrap, SCSS, Vainilla Javascript and Typescript. I am familiar with version control tools such as Microsoft TeamFundation, bitbucket and Github. I also use project management tools such as Atlassian Jira and Confluence, and follow kanban, scrum and agile methodologies.
+
+- I have a lot of knowledge in tech support, such as fixing printers and PCs, deploying Windows Server and services (Domains, FTP, IIS, Policies, etc), and scripting in PowerShell and bash. I am fluent in Spanish and English, and can read and listen to French at a beginner level. I also have some hacking skills such as network sniffing, .NET disassembling, bruteforce logins and SQL injection.
 
 ## PROFESSIONAL BACKGROUND
 
