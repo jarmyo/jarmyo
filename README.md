@@ -14,7 +14,7 @@
 - I’m the CTO of [Repos Software](https://repos.mx) we have a POS for restaurants, we apply all our tech knowledge: Web. Mobile and Desktop development, Huge normalized Databases, Cloud Security, biometrics, online payments, deployment and support. We are only two people, but we have about 20 clients in México and USA.
 - I’ve working at [Secretaría de Seguridad Pública del Estado de Aguascalientes](https://www.aguascalientes.gob.mx/SSP), in a In-House security development from 2019 to 2022.
 - Sitecore 8.2 Backend Development for [Texas Instruments Education Page](https://education.ti.com) as [Deloitte](https://www2.deloitte.com) contractor.
-- ASP.NET backend development for [Texas Medicaid & Healthcare Partnership](https://www.tmhp.com) website as [Accenture](https://www.accenture.com) independent contractor 
+- ASP.NET backend and Windows Services development, also XSD designing for [Texas Medicaid & Healthcare Partnership internal software](https://www.tmhp.com) as [Accenture](https://www.accenture.com) independent contractor 
 - Currently Sterling background checks development as Hexaware contractor.
 
 ### CONTACT FORMS
