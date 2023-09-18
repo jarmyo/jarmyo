@@ -51,18 +51,5 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <ItemGroup>
-    <EmbeddedResource Update="Resources\Controllers.HomeController.en-US.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Views.Curriculum.Index.en-US.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Views.Curriculum.Index.es-MX.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Views.Curriculum.Index.fr-FR.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
+  <ItemGroup />
 </Project>
