@@ -1,6 +1,6 @@
 ## SKILLS
 
-- I have been a passionate programmer for 20 years, working with various languages and technologies such as QBasic, VBasic6, Turbo Pascal, dBase, Clipper 5, C, C++, Prolog, Perl, PHP, Python, and Java. For the past 12 years, I have specialized in C# development and .NET technologies.
+- I have been a passionate programmer for 20 years, working with various languages and technologies such as QBasic, VBasic6, Turbo Pascal, dBase, Clipper 5, C, C++, Prolog, Perl, PHP, Python, and Java. For the past 15 years, I have specialized in C# development and .NET technologies.
 
 - I have experience in designing user interfaces with WPF, Windows Forms, WinUI and Razor Pages. I also have skills in SQL Server database management, including queries, security, triggers, functions, stored procedures, schemas, indexes, EntityFramework ORM and Linq queries.
 
@@ -14,7 +14,8 @@
 - I’m the CTO of [Repos Software](https://repos.mx) we have a POS for restaurants, we apply all our tech knowledge: Web. Mobile and Desktop development, Huge normalized Databases, Cloud Security, biometrics, online payments, deployment and support. We are only two people, but we have about 20 clients in México and USA.
 - I’ve working at [Secretaría de Seguridad Pública del Estado de Aguascalientes](https://www.aguascalientes.gob.mx/SSP), in a In-House security development from 2019 to 2022.
 - Sitecore 8.2 Backend Development for [Texas Instruments Education Page](https://education.ti.com) as [Deloitte](https://www2.deloitte.com) contractor.
-- ASP.NET backend and Windows Services development, also XSD designing for [Texas Medicaid & Healthcare Partnership internal software](https://www.tmhp.com) as [Accenture](https://www.accenture.com) independent contractor 
+- ASP.NET backend and Windows Services development, also XSD designing for [Texas Medicaid & Healthcare Partnership internal software](https://www.tmhp.com) as [Accenture](https://www.accenture.com) independent contractor.
+- .NET Core backend development for [Rdius Recycling](https://www.radiusrecycling.com/) new IA Powered [PicknPull Portal](https://www.picknpull.com/sell-my-car) as independent contractor.
 - Currently Sterling background checks development as Hexaware contractor.
 
 ### CONTACT FORMS
@@ -45,10 +46,9 @@
 
 
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=jarmyo)
 [![CodeFactor](https://www.codefactor.io/repository/github/jarmyo/jarmyo/badge)](https://www.codefactor.io/repository/github/jarmyo/jarmyo)
 [![Build and deploy to Azure](https://github.com/jarmyo/jarmyo/actions/workflows/main_julianaugusto.yml/badge.svg?branch=main)](https://github.com/jarmyo/jarmyo/actions/workflows/main_julianaugusto.yml)
-[![CodeQL](https://github.com/jarmyo/jarmyo/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/jarmyo/jarmyo/actions/workflows/codeql.yml)
+[![CodeQL](https://github.com/jarmyo/jarmyo/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/jarmyo/jarmyo/actions/workflows/codeql-analysis.yml)
 
 ## STRUCTURE
 
