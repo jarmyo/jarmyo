@@ -1,17 +1,10 @@
 ﻿namespace Personal.Controllers;
-public partial class BlogController : Controller
+public partial class BlogController(BlogContext blogCtx, SignInManager<IdentityUser> signInManager) : Controller
 {
     internal const int MaxPages = 10; //10 post by page
     internal static int TotalPost;
     internal static int TotalPages;
-    private readonly BlogContext _blogCtx;
-    private readonly SignInManager<IdentityUser> _signInManager;
-    public BlogController(BlogContext blogCtx, SignInManager<IdentityUser> signInManager,
-        UserManager<IdentityUser> userManager)
-    {
-        _signInManager = signInManager;
-        _blogCtx = blogCtx;
-    }
+
     [AllowAnonymous]
     public ActionResult Index(string id)
     {
@@ -27,16 +20,16 @@ public partial class BlogController : Controller
         var model = new Models.Blog.BlogIndexModel
         {
             //TODO: This can be slice, order and filter
-            Entradas = _blogCtx.Entradas.OrderByDescending(e => e.Fecha).Skip((currentPage - 1) * MaxPages).Take(MaxPages).ToList(),
+            Entradas = [.. blogCtx.Entradas.OrderByDescending(e => e.Fecha).Skip((currentPage - 1) * MaxPages).Take(MaxPages)],
             DisableBack = currentPage == 1,
             DisableFoward = currentPage == TotalPages,
             CurrentPage = currentPage,
-            Etiquetas = _blogCtx.Etiquetas.ToList(),
+            Etiquetas = [.. blogCtx.Etiquetas],
         };
 
         var culture = Request.HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.Culture;
-        model.Archivo = new Dictionary<string, string>();
-        foreach (var date in _blogCtx.Fechas)
+        model.Archivo = [];
+        foreach (var date in blogCtx.Fechas)
         {
             var dateparts = date.Name.Split('-');
             var year = 2000 + int.Parse(dateparts[0]);
@@ -54,7 +47,7 @@ public partial class BlogController : Controller
         Post entrada;
         if (id != null)
         {
-            entrada = _blogCtx.Entradas.Find(id);
+            entrada = blogCtx.Entradas.Find(id);
             ViewBag.Titulo = entrada.Titulo;
             return View(entrada);
         }

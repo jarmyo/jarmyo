@@ -8,7 +8,7 @@
             ViewBag.Title = "SQLite WebForm";
             var model = new SQLiteModel
             {
-                Visitantes = _myDbContext.Visitantes.OrderByDescending(v => v.Fecha).Take(50).ToList()
+                Visitantes = [.. _myDbContext.Visitantes.OrderByDescending(v => v.Fecha).Take(50)]
             };
             return View(model);
         }

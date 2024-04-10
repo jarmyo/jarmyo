@@ -51,7 +51,7 @@ namespace Personal.Helpers
             QueryDefinition queryDefinition = new(sqlQueryText);
             FeedIterator<CosmoItem> queryResultSetIterator = container.GetItemQueryIterator<CosmoItem>(queryDefinition);
 
-            List<CosmoItem> families = new();
+            List<CosmoItem> families = [];
 
             while (queryResultSetIterator.HasMoreResults)
             {
@@ -73,7 +73,7 @@ namespace Personal.Helpers
         }
         public async Task DeleteFamilyItemAsync(string partitionKeyValue, string ItemId)
         {
-            ItemResponse<CosmoItem> wakefieldFamilyResponse = await container.DeleteItemAsync<CosmoItem>(ItemId, new PartitionKey(partitionKeyValue));
+            _ = await container.DeleteItemAsync<CosmoItem>(ItemId, new PartitionKey(partitionKeyValue));
             Console.WriteLine("Deleted Item [{0},{1}]\n", partitionKeyValue, ItemId);
         }
     }

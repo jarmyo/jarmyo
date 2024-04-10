@@ -1,13 +1,9 @@
 ﻿using Microsoft.Extensions.Localization;
 namespace Personal.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController(IStringLocalizer<HomeController> localizer) : Controller
     {
-        public HomeController(IStringLocalizer<HomeController> localizer)
-        {
-            _localizer = localizer;
-        }
-        private readonly IStringLocalizer<HomeController> _localizer;
+        private readonly IStringLocalizer<HomeController> _localizer = localizer;
         public ActionResult Index()
         {
             ViewBag.Titulo = _localizer["Title"];

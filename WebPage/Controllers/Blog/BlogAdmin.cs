@@ -13,7 +13,7 @@ public partial class BlogController : Controller
         {
             ViewBag.Title = "Update Post"; //TRANSLATE
             ViewBag.ButtonCaption = "Update";
-            entrada = _blogCtx.Entradas.Find(id);
+            entrada = blogCtx.Entradas.Find(id);
         }
         else
         {
@@ -27,9 +27,9 @@ public partial class BlogController : Controller
     [HttpPost]
     public ActionResult Edit(BlogPostEntry formData)
     {
-        BlogHelper.Configure(_blogCtx);
+        BlogHelper.Configure(blogCtx);
         Post OriginalPost = new();
-        if (formData.IsUpdate) OriginalPost = _blogCtx.Entradas.Find(formData.Id); //find original if update
+        if (formData.IsUpdate) OriginalPost = blogCtx.Entradas.Find(formData.Id); //find original if update
         //map 
         OriginalPost.Id = formData.Id;
         OriginalPost.Fecha = DateTime.Parse(formData.Fecha);
@@ -39,8 +39,8 @@ public partial class BlogController : Controller
         BlogHelper.ProcessDates(OriginalPost.Fecha, OriginalPost.Id);
         BlogHelper.ProcessTags(OriginalPost.Etiquetas, OriginalPost.Id);
         // end map
-        if (!formData.IsUpdate) _blogCtx.Entradas.Add(OriginalPost); //add if new
-        _blogCtx.SaveChanges();
+        if (!formData.IsUpdate) blogCtx.Entradas.Add(OriginalPost); //add if new
+        blogCtx.SaveChanges();
         return RedirectToAction("Index");
     }
     public IActionResult DeleteTag(string id)
@@ -49,14 +49,14 @@ public partial class BlogController : Controller
         {
             if (id != null)
             {
-                var tag = _blogCtx.Etiquetas.Find(id);
-                _blogCtx.Etiquetas.Remove(tag);
+                var tag = blogCtx.Etiquetas.Find(id);
+                blogCtx.Etiquetas.Remove(tag);
             }
             else
             {
-                _blogCtx.Etiquetas.Remove(_blogCtx.Etiquetas.First(t => t.Name == string.Empty));
+                blogCtx.Etiquetas.Remove(blogCtx.Etiquetas.First(t => t.Name == string.Empty));
             }
-            _blogCtx.SaveChanges();
+            blogCtx.SaveChanges();
             return Json("ok");
         }
         catch (Exception ex)
@@ -68,15 +68,15 @@ public partial class BlogController : Controller
     {
         if (id != null)
         {
-            var entrada = _blogCtx.Entradas.Find(id);
-            _blogCtx.Entradas.Remove(entrada);
-            _blogCtx.SaveChanges();
+            var entrada = blogCtx.Entradas.Find(id);
+            blogCtx.Entradas.Remove(entrada);
+            blogCtx.SaveChanges();
         }
         return RedirectToAction("Index");
     }
     public IActionResult Logoff()
     {
-        _signInManager.SignOutAsync();
+        signInManager.SignOutAsync();
         return RedirectToAction("Index");
     }       
 }    

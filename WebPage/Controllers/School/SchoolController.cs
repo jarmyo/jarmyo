@@ -1,15 +1,10 @@
 ﻿namespace Personal.Controllers.School
 {
-    public class SchoolController : Controller
+    public class SchoolController(SchoolContext schoolCtx, SignInManager<IdentityUser> signInManager) : Controller
     {
-        private readonly SchoolContext _schoolCtx;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly SchoolContext _schoolCtx = schoolCtx;
+        private readonly SignInManager<IdentityUser> _signInManager = signInManager;
         private const string IdDefaultBusinness = "juliansoft"; //for testing purpouses.
-        public SchoolController(SchoolContext schoolCtx, SignInManager<IdentityUser> signInManager)
-        {
-            _signInManager = signInManager;
-            _schoolCtx = schoolCtx;
-        }
         #region Views       
         public ActionResult Index()
         {
@@ -26,8 +21,8 @@
             {
                 var model = new Models.School.SchoolAdminModel
                 {
-                    Clients = _schoolCtx.Clients.ToList(),
-                    Services = _schoolCtx.Services.ToList()
+                    Clients = [.. _schoolCtx.Clients],
+                    Services = [.. _schoolCtx.Services]
                 };
                 ViewBag.Titulo = "Admin your Data";
                 ViewBag.IdBusiness = id;
@@ -38,7 +33,7 @@
         public IActionResult New(string id)
         {
             if (string.IsNullOrEmpty(id))
-                id = IdDefaultBusinness;
+                _ = IdDefaultBusinness;
 
             //Search for the id and send to sessión.
             ViewBag.Titulo = "Create a new appointment";

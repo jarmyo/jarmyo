@@ -29,21 +29,21 @@ namespace Personal.Controllers.Work.Tests
             [18] = "4.24264",
             [19] = "4.35890"
         };
-        private static readonly List<string> ValidShort = new()
-        {
+        private static readonly List<string> ValidShort =
+        [
             "0",
             "12345678901",
             "-12345678901"
-        };
-        private static readonly List<string> NotValidShort = new()
-        {
+        ];
+        private static readonly List<string> NotValidShort =
+        [
              "1239223372036854775809",
             "-1239223372036854775809",
             "",
             "abc",
             "1.1.1",
             "1.1"
-        };
+        ];
         [TestMethod()]
         public void IsNotNumericTest()
         {

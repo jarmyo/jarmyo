@@ -7,7 +7,7 @@ namespace Personal.Controllers
         public ResultObject()
         {
             GUID = Guid.NewGuid().ToString();
-            Attributes = new Dictionary<string, string>();
+            Attributes = [];
         }
         public bool OK { get; set; }
         public string GUID { get; set; }

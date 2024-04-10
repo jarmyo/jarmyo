@@ -2,12 +2,8 @@
 
 namespace Personal.Data
 {
-    public class SecurityContext : IdentityDbContext<IdentityUser>
+    public class SecurityContext(DbContextOptions<SecurityContext> options) : IdentityDbContext<IdentityUser>(options)
     {
-        public SecurityContext(DbContextOptions<SecurityContext> options)
-            : base(options)
-        {
-        }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

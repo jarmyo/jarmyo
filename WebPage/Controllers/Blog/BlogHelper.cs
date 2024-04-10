@@ -13,7 +13,7 @@ public static class BlogHelper
     /// <param name="idPost">Id of post entry</param>
     public static void ProcessTags(string etiquetas, string idPost)
     {
-        List<string> usedTags = new();
+        List<string> usedTags = [];
         foreach (var tags in etiquetas.Split(';'))
         {
             var trimmedTag = tags.Trim();

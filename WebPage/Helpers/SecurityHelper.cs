@@ -7,35 +7,29 @@ namespace Personal.Helpers
         public static string Encrypt(string txtValueText, string hash)
         {
             byte[] data = Encoding.UTF8.GetBytes(txtValueText);
-            using (var md5 = MD5.Create())
+            byte[] keys = MD5.HashData(Encoding.UTF8.GetBytes(hash));
+            using (var tripDes = TripleDES.Create())
             {
-                byte[] keys = md5.ComputeHash(Encoding.UTF8.GetBytes(hash));
-                using (var tripDes = TripleDES.Create())
-                {
-                    tripDes.Key = keys;
-                    tripDes.Mode = CipherMode.CTS;
-                    tripDes.Padding = PaddingMode.PKCS7;
-                    ICryptoTransform transform = tripDes.CreateEncryptor();
-                    byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
-                    return Convert.ToBase64String(results, 0, results.Length);
-                }
+                tripDes.Key = keys;
+                tripDes.Mode = CipherMode.CTS;
+                tripDes.Padding = PaddingMode.PKCS7;
+                ICryptoTransform transform = tripDes.CreateEncryptor();
+                byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                return Convert.ToBase64String(results, 0, results.Length);
             }
         }
         public static string Decrypt(string txtEncryptText, string hash)
         {
             byte[] data = Convert.FromBase64String(txtEncryptText);
-            using (var md5 = MD5.Create())
+            byte[] keys = MD5.HashData(Encoding.UTF8.GetBytes(hash));
+            using (var tripDes = TripleDES.Create())
             {
-                byte[] keys = md5.ComputeHash(Encoding.UTF8.GetBytes(hash));
-                using (var tripDes = TripleDES.Create())
-                {
-                    tripDes.Key = keys;
-                    tripDes.Mode = CipherMode.CTS;
-                    tripDes.Padding = PaddingMode.PKCS7;
-                    ICryptoTransform transform = tripDes.CreateDecryptor();
-                    byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
-                    return Encoding.UTF8.GetString(results);
-                }
+                tripDes.Key = keys;
+                tripDes.Mode = CipherMode.CTS;
+                tripDes.Padding = PaddingMode.PKCS7;
+                ICryptoTransform transform = tripDes.CreateDecryptor();
+                byte[] results = transform.TransformFinalBlock(data, 0, data.Length);
+                return Encoding.UTF8.GetString(results);
             }
         }
     }

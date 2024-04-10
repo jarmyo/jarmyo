@@ -1,16 +1,13 @@
 ﻿namespace Personal.Controllers
 {
-    public class EmailSign : Controller
+    public class EmailSign(IWebHostEnvironment env) : Controller
     {
-        private IWebHostEnvironment _host;
-        public EmailSign(IWebHostEnvironment env)
-        {
-            _host = env;
-        }
+        private readonly IWebHostEnvironment _host = env;
+
         [HttpGet]
         public FileResult Index()
         {
-            return Sign();
+            return Sign;
         }
         /// <summary>
         /// This method returns an image with my sign
@@ -27,13 +24,16 @@
                 //if reopen, increment the counter.
                 //return the sign image
             }
-            return Sign();
+            return Sign;
         }
-        private FileResult Sign()
+        private FileResult Sign
         {
-            var FileNameWithPath = Path.Combine(_host.WebRootPath, @"assets\sign.png");
-            byte[] bytes = System.IO.File.ReadAllBytes(FileNameWithPath);
-            return File(bytes, "application/octet-stream", "jarm.yo.sign.png");
+            get
+            {
+                var FileNameWithPath = Path.Combine(_host.WebRootPath, @"assets\sign.png");
+                byte[] bytes = System.IO.File.ReadAllBytes(FileNameWithPath);
+                return File(bytes, "application/octet-stream", "jarm.yo.sign.png");
+            }
         }
     }
 }

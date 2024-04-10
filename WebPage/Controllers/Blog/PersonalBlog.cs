@@ -8,7 +8,7 @@ public partial class BlogController : Controller
         ViewBag.Titulo = "Blog Personal";
         var model = new Models.Blog.BlogIndexModel
         {
-            Entradas = personal.Entradas.OrderByDescending(e => e.Fecha).ToList()
+            Entradas = [.. personal.Entradas.OrderByDescending(e => e.Fecha)]
         };
         return View(model);
     }
