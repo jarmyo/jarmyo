@@ -56,7 +56,7 @@
   </ItemGroup>
   <ItemGroup>    
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.4" />    
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.6" />    
     <PackageReference Include="Microsoft.AspNetCore.Razor.Language" Version="6.0.30" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />    
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.4" />    
