@@ -1,4 +1,8 @@
-﻿namespace Personal.Controllers;
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Globalization;
+using System.Linq;
+
+namespace Personal.Controllers;
 public partial class BlogController(BlogContext blogCtx, SignInManager<IdentityUser> signInManager) : Controller
 {
     internal const int MaxPages = 10; //10 post by page
@@ -9,12 +13,13 @@ public partial class BlogController(BlogContext blogCtx, SignInManager<IdentityU
     public ActionResult Index(string id)
     {
         ViewBag.Titulo = "Blog";
-        int currentPage = 1;
-        if (id != null)
+        if (!int.TryParse(id, out int currentPage) || currentPage < 1)
         {
-            _ = int.TryParse(id, out currentPage);
-            if (currentPage < 1) currentPage = 1;
-            else if (currentPage > TotalPages) currentPage = TotalPages;
+            currentPage = 1;
+        }
+        else if (currentPage > TotalPages)
+        {
+            currentPage = TotalPages;
         }
 
         var model = new Models.Blog.BlogIndexModel
@@ -28,19 +33,27 @@ public partial class BlogController(BlogContext blogCtx, SignInManager<IdentityU
         };
 
         var culture = Request.HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.Culture;
-        model.Archivo = [];
-        foreach (var date in blogCtx.Fechas)
-        {
-            var dateparts = date.Name.Split('-');
-            var year = 2000 + int.Parse(dateparts[0]);
-            var month = new DateTime(year, int.Parse(dateparts[1]), 1);
-            var monthName = month.ToString("MMMM", culture);
-            //Localize date names
-            model.Archivo.Add(date.Name, year + "-" + monthName);
-        }
+        model.Archivo = GetArchive(blogCtx.Fechas, culture);
 
         return View(model);
     }
+
+    private Dictionary<string, string> GetArchive(IEnumerable<MonthYear> fechas, CultureInfo culture)
+    {
+        var archive = new Dictionary<string, string>();
+        foreach (var (date, year, monthName) in from date in fechas
+                                                let dateParts = date.Name.Split('-')
+                                                let year = 2000 + int.Parse(dateParts[0])
+                                                let month = new DateTime(year, int.Parse(dateParts[1]), 1)
+                                                let monthName = month.ToString("MMMM", culture)
+                                                select (date, year, monthName))
+        {
+            archive.Add(date.Name, $"{year}-{monthName}");
+        }
+
+        return archive;
+    }
+
     [AllowAnonymous]
     public ActionResult Entrada(string id)
     {

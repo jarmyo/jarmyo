@@ -159,6 +159,12 @@
   <data name="My_Activities5" xml:space="preserve">
     <value>Desarrollo web en &lt;a href="https://education.ti.com"&gt;Texas Instruments&lt;/a&gt; via &lt;a href="https://www2.deloitte.com/us/en.html"&gt;Deloitte&lt;/a&gt;</value>
   </data>
+  <data name="My_Activities7" xml:space="preserve">
+    <value>ASP.NET, Windows Services y diseno XSD en &lt;a href="https://www.tmhp.com"&gt;Texas Medicaid and Healthcare Partnership&lt;/a&gt; via &lt;a href="https://www.accenture.com"&gt;Accenture&lt;/a&gt;</value>
+  </data>
+  <data name="My_Activities8" xml:space="preserve">
+    <value>Desarrollo .NET Core backend en &lt;a href="https://www.radiusrecycling.com/"&gt;Rdius Recycling&lt;/a&gt;</value>
+  </data>
   <data name="LeadSocial" xml:space="preserve">
     <value>Mis redes sociales</value>
   </data>

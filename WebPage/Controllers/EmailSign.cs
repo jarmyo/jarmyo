@@ -1,5 +1,10 @@
 ﻿namespace Personal.Controllers
 {
+    /// <summary>
+    /// This utility is for personal use.
+    /// 
+    /// </summary>
+    /// <param name="env"></param>
     public class EmailSign(IWebHostEnvironment env) : Controller
     {
         private readonly IWebHostEnvironment _host = env;

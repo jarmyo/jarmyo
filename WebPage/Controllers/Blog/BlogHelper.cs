@@ -13,57 +13,59 @@ public static class BlogHelper
     /// <param name="idPost">Id of post entry</param>
     public static void ProcessTags(string etiquetas, string idPost)
     {
-        List<string> usedTags = [];
-        foreach (var tags in etiquetas.Split(';'))
+        var usedTags = new HashSet<string>(
+            etiquetas.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries)
+            .Select(tag => tag.Trim())
+            .Where(tag => !string.IsNullOrEmpty(tag))
+        );
+
+        // Crear etiquetas que no existen
+        var newTags = usedTags.Where(tag => !blogCtx.Etiquetas.Any(t => t.Name == tag)).ToList();
+        foreach (var tag in newTags)
         {
-            var trimmedTag = tags.Trim();
-            if (trimmedTag != String.Empty) //No empty tags
-            {
-                usedTags.Add(trimmedTag);
-                if (!blogCtx.Etiquetas.Any(t => t.Name == trimmedTag)) // create tag if not exist
-                {
-                    blogCtx.Etiquetas.Add(new Tag() { Name = trimmedTag });
-                    blogCtx.SaveChanges();
-                }
-                // now, check if has in the map.
-                if (!blogCtx.EtiquetasEntradas.Any(et => et.Tag == trimmedTag && et.IdPost == idPost))
-                {
-                    blogCtx.EtiquetasEntradas.Add(new PostTags() { IdPost = idPost, Tag = trimmedTag });
-                    blogCtx.SaveChanges();
-                }
-            }
+            blogCtx.Etiquetas.Add(new Tag { Name = tag });
         }
-        //then remove unused tags.
-        var unused = blogCtx.EtiquetasEntradas.Where(et => et.IdPost == idPost && !usedTags.Contains(et.Tag));
-        blogCtx.EtiquetasEntradas.RemoveRange(unused);
-        //save
+
+        // Crear relaciones de etiquetas con entradas que no existen
+        var newTagEntries = usedTags
+            .Where(tag => !blogCtx.EtiquetasEntradas.Any(et => et.Tag == tag && et.IdPost == idPost))
+            .Select(tag => new PostTags { IdPost = idPost, Tag = tag })
+            .ToList();
+
+        blogCtx.EtiquetasEntradas.AddRange(newTagEntries);
+
+        // Eliminar etiquetas no utilizadas
+        var unusedTagEntries = blogCtx.EtiquetasEntradas
+            .Where(et => et.IdPost == idPost && !usedTags.Contains(et.Tag));
+
+        blogCtx.EtiquetasEntradas.RemoveRange(unusedTagEntries);
         blogCtx.SaveChanges();
     }
     /// <summary>
     /// Creates (if doesn't exist) a date entry on DB and maps to Post
     /// </summary>
-    /// <param name="Date">Date of post</param>
+    /// <param name="date">Date of post</param>
     /// <param name="idPost">Id of post</param>
-    public static void ProcessDates(DateTime Date, string idPost)
+    public static void ProcessDates(DateTime date, string idPost)
     {
-        var datename = Date.ToString("yy-M");
-        if (!blogCtx.Fechas.Any(d => d.Name == datename))
+        var dateName = date.ToString("yy-M");
+        if (!blogCtx.Fechas.Any(d => d.Name == dateName))
         {
-            blogCtx.Fechas.Add(new MonthYear() { Name = datename });
+            blogCtx.Fechas.Add(new MonthYear() { Name = dateName });
             blogCtx.SaveChanges();
         }
 
-        var post = blogCtx.FechasEntradas.Find(idPost);
-        if (post != null)
+        var postEntry = blogCtx.FechasEntradas.Find(idPost);
+        if (postEntry != null)
         {
-            post.IdMonthYear = datename;
+            postEntry.IdMonthYear = dateName;
         }
         else
         {
             blogCtx.FechasEntradas.Add(new PostMonthYear
             {
                 IdPost = idPost,
-                IdMonthYear = datename
+                IdMonthYear = dateName
             });
         }
         blogCtx.SaveChanges();
