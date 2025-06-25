@@ -18,16 +18,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2.5.2
-        with:
-          node-version: 18.x
-
-      - name: Install NPM
-        run:  |
-         cd ./WebPage
-         npm install
-         cd ..
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
         with:
