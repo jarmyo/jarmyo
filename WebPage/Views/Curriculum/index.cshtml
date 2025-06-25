@@ -4,178 +4,148 @@
 {
     @await Html.PartialAsync("_NavigationPartial", new HeaderModel {Title = Localizer["Title"], Active = "CV"})
 }
-<div class="container my-5">
-    <div>
-        <p class="lead">Work Experience.</p>
-    </div>
-    <hr />
-    <div class="col-11">
-         <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-                <h3 class="mb-0">@Localizer["JobName5"]</h3>
-                <div class="subheading mb-3"><a href="https://hexaware.com/">Hexaware</a></div>                               
-                <p>@Localizer["JobDescription5"]</p>
-                <p>
-                    <strong>@Localizer["Stack"]: </strong>
-                    @*TODO: create a foreach, save on a database, auto render this tags*@
-                    <span class="badge bg-primary">.NET Framework</span>
-                    <span class="badge bg-primary">ASP.NET</span>
-                    <span class="badge bg-primary">C#</span>
-                    <span class="badge bg-primary">Windows Forms</span>
-                    <span class="badge bg-success">SQL Server</span>
-                    <span class="badge bg-danger">TestCafe</span>
-                    <span class="badge bg-danger">MSTest2</span>
-                    <span class="badge bg-warning text-dark">TypeScript</span>                    
-                    <span class="badge bg-light text-dark">npm</span>
-                    <span class="badge bg-light text-dark">jenkins</span>
-                    <span class="badge bg-light text-dark">jira</span>
-                    <span class="badge bg-info">AWS</span>
-                    <span class="badge bg-dark">Windows OS</span>
-                    <span class="badge bg-dark">Github</span>
-                </p>               
-            </div>
-            <div class="flex-shrink-0"><span class="text-primary">@Localizer["JobDate5"]</span></div>
-        </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-                <h3 class="mb-0">@Localizer["JobName4"]</h3>
-                <div class="subheading mb-3"><a href="https://dextratech.com/">Dextra technologies a Deloitte Business</a></div>
-                <p>@Localizer["JobDescription4"]</p>
-                <p>
-                    <strong>@Localizer["Stack"]: </strong>
-                    <span class="badge bg-primary">.NET Framework</span>
-                    <span class="badge bg-primary">ASP.NET</span>
-                    <span class="badge bg-primary">C#</span>
-                    <span class="badge bg-success">SQL Server</span>
-                    <span class="badge bg-warning text-dark">TypeScript</span>
-                    <span class="badge bg-warning text-dark">SCSS</span>
-                    <span class="badge bg-light text-dark">jQuery</span>
-                    <span class="badge bg-light text-dark">bulma</span>
-                    <span class="badge bg-light text-dark">gulp</span>
-                    <span class="badge bg-light text-dark">npm</span>
-                    <span class="badge bg-info">Sitecore</span>
-                    <span class="badge bg-info">Solr</span>
-                    <span class="badge bg-dark">Windows OS</span>
-                    <span class="badge bg-dark">bitbucket</span>
-                </p>
-                <div class="col">
-                    <a href="~/assets/texas_screenshoot.png">
-                        <img src="~/assets/texas_screenshoot_thumb.png" class="img-thumbnail" alt="Education Technology by Texas Instruments">
-                    </a>
+<section class="skills-section py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Languages &amp; Frameworks</h5>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge bg-primary me-2 mb-2">C#</span>
+                            <span class="badge bg-primary me-2 mb-2">.NET Framework</span>
+                            <span class="badge bg-primary me-2 mb-2">.NET Core</span>
+                            <span class="badge bg-primary me-2 mb-2">ASP.NET</span>
+                            <span class="badge bg-primary me-2 mb-2">WebForms</span>
+                            <span class="badge bg-primary me-2 mb-2">WPF</span>
+                            <span class="badge bg-primary me-2 mb-2">Windows Forms</span>
+                            <span class="badge bg-primary me-2 mb-2">.NET MAUI</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="flex-shrink-0"><span class="text-primary">@Localizer["JobDate4"]</span></div>
-        </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-                <h3 class="mb-0">@Localizer["JobName3"]</h3>
-                <div class="subheading mb-3"><a href="https://www.aguascalientes.gob.mx/SSP">Secretaría de Seguridad Pública Estado de Aguascalientes</a></div>
-                <p>@Localizer["JobDescription3"]</p>
-                <p>
-                    <strong>@Localizer["Stack"]: </strong>
-                    <span class="badge bg-primary">.NET</span>
-                    <span class="badge bg-primary">ASP.NET MVC</span>
-                    <span class="badge bg-primary">C#</span>
-                    <span class="badge bg-primary">WPF</span>
-                    <span class="badge bg-success">SQL Server</span>
-                    <span class="badge bg-warning text-dark">TypeScript</span>
-                    <span class="badge bg-warning text-dark">CSS</span>
-                    <span class="badge bg-light text-dark">chart.js</span>
-                    <span class="badge bg-light text-dark">bootstrap 5</span>
-                    <span class="badge bg-info">DigitalPersona</span>
-                    <span class="badge bg-info">Tesseract</span>
-                    <span class="badge bg-dark">Debian</span>
-                    <span class="badge bg-dark">Github</span>
-                </p>
-            </div>
-            <div class="flex-shrink-0"><span class="text-primary">@Localizer["JobDate3"]</span></div>
-        </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-                <h3 class="mb-0">@Localizer["JobName2"]</h3>
-                <div class="subheading mb-3"><a href="https://repos.mx">Repos Software</a></div>
-                <p>@Localizer["JobDescription2"]</p>
-                <p>
-                    <strong>@Localizer["Stack"]: </strong>
-                    <span class="badge bg-primary">.NET</span>
-                    <span class="badge bg-primary">ASP.NET MVC</span>
-                    <span class="badge bg-primary">WebForms</span>
-                    <span class="badge bg-primary">WPF</span>
-                    <span class="badge bg-primary">C#</span>
-                    <span class="badge bg-danger">Azure</span>
-                    <span class="badge bg-danger">MSTest2</span>
-                    <span class="badge bg-success">SQL Server</span>
-                    <span class="badge bg-success">SQLite</span>
-                    <span class="badge bg-warning text-dark">TypeScript</span>
-                    <span class="badge bg-warning text-dark">CSS</span>
-                    <span class="badge bg-light text-dark">GraphQL</span>
-                    <span class="badge bg-light text-dark">chart.js</span>
-                    <span class="badge bg-light text-dark">bootstrap 5</span>
-                    <span class="badge bg-info">DigitalPersona</span>
-                    <span class="badge bg-info">bouncyCastle</span>
-                    <span class="badge bg-info">SignalR</span>
-                    <span class="badge bg-info">Xamarin</span>
-                    <span class="badge bg-dark">Windows</span>
-                    <span class="badge bg-dark">Android</span>
-                    <span class="badge bg-dark">Github</span>
-                    <span class="badge bg-dark">TeamFundation</span>
-                </p>
-                <div class="col">
-                    <a href="~/assets/repos-homepage.jpeg"><img src="/assets/repos-homepage_Thumb.jpeg" class="img-thumbnail" alt="Repos.mx HomePage"></a>
-                    <a href="~/assets/repos-dashboard.jpeg"><img src="/assets/repos-dashboard_Thumb.jpeg" class="img-thumbnail" alt="Repos Online Daskboard"></a>
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail" alt="Financiera">
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">DataBase</h5>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge bg-success me-2 mb-2">SQL Server</span>
+                            <span class="badge bg-success me-2 mb-2">SQLite</span>
+                            <span class="badge bg-success me-2 mb-2">Azure CosmosDB</span>
+                            <span class="badge bg-success me-2 mb-2">AWS DynamoDB</span>
+                            <span class="badge bg-success me-2 mb-2">EntityFramework</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="flex-shrink-0"><span class="text-primary">@Localizer["JobDate2"]</span></div>
-        </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="flex-grow-1">
-                <h3 class="mb-0">@Localizer["JobName1"]</h3>
-                <div class="subheading mb-3"><a href="https://www.inm.gob.mx/">Instituto Nacional de Migración</a></div>
-                <p>@Localizer["JobDescription1"]</p>
-                <p>
-                    <strong>@Localizer["Stack"]: </strong>
-                    <span class="badge bg-primary">.NET Framework</span>
-                    <span class="badge bg-primary">ASP.NET</span>
-                    <span class="badge bg-primary">WebForms</span>
-                    <span class="badge bg-primary">WPF</span>
-                    <span class="badge bg-primary">C#</span>
-                    <span class="badge bg-danger">MSTest</span>
-                    <span class="badge bg-danger">ClickOnce</span>
-                    <span class="badge bg-success">SQL Server</span>
-                    <span class="badge bg-warning text-dark">JavaScript</span>
-                    <span class="badge bg-warning text-dark">CSS</span>
-                    <span class="badge bg-info">CrossMatch</span>
-                    <span class="badge bg-info">SignalR</span>
-                    <span class="badge bg-dark">Windows Server</span>
-                    <span class="badge bg-dark">TeamFundation</span>
-                </p>
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Front-end &amp; CMS</h5>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge bg-warning text-dark me-2 mb-2">TypeScript</span>
+                            <span class="badge bg-warning text-dark me-2 mb-2">JavaScript</span>
+                            <span class="badge bg-warning text-dark me-2 mb-2">React</span>
+                            <span class="badge bg-warning text-dark me-2 mb-2">SCSS</span>
+                            <span class="badge bg-warning text-dark me-2 mb-2">CSS</span>
+                            <span class="badge bg-warning text-dark me-2 mb-2">jQuery</span>
+                            <span class="badge bg-warning text-dark me-2 mb-2">Bootstrap</span>
+                            <span class="badge bg-warning text-dark me-2 mb-2">Sitecore</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="flex-shrink-0"><span class="text-primary">@Localizer["JobDate1"]</span></div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Cloud &amp; DevOps</h5>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge bg-info text-dark me-2 mb-2">AWS</span>
+                            <span class="badge bg-info text-dark me-2 mb-2">Azure</span>
+                            <span class="badge bg-info text-dark me-2 mb-2">npm</span>
+                            <span class="badge bg-info text-dark me-2 mb-2">Gulp</span>
+                            <span class="badge bg-info text-dark me-2 mb-2">Jenkins</span>
+                            <span class="badge bg-info text-dark me-2 mb-2">AzureDevOps</span>
+                            <span class="badge bg-info text-dark me-2 mb-2">TeamFundation</span>
+                            <span class="badge bg-info text-dark me-2 mb-2">GitHub</span>
+                            <span class="badge bg-info text-dark me-2 mb-2">Bitbucket</span>
+                            <span class="badge bg-info text-dark me-2 mb-2">Jira</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Testing</h5>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge bg-danger me-2 mb-2">MSTest2</span>
+                            <span class="badge bg-danger me-2 mb-2">xUnit</span>
+                            <span class="badge bg-danger me-2 mb-2">nUnit</span>
+                            <span class="badge bg-danger me-2 mb-2">TestCafe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Other</h5>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge bg-secondary me-2 mb-2">REST and SOAP</span>
+                            <span class="badge bg-secondary me-2 mb-2">Solr</span>
+                            <span class="badge bg-secondary me-2 mb-2">Debian</span>
+                            <span class="badge bg-secondary me-2 mb-2">DigitalPersona</span>
+                            <span class="badge bg-secondary me-2 mb-2">Tesseract</span>
+                            <span class="badge bg-secondary me-2 mb-2">SignalR</span>
+                            <span class="badge bg-secondary me-2 mb-2">Xamarin</span>
+                            <span class="badge bg-secondary me-2 mb-2">Chart.js</span>
+                            <span class="badge bg-secondary me-2 mb-2">GraphQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Arquitecture &amp; Patterns</h5>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge bg-dark me-2 mb-2">SOLID</span>
+                            <span class="badge bg-dark me-2 mb-2">Clean Architecture</span>
+                            <span class="badge bg-dark me-2 mb-2">Domain-Driven Design</span>
+                            <span class="badge bg-dark me-2 mb-2">CQRS</span>
+                            <span class="badge bg-dark me-2 mb-2">Event Sourcing</span>
+                            <span class="badge bg-dark me-2 mb-2">Docker</span>
+                            <span class="badge bg-dark me-2 mb-2">Grafana</span>
+                            <span class="badge bg-dark me-2 mb-2">App Insights</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Methodologies &amp; Soft Skills</h5>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge bg-secondary text-dark me-2 mb-2">Agile (Scrum/Kanban)</span>
+                            <span class="badge bg-secondary text-dark me-2 mb-2">TDD/BDD</span>
+                            <span class="badge bg-secondary text-dark me-2 mb-2">Pair Programming</span>
+                            <span class="badge bg-secondary text-dark me-2 mb-2">Code Reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
         </div>
     </div>
-    <div class="col-1"></div>
-</div>
-<div class="container my-5">
-    <div>
-        <p class="lead">Education.</p>
-    </div>
-    <hr />
-    <div class="col-11">
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-                <h3 class="mb-0">@Localizer["SchoolName2"]</h3>
-                <div class="subheading mb-3"><a href="https://www.unadmexico.mx/">UNAD</a></div>
-            </div>
-            <div class="flex-shrink-0"><span class="text-primary">2012 - 2018</span></div>
-        </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-                <h3 class="mb-0">@Localizer["SchoolName1"]</h3>
-                <div class="subheading mb-3"><a href="https://unach.mx/">UNACH</a></div>         
-            </div>
-            <div class="flex-shrink-0"><span class="text-primary">2004 - 2009</span></div>
-        </div>
-    </div>
-    <div class="col-1"></div>
-</div>
+</section>
+
+<style>
+    .skills-section .card-title {
+        font-weight: 600;
+    }
+    .skills-section .badge {
+        font-size: 0.9rem;
+        padding: 0.6em 0.8em;
+    }
+</style>
