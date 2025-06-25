@@ -1,18 +1,18 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer Localizer
 <a href="https://github.com/jarmyo/jarmyo" target="_blank" id="fork-corner" class="fork-corner fc-pos-tr fc-animate fc-theme-github fc-size-small"></a>
-<div class="container-fluid mb-5">
-    <div class="row p-4 pb-0 pe-lg-0 pt-0 align-items-center rounded-3 border shadow-lg">
-        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-            <h1 class="display-4 fw-bold lh-1 poppins-regular">Julian Augusto Ruiz Martinez</h1>
-            <p class="lead">@Localizer["Lead"]</p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-                <a href="/Blog" class="btn btn-info btn-lg px-4 me-md-2 fw-bold">@Localizer["Blog"]</a>
-                <a href="/Curriculum" class="btn btn-outline-success btn-lg px-4">Tech skills</a>
-            </div>
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="/assets/index.png" class="d-block mx-lg-auto img-fluid rounded" alt="Julian's photo" width="700" height="500" loading="lazy">
         </div>
-        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-            <img src="/assets/index.png" alt="Julian's photo">
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 merriweather-f">Julian Augusto Ruiz Martinez</h1>
+            <p class="lead nunito-f">@Localizer["Lead"]</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="/Blog" class="btn btn-primary btn-lg px-4 me-md-2">@Localizer["Blog"]</a>
+                <a href="/Curriculum" class="btn btn-outline-secondary btn-lg px-4">Tech skills</a>
+            </div>
         </div>
     </div>
 </div>
@@ -39,7 +39,7 @@
                 <div class="col fs-2"><a href="https://www.youtube.com/channel/UC3bChlMRaPeKnqhGD9QF1-w"><i class="bi bi-twitch"></i></a></div>
             </div>
             <p>@Localizer["Other2"]</p>
-            <ul>                
+            <ul>
                 <li><a href="https://es.duolingo.com/profile/jarmyo">@Localizer["Languages"]</a></li>
                 <li><a href="https://es.bookmate.com/@Html.Raw("@jarmyo")">@Localizer["Books"]</a></li>
                 <li><a href="https://letterboxd.com/jarmyo/">@Localizer["Movies"]</a></li>
@@ -59,10 +59,10 @@
 </div>
 @section Styles
 {
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-corner/dist/fork-corner.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-corner/dist/fork-corner.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 }
 @section HeadScripts
 {
-<script src="https://cdn.jsdelivr.net/npm/fork-corner/dist/fork-corner.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fork-corner/dist/fork-corner.min.js" defer></script>
 }

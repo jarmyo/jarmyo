@@ -13,6 +13,7 @@
     <RootNamespace>Personal</RootNamespace>
     <SelfContained>false</SelfContained>
     <Platforms>AnyCPU;x86</Platforms>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <PlatformTarget>x86</PlatformTarget>
@@ -50,9 +51,6 @@
     </Content>
     <Content Include="Data\store\security.db-shm" />
     <Content Include="Data\store\security.db-wal" />
-    <Content Include="Data\store\SQLite.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>    
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.6" />

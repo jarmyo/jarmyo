@@ -12,8 +12,6 @@ namespace Personal
             CosmosDBHelper.PrimaryKey = Configuration["cosmosDBKey"];
             CosmosDBHelper.EndpointUri = Configuration["cosmosDBEndPoint"];
             services.AddEntityFrameworkSqlite().AddDbContext<BlogContext>();
-            services.AddEntityFrameworkSqlite().AddDbContext<SchoolContext>();
-            services.AddEntityFrameworkSqlite().AddDbContext<SQLiteContext>();
             services.AddDbContext<SecurityContext>();
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddRoles<IdentityRole>()
@@ -21,8 +19,6 @@ namespace Personal
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.AddRazorPages().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
             services.AddControllersWithViews(ConfigureMvcOptions);
-            services.AddScoped<IScopedService, ExampleService>();
-            services.AddSingleton<ISingletonService, ExampleService>();
             services.Configure<RequestLocalizationOptions>(options =>
             {
                 var supportedCultures = new[]

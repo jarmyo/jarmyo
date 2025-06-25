@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JulianAugusto.com", "WebPag
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JulianAugusto.comTests", "Tests\JulianAugusto.comTests.csproj", "{6A305936-A003-42B7-8847-4DEF3364C398}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "leetCodeSolutions", "leetCodeSolutions\leetCodeSolutions.csproj", "{F846BDAD-461B-448B-B1B0-4BBBF5CC3730}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DBE07893-8BB8-4381-84E8-B9069A8D9A07}"
 	ProjectSection(SolutionItems) = preProject
 		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
@@ -53,17 +51,6 @@ Global
 		{6A305936-A003-42B7-8847-4DEF3364C398}.Release|x64.Build.0 = Release|Any CPU
 		{6A305936-A003-42B7-8847-4DEF3364C398}.Release|x86.ActiveCfg = Release|Any CPU
 		{6A305936-A003-42B7-8847-4DEF3364C398}.Release|x86.Build.0 = Release|Any CPU
-		{F846BDAD-461B-448B-B1B0-4BBBF5CC3730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F846BDAD-461B-448B-B1B0-4BBBF5CC3730}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{F846BDAD-461B-448B-B1B0-4BBBF5CC3730}.Debug|x64.Build.0 = Debug|Any CPU
-		{F846BDAD-461B-448B-B1B0-4BBBF5CC3730}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{F846BDAD-461B-448B-B1B0-4BBBF5CC3730}.Debug|x86.Build.0 = Debug|Any CPU
-		{F846BDAD-461B-448B-B1B0-4BBBF5CC3730}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F846BDAD-461B-448B-B1B0-4BBBF5CC3730}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F846BDAD-461B-448B-B1B0-4BBBF5CC3730}.Release|x64.ActiveCfg = Release|Any CPU
-		{F846BDAD-461B-448B-B1B0-4BBBF5CC3730}.Release|x64.Build.0 = Release|Any CPU
-		{F846BDAD-461B-448B-B1B0-4BBBF5CC3730}.Release|x86.ActiveCfg = Release|Any CPU
-		{F846BDAD-461B-448B-B1B0-4BBBF5CC3730}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
